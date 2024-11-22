@@ -6,7 +6,7 @@ import { Button, Typography } from "@material-tailwind/react";
 
 // IMPORTER IMAGES
 import logo from "../../../src/assets/images/logos/logo.png";
-import backgroun from "../../../src/assets/images/background/001.jPG";
+import background from "../../../src/assets/images/background/001.jPG";
 
 const LoginPage = () => {
   return (
@@ -17,7 +17,7 @@ const LoginPage = () => {
         {/* Left: Image */}
         <div className="lg:w-1/2 lg:block h-64 lg:h-auto opacity-90">
           <img
-            src={backgroun}
+            src={background}
             className="object-cover w-full h-full"
             alt="Background image"
           />
