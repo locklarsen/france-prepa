@@ -3,41 +3,55 @@ import { Link } from "react-router-dom";
 
 import NavigationBar from "../../components/homePage_Components/NavigationBar";
 import InputPhoneCountryCode from "../../components/general_usage_components/InputPhoneCountryCode";
-
 import Footer from "../../components/homePage_Components/Footer";
+
 import { Button, Typography } from "@material-tailwind/react";
+
+// IMAGE
+import logo from "../../../src/assets/images/logos/logo.png";
+import background_image from "../../../src/assets/images/background/004.JPG";
 
 export default function Contact() {
   return (
     <div
-      className="bg-white flex flex-col min-h-screen bg-cover bg-center bg-no-repeat"
-      id="contact"
+      className="relative bg-white flex flex-col min-h-screen bg-cover bg-center bg-no-repeat"
+      style={{ backgroundImage: `url(${background_image})` }}
     >
-      <NavigationBar />
-      <div className="flex flex-col items-center py-10 px-6 lg:px-8">
-        <div className="text-center mb-6">
-          <span
-            className="block mb-4 text-lg font-semibold py-2 capitalize"
-            style={{ color: "#f70b1b" }}
-          >
-            Parler avec nous
-          </span>
-          <Typography className="text-[#00008f] mb-3 text-3xl font-bold sm:text-[40px]/[48px]">
-            Contactez-nous
-          </Typography>
-          <p className="text-lg leading-8 text-gray-600">
-            Aute magna irure deserunt veniam aliqua magna enim voluptate.
-          </p>
-        </div>
-        <form className="bg-white rounded-3xl shadow-lg p-8 w-full max-w-2xl opacity-95">
+      {/* Superposition noire avec opacité */}
+      <div className="absolute inset-0 bg-[#000000] bg-opacity-75 z-10 pointer-events-none"></div>
+
+      {/* Navigation bar */}
+      <div className="relative z-20">
+        <NavigationBar />
+      </div>
+
+      {/* Contenu principal */}
+      <div className="relative flex flex-col items-center py-10 px-6 lg:px-8 z-20">
+        {/* Formulaire de contact */}
+        <form className="relative bg-white rounded-3xl shadow-lg p-8 w-full max-w-2xl z-20 opacity-95">
+          <div className="text-center mb-6">
+            <span
+              className="block mb-4 text-lg font-semibold py-2 capitalize"
+              style={{ color: "#f70b1b" }}
+            >
+              Parler avec nous
+            </span>
+            <Typography className="text-[#00008f] mb-3 text-3xl font-bold sm:text-[40px]/[48px]">
+              Contactez-nous
+            </Typography>
+            <p className="text-lg leading-8 text-gray-600">
+              Aute magna irure deserunt veniam aliqua magna enim voluptate.
+            </p>
+          </div>
           <div className="flex justify-center mb-6">
             <img
-              src="../../../src/assets/images/logos/logo.png"
+              src={logo}
               alt="Placeholder Image"
               className="object-cover w-24 h-24"
             />
           </div>
           <div className="flex flex-col gap-4 mb-4">
+            {/* Champs prénom et nom */}
             <div className="flex flex-col md:flex-row gap-4">
               <div className="flex flex-col w-full">
                 <label htmlFor="prenom" className="mb-2 text-sm text-grey-900">
@@ -64,6 +78,8 @@ export default function Contact() {
                 />
               </div>
             </div>
+
+            {/* Champs email et téléphone */}
             <div className="flex flex-col md:flex-row gap-4">
               <div className="flex flex-col w-full">
                 <label htmlFor="email" className="mb-2 text-sm text-grey-900">
@@ -89,6 +105,8 @@ export default function Contact() {
                 </div>
               </div>
             </div>
+
+            {/* Dernier diplôme et objet du message */}
             <div className="flex flex-col md:flex-row gap-4">
               <div className="flex flex-col w-full">
                 <label
@@ -121,6 +139,8 @@ export default function Contact() {
                 />
               </div>
             </div>
+
+            {/* Message */}
             <div className="flex flex-col w-full">
               <label htmlFor="message" className="mb-2 text-sm text-grey-900">
                 Message<span className="text-red-700">*</span>
@@ -135,7 +155,7 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* Login Button */}
+          {/* Bouton d'envoi */}
           <Button
             size="lg"
             className="font-[montserrat] bg-[#f6aa00] hover:bg-[#e59d01] hover:border-1 hover:border-yellow-100 mx-auto my-4"
@@ -150,7 +170,9 @@ export default function Contact() {
           </p>
         </form>
       </div>
-      <Footer />
+
+      {/* Footer */}
+      <Footer className="relative z-20" />
     </div>
   );
 }

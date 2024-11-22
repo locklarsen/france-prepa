@@ -1,31 +1,45 @@
 import React from "react";
 import Footer from "../../components/homePage_Components/Footer";
 import InputPhoneCountryCode from "../../components/general_usage_components/InputPhoneCountryCode";
-
 import { Link } from "react-router-dom";
 import NavigationBar from "../../components/homePage_Components/NavigationBar";
-
 import { Button, Typography } from "@material-tailwind/react";
+
+import image_hapyy from "../../../src/assets/images/background/001.jpg";
+import logo from "../../../src/assets/images/logos/logo.png";
+
 const SignupPage = () => {
   return (
-    <div>
+    <div className="bg-white">
       <NavigationBar />
+
+      {/* Section avec l'image d'arrière-plan et l'overlay blanc */}
       <div
-        className="w-full p-5 sm:p-6 md:p-10 lg:p-14 flex flex-col justify-center items-center bg-contain bg-center opacity-95"
-        id="signuppage"
+        style={{ backgroundImage: `url(${image_hapyy})` }}
+        className="relative w-full inset-50 p-5 sm:p-6 md:p-10 lg:p-14 flex flex-col justify-center items-center bg-cover bg-center"
       >
-        <div className="flex justify-center w-full h-full my-auto xl:gap-14 lg:gap-10 md:gap-5">
+        {/* Overlay blanc semi-transparent */}
+        {/* Superposition noire avec opacité */}
+        <div className="absolute inset-0 bg-[#000000] bg-opacity-75 z-10"></div>
+
+        {/* Contenu au-dessus de l'image */}
+        <div className="relative z-10 flex justify-center w-full h-full my-auto xl:gap-14 lg:gap-10 md:gap-5">
           <div className="flex items-center justify-center w-full lg:p-12">
             <div className="flex items-center xl:p-1 w-full">
-              <form className="form-background flex flex-col items-center w-full h-full pb-6 text-center  rounded-3xl p-4 md:p-8">
+              <form className="bg-white opacity-90 flex flex-col items-center w-full h-full pb-6 text-center rounded-3xl p-4 md:p-8">
+                {/* Logo */}
                 <img
-                  src="../../../src/assets/images/logos/logo.png"
+                  src={logo}
                   alt="Placeholder Image"
                   className="object-cover w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-48 lg:h-48"
                 />
+
+                {/* Titre */}
                 <Typography className="font-[montserrat] text-[#00008f] mb-3 text-2xl sm:text-3xl md:text-4xl font-extrabold uppercase">
                   Créer un compte
                 </Typography>
+
+                {/* Ligne de séparation */}
                 <div className="flex items-center mb-3 w-full">
                   <hr className="h-0.5 border-b border-solid border-grey-500 grow"></hr>
                   <hr className="h-0.5 border-b border-solid border-grey-500 grow"></hr>

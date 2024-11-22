@@ -1,6 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 
+import image_paris from "../../../src/assets/images/background/paris_2.jpg";
+
 // Données des étapes
 const steps = [
   { id: 1, title: "Admission", description: "Procédure d'admission en école." },
@@ -43,12 +45,13 @@ const stepVariants = {
 const EtapeDossier = () => {
   return (
     <div
-      className="relative bg-gray-200 bg-cover bg-center py-16 px-4 mx-auto my-16"
-      id="etapeDossier"
+      style={{ backgroundImage: `url(${image_paris})` }}
+      className="relative bg-gray-200 bg-cover bg-center py-16 px-4 m-auto"
     >
       {/* Superposition noire avec opacité */}
       <div className="absolute inset-0 bg-[#040480] bg-opacity-75 z-10"></div>
 
+      {/* Titre et description */}
       <div className="relative z-20 text-center mb-12">
         <h1 className="text-3xl font-bold text-[#f6aa00]">
           Cheminement Chronologique
@@ -61,7 +64,7 @@ const EtapeDossier = () => {
       {/* Conteneur des étapes */}
       <div className="relative max-w-4xl mx-auto z-20">
         {/* Ligne principale */}
-        <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-[#f6aa00] z-20"></div>
+        <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-[#f6aa00] z-10"></div>
 
         {/* Étapes */}
         <div className="space-y-12">
@@ -78,7 +81,7 @@ const EtapeDossier = () => {
             >
               {/* Contenu de l'étape */}
               <div
-                className={`bg-white shadow-md rounded-lg p-6 w-72 ${
+                className={`bg-white shadow-md rounded-lg p-6 w-72 z-20 ${
                   index % 2 === 0 ? "text-right ml-auto" : "text-left mr-auto"
                 }`}
               >
@@ -89,7 +92,7 @@ const EtapeDossier = () => {
               </div>
 
               {/* Point sur la ligne */}
-              <div className="absolute left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full bg-[#f6aa00] flex items-center justify-center">
+              <div className="absolute left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full bg-[#f6aa00] flex items-center justify-center z-30">
                 <span className="text-white font-bold">{step.id}</span>
               </div>
             </motion.div>

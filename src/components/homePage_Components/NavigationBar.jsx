@@ -276,7 +276,7 @@ const NavigationBar = () => {
         </div>
 
         {/* BOUTTONS CTA */}
-        <div className="hidden gap-2 lg:flex ml-2 mr-auto my-auto">
+        <div className="hidden gap-2 lg:flex m-auto">
           {/* Bouton "Se connecter" */}
           <Button
             variant="text"
@@ -310,7 +310,7 @@ const NavigationBar = () => {
         <IconButton
           variant="text"
           color="orange"
-          className="lg:hidden"
+          className="lg:hidden ml-auto"
           onClick={() => setOpenNav(!openNav)}
         >
           {openNav ? (

@@ -42,9 +42,9 @@ const DownloadBrochureForm = () => {
       variants={containerVariants}
       initial="hidden"
       animate="visible"
-      className="bg-white py-16 px-4"
+      className=" py-16 px-4"
     >
-      <div className="max-w-xl mx-auto text-center">
+      <div className="bg-gray-50 max-w-xl mx-auto text-center p-5 rounded-md">
         <Typography
           variant="h2"
           className="text-3xl font-semibold text-[#00008f]"

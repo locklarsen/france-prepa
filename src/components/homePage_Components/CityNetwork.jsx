@@ -4,6 +4,8 @@ import { FaCity, FaLocationDot, FaLocationPinLock } from "react-icons/fa6";
 import { MapIcon, MapPinIcon } from "@heroicons/react/24/outline";
 import { MdLocationCity } from "react-icons/md";
 
+import image_paris from "../../../src/assets/images/background/paris.jpg";
+
 // Liste des villes
 const cities = [
   "Lyon",
@@ -33,12 +35,16 @@ const cityVariants = {
 
 const CityNetwork = () => {
   return (
-    <div className="bg-gray-100 bg-cover bg-center py-16 px-4" id="cityNetwork">
+    <div
+      className="bg-cover bg-center py-10 px-4"
+      id="cityNetwork"
+      style={{ backgroundImage: `url(${image_paris})` }}
+    >
       <div className="text-center mb-8">
-        <h1 className="text-3xl font-bold text-[#00008f]">
+        <h1 className="text-3xl font-bold text-[#f6aa00]">
           Notre Réseau de Villes
         </h1>
-        <p className="text-gray-600 mt-2">
+        <p className="text-white mt-2">
           Explorez notre présence à travers la France
         </p>
       </div>

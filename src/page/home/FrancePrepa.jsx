@@ -126,7 +126,7 @@ const FrancePrepa = () => {
           <div className="flex flex-col justify-center">
             <Typography
               variant="h2"
-              className="text-[#00008f] font-[montserrat] uppercase font-bold text-3xl sm:text-[40px]/[48px]"
+              className="text-white font-[montserrat] uppercase font-bold text-3xl sm:text-[40px]/[48px]"
             >
               France Prépa
             </Typography>
@@ -150,7 +150,7 @@ const FrancePrepa = () => {
           <div className="flex flex-col justify-center">
             <Typography
               variant="h2"
-              className="text-[#00008f] font-[montserrat] uppercase font-bold text-3xl sm:text-[40px]/[48px]"
+              className="text-white font-[montserrat] uppercase font-bold text-3xl sm:text-[40px]/[48px]"
             >
               France Prépa
             </Typography>

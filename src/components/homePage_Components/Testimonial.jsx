@@ -11,6 +11,11 @@ import {
 import { FaArrowLeftLong, FaRightLong } from "react-icons/fa6";
 import { motion, AnimatePresence } from "framer-motion";
 
+//Importer les images
+import person1 from "../../../src/assets/images/temoignanes/personnage1.jpeg";
+import person2 from "../../../src/assets/images/temoignanes/personnage2.jpg";
+import person3 from "../../../src/assets/images/temoignanes/personnage3.jpeg";
+
 const Testimonial = () => {
   const [activeTestimonial, setActiveTestimonial] = useState(0);
   const [direction, setDirection] = useState(0);
@@ -18,17 +23,17 @@ const Testimonial = () => {
   const testimonials = [
     {
       name: "Celia - Etudiante",
-      image: "../../src/assets/images/temoignanes/personnage1.jpeg",
+      image: person1,
       text: "« France Prepa a été pour moi une opportunité énorme, un tremplin pour mener à bien mon projet professionnel »",
     },
     {
       name: "Loica - Etudiant",
-      image: "../../src/assets/images/temoignanes/personnage2.jpg",
+      image: person2,
       text: "« France Prepa m'a permis de découvrir de nouvelles opportunités et de renforcer mes compétences professionnelles »",
     },
     {
       name: "Alexandre - Entrepreneur",
-      image: "../../src/assets/images/temoignanes/personnage3.jpeg",
+      image: person3,
       text: "« Grâce à France Prepa, j'ai pu me préparer aux grandes écoles et lancer mon propre projet d'entreprise »",
     },
   ];

@@ -1,3 +1,6 @@
+// IMPORT IMAGES
+import personnage from "../../../src/assets/images/temoignanes/hand.png";
+
 const posts = [
   {
     id: 1,
@@ -9,11 +12,10 @@ const posts = [
     datetime: "2024-11-30",
     category: { title: "Annonce", href: "#" },
     author: {
-      name: "France Prépa",
-      role: "Co-Founder / CTO",
+      name: "Dr.  Benjamin B.",
+      role: "Promoteur de Dr.  Benjamin B.",
       href: "#",
-      imageUrl:
-        "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+      imageUrl: personnage,
     },
   },
   // More posts...
@@ -27,11 +29,10 @@ const posts = [
     datetime: "2020-03-16",
     category: { title: "Annonce", href: "#" },
     author: {
-      name: "France Prépa",
-      role: "Co-Founder / CTO",
+      name: "Dr.  Benjamin B.",
+      role: "Promoteur de Dr.  Benjamin B.",
       href: "#",
-      imageUrl:
-        "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+      imageUrl: personnage,
     },
   },
   {
@@ -45,10 +46,9 @@ const posts = [
     category: { title: "Annonce", href: "#" },
     author: {
       name: "Michael Foster",
-      role: "Co-Founder / CTO",
+      role: "Promoteur de Dr.  Benjamin B.",
       href: "#",
-      imageUrl:
-        "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+      imageUrl: personnage,
     },
   },
   {
@@ -61,10 +61,9 @@ const posts = [
     category: { title: "Annonce", href: "#" },
     author: {
       name: "Michael Foster",
-      role: "Co-Founder / CTO",
+      role: "Promoteur de Dr.  Benjamin B.",
       href: "#",
-      imageUrl:
-        "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+      imageUrl: personnage,
     },
   },
 ];
@@ -74,7 +73,7 @@ export default function News() {
     <div className="bg-white py-5 sm:py-20">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0">
-          <h2 className="text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
+          <h2 className="text-pretty text-4xl font-semibold tracking-tight text-[#00008f] sm:text-5xl">
             Actualités de France Prépa
           </h2>
           <p className="mt-2 text-lg/8 text-gray-600">
@@ -110,7 +109,7 @@ export default function News() {
                   {post.description}
                 </p>
               </div>
-              <div className="relative mt-8 flex items-center gap-x-4">
+              <div className="relative mt-8 flex items-center gap-x-4 text-justify">
                 <img
                   alt=""
                   src={post.author.imageUrl}
@@ -119,7 +118,7 @@ export default function News() {
                 <div className="text-sm/6">
                   <p className="font-semibold text-gray-900">
                     <a href={post.author.href}>
-                      <span className="absolute inset-0" />
+                      <span className="absolute inset-0 " />
                       {post.author.name}
                     </a>
                   </p>

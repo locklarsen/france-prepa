@@ -54,7 +54,7 @@ const EtudesInternationales = () => {
     }
   };
   return (
-    <div className="bg-white">
+    <div>
       {/* Barre de navigation */}
       <NavigationBar />
 

@@ -4,6 +4,11 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 // import "../styles.css";
+
+//  IMPORTER DES IMAGES
+import image_orientation from "../../assets/images/gallerie/orientation.JPG";
+import photo_famille from "../../../src/assets/images/gallerie/photo_famille.JPG";
+import image_jeune_fille from "../../../src/assets/images/temoignanes/personnage1.jpeg";
 const About = () => {
   const plusValues = [
     {
@@ -87,23 +92,19 @@ const About = () => {
           <div className="w-full px-3 sm:px-4 xl:w-1/2">
             <div className="py-3 sm:py-4">
               <img
-                src="../../src/assets/images/gallerie/orientation.JPG"
+                src={image_orientation}
                 alt=""
                 className="w-full rounded-2xl"
               />
             </div>
             <div className="py-3 sm:py-4">
-              <img
-                src="../../src/assets/images/gallerie/photo_famille.JPG"
-                alt=""
-                className="w-full rounded-2xl"
-              />
+              <img src={photo_famille} alt="" className="w-full rounded-2xl" />
             </div>
           </div>
           <div className="w-full px-3 sm:px-4 xl:w-1/2">
             <div className="relative z-10 my-4">
               <img
-                src="../../src/assets/images/temoignanes/personnage1.jpeg"
+                src={image_jeune_fille}
                 alt=""
                 className="w-full rounded-2xl"
               />

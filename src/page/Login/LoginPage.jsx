@@ -4,6 +4,9 @@ import NavigationBar from "../../components/homePage_Components/NavigationBar";
 import Footer from "../../components/homePage_Components/Footer";
 import { Button, Typography } from "@material-tailwind/react";
 
+// IMPORTER IMAGES
+import logo from "../../../src/assets/images/logos/logo.png";
+import image_hapyy from "../../../src/assets/images/background/001.jpg";
 const LoginPage = () => {
   return (
     <div className="flex flex-col min-h-screen w-auto">
@@ -13,16 +16,16 @@ const LoginPage = () => {
         {/* Left: Image */}
         <div className="lg:w-1/2 lg:block h-64 lg:h-auto opacity-90">
           <img
-            src="../../../src/assets/images/background/001.jpg"
+            src={image_hapyy}
             className="object-cover w-full h-full"
-            alt="Background"
+            alt="Background image"
           />
         </div>
 
         {/* Right: Login Form */}
         <div className="flex flex-col bg-white opacity-95 rounded-2xl p-8 sm:p-10 md:p-12 lg:w-1/2 items-center justify-center">
           <img
-            src="../../../src/assets/images/logos/logo.png"
+            src={logo}
             alt="Placeholder Image"
             className="object-cover w-1/3 h-1/3 mb-4 "
           />

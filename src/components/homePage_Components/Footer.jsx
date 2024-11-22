@@ -9,6 +9,7 @@ import {
   FaWhatsapp,
   FaYoutube,
 } from "react-icons/fa6";
+import { Link, NavLink } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -24,7 +25,13 @@ const Footer = () => {
             dans les grandes écoles en France et à réussir parfaitement leur
             procédure de visa.{" "}
           </p>
-          <img className="w-20 h-20" src={logo} alt="Logo Fraance Prépa"></img>
+          <NavLink to={"/"}>
+            <img
+              className="w-20 h-20"
+              src={logo}
+              alt="Logo Fraance Prépa"
+            ></img>
+          </NavLink>
 
           {/* ICONES DE RESEAUX SOCIAUX */}
           <div className="flex space-x-6">
@@ -63,25 +70,34 @@ const Footer = () => {
           <ul role="list" className="mt-6 space-y-4">
             {/* Accueil */}
             <li>
-              <a
-                href="#"
+              <NavLink
+                to={"/"}
                 className="text-sm leading-6 text-gray-600 hover:text-gray-900"
               >
                 Accueil
-              </a>
+              </NavLink>
             </li>
 
             {/* France Prepa */}
             <li>
-              <a
-                href="#"
-                className="text-sm leading-6 text-gray-600 hover:text-gray-900"
+              <NavLink
+                to={"/francePrepa"}
+                className="text-sm leading-6 text-gray-600 hover:text-gray-900 uppercase"
               >
                 France Prépa
-              </a>
+              </NavLink>
             </li>
 
             {/* Etudes internationales */}
+            <li>
+              <NavLink
+                to={"/etudes_internationales/#"}
+                className="text-sm leading-6 text-gray-600 hover:text-gray-900 uppercase"
+              >
+                France Prépa
+              </NavLink>
+            </li>
+
             <li>
               <a
                 href="#"
@@ -93,12 +109,12 @@ const Footer = () => {
 
             {/* Contact */}
             <li>
-              <a
-                href="#"
+              <Link
+                to={"/contact"}
                 className="text-sm leading-6 text-gray-600 hover:text-gray-900"
               >
                 Contact
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
@@ -110,23 +126,23 @@ const Footer = () => {
           </h3>
           <ul role="list" className="mt-6 space-y-4">
             {/* Se connecter */}
+
             <li>
-              <a
-                href="#"
+              <Link
+                to={"/login"}
                 className="text-sm leading-6 text-gray-600 hover:text-gray-900"
               >
                 Se connecter
-              </a>
+              </Link>
             </li>
 
-            {/* Créer un compte */}
             <li>
-              <a
-                href="#"
+              <Link
+                to={"/signup"}
                 className="text-sm leading-6 text-gray-600 hover:text-gray-900"
               >
                 Créer un compte
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

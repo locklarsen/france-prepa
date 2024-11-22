@@ -3,6 +3,9 @@ import { BsTwitterX } from "react-icons/bs";
 import { FaFacebook, FaLinkedin } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 
+// IMPORTER LES IMAGES
+
+import promoteur from "../../../src/assets/images/temoignanes/promoteur.jpg";
 const FrancePrepaTeam = () => {
   // Liste statique des membres de l'équipe
   const teamMembers = [
@@ -11,28 +14,28 @@ const FrancePrepaTeam = () => {
       role: "Promoteur de France Prépa",
       description:
         " Dr. Obama est maître de conférences à l’Université Catholique de  Lyon et spécialiste des questions d’entreprenariat et de RSE.",
-      image: "https://cdn.tuk.dev/assets/photo-1544005313-94ddf0286df2.jfif",
+      image: promoteur,
     },
     {
       name: "Daouda",
       role: "Promoteur de France Prépa",
       description:
-        "A UX designer is the voice of the customer. Our job is to look beyond the business goals. We don't just experience user interface but also question it.",
-      image: "https://cdn.tuk.dev/assets/photo-1544005313-94ddf0286df2.jfif",
+        " Dr. Obama est maître de conférences à l’Université Catholique de  Lyon et spécialiste des questions d’entreprenariat et de RSE.",
+      image: promoteur,
     },
     {
       name: "Juvenal",
       role: "Promoteur de France Prépa",
       description:
-        "A UX designer is the voice of the customer. Our job is to look beyond the business goals. We don't just experience user interface but also question it.",
-      image: "https://cdn.tuk.dev/assets/photo-1544005313-94ddf0286df2.jfif",
+        " Dr. Obama est maître de conférences à l’Université Catholique de  Lyon et spécialiste des questions d’entreprenariat et de RSE.",
+      image: promoteur,
     },
   ];
 
   return (
     <div>
       <div className="mb-16" id="team">
-        <div className="w-full bg-gray-100 px-10 pt-10">
+        <div className="w-full bg-blue-50 px-10 pt-0">
           <div className="container mx-auto">
             <div
               role="list"

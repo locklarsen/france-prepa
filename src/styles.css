@@ -10,25 +10,14 @@
   margin: 0;
 }
 
-#loginpage {
-  background-image: url("../src/assets/images/background/001.JPG");
-}
 
-#signuppage {
-  background-image: url("../src/assets/images/background/002.JPG");
-  background-size: cover;
-}
+
 #contact {
   background-image: url("../src/assets/images/background/004.JPG");
 }
 
-#cityNetwork {
-  background-image: url("../src/assets/images/background/paris.jpg");
-}
 
-#etapeDossier {
-  background-image: url("../src/assets/images/background/paris_2.jpg");
-}
+
 
 .gradient-custom {
   background: radial-gradient(50% 123.47% at 50% 50%, #000097 0%, #f6aa00 100%),

@@ -5,15 +5,12 @@ import { Typography } from "@material-tailwind/react";
 // Services Section
 const Services = () => {
   return (
-    <section className="bg-gray-200 pt-5 pb-1 px-2 dark:bg-dark lg:pb-[90px] lg:pt-[120px]">
+    <section className="bg-gray-100 pt-5 pb-1 px-2 dark:bg-dark lg:pb-[90px] lg:pt-[120px]">
       <div className="container mx-auto">
         <div className="-mx-4 flex flex-wrap">
           <div className="w-full px-4">
             <div className="mx-auto mb-5 max-w-[510px] text-center lg:mb-20">
-              <span
-                className="block mb-4 text-lg font-semibold py-2 capitalize"
-                style={{ color: "#f70b1b" }}
-              >
+              <span className="block mb-4 text-lg font-semibold py-2 capitalize text-[#f70b1b]">
                 Nos services
               </span>
               <Typography
