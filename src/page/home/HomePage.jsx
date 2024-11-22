@@ -6,7 +6,7 @@ import { useInView } from "react-intersection-observer";
 import NavigationBar from "../../components/homePage_Components/NavigationBar";
 import CarouselCustomArrows from "../../components/homePage_Components/CarouselCustomArrows";
 import Footer from "../../components/homePage_Components/Footer";
-import SearchBar from "../../components/homePage_Components/SearchBar";
+import SearchBar from "../../components/homePage_Components/searchBar";
 import Services from "../../components/homePage_Components/Services";
 import Testimonial from "../../components/homePage_Components/Testimonial";
 import About from "../../components/homePage_Components/About";
