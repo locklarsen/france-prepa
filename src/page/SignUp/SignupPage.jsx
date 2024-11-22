@@ -5,7 +5,8 @@ import { Link } from "react-router-dom";
 import NavigationBar from "../../components/homePage_Components/NavigationBar";
 import { Button, Typography } from "@material-tailwind/react";
 
-import image_hapyy from "../../../src/assets/images/background/001.jpg";
+import background from "../../assets/images/background/001.JPG";
+
 import logo from "../../../src/assets/images/logos/logo.png";
 
 const SignupPage = () => {
@@ -15,7 +16,7 @@ const SignupPage = () => {
 
       {/* Section avec l'image d'arrière-plan et l'overlay blanc */}
       <div
-        style={{ backgroundImage: `url(${image_hapyy})` }}
+        style={{ backgroundImage: `url(${background})` }}
         className="relative w-full inset-50 p-5 sm:p-6 md:p-10 lg:p-14 flex flex-col justify-center items-center bg-cover bg-center"
       >
         {/* Overlay blanc semi-transparent */}
