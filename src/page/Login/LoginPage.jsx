@@ -6,7 +6,7 @@ import { Button, Typography } from "@material-tailwind/react";
 
 // IMPORTER IMAGES
 import logo from "../../../src/assets/images/logos/logo.png";
-import image_hapyy from "../../../src/assets/images/background/001.jpg";
+import image_hapyy from "../../../src/assets/images/background/001.jPG";
 const LoginPage = () => {
   return (
     <div className="flex flex-col min-h-screen w-auto">
