@@ -7,7 +7,7 @@ import { Button, Typography } from "@material-tailwind/react";
 // IMPORTER IMAGES
 import logo from "../../../src/assets/images/logos/logo.png";
 
-import background from "../../../src/assets/images/background/002.JPG";
+import background from "../../assets/images/background/001.JPG";
 
 const LoginPage = () => {
   return (
