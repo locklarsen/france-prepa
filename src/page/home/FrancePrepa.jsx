@@ -13,6 +13,7 @@ import FrancePrepaTeam from "../../components/homePage_Components/FrancePrepaTea
 // IMPORT VIDÉO
 import video from "../../../src/assets/videos/video_01.MP4";
 import voyage from "../../../src/assets/images/gallerie/voyage.jpg";
+import ScrollToTopButton from "../../components/general_usage_components/ScrollToTopButton";
 
 // Variantes d'animation pour Framer Motion
 const containerVariants = {
@@ -37,6 +38,7 @@ const AnimatedComponent = ({ children }) => {
 
   return (
     <motion.div
+      ScrollToTopButton
       ref={ref}
       variants={containerVariants}
       initial="hidden"
@@ -58,9 +60,9 @@ const FrancePrepa = () => {
   };
   return (
     <div className="bg-white">
+      <ScrollToTopButton />
       {/* Barre de navigation */}
       <NavigationBar />
-
       <div className="relative h-[75vh] sm:h-[50vh] lg:h-[85vh]">
         {/* Image de la diapositive */}
         <img src={voyage} alt="voyage" className="h-full w-full object-cover" />
@@ -93,7 +95,6 @@ const FrancePrepa = () => {
           </div>
         </div>
       </div>
-
       {/* Section Présentation */}
       <AnimatedComponent>
         <div className="bg-white flex flex-col lg:flex-row items-center justify-center lg:justify-between px-6 py-16">
@@ -104,12 +105,10 @@ const FrancePrepa = () => {
           </div> */}
         </div>
       </AnimatedComponent>
-
       {/* Section Diplômes */}
       <AnimatedComponent>
         <Diplomes />
       </AnimatedComponent>
-
       {/* Section Écoles partenaires */}
       <AnimatedComponent>
         <div className="grid grid-cols-1 md:grid-cols-2 bg-[#0a090f] text-white py-16 px-6 gap-8 hover:shadow-xl transform hover:scale-105 transition-transform duration-300">
@@ -149,12 +148,10 @@ const FrancePrepa = () => {
           </div>
         </div>
       </AnimatedComponent>
-
       {/* Section Équipe */}
       <AnimatedComponent>
         <FrancePrepaTeam />
       </AnimatedComponent>
-
       {/* Footer */}
       <Footer />
     </div>

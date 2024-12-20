@@ -11,6 +11,7 @@ import CityNetwork from "../../components/homePage_Components/CityNetwork";
 import EtapeDossier from "../../components/homePage_Components/etapeDossier";
 
 import DownloadBrochureForm from "../../components/homePage_Components/DownloadBrochureForm";
+import ScrollToTopButton from "../../components/general_usage_components/ScrollToTopButton";
 
 // Variantes d'animation pour Framer Motion
 const containerVariants = {
@@ -56,6 +57,7 @@ const EtudesInternationales = () => {
   };
   return (
     <div>
+      <ScrollToTopButton />
       {/* Barre de navigation */}
       <NavigationBar />
 

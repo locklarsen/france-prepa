@@ -10,6 +10,7 @@ import { Button, Typography } from "@material-tailwind/react";
 // IMAGE
 import logo from "../../../src/assets/images/logos/logo.png";
 import background_image from "../../../src/assets/images/background/004.JPG";
+import ScrollToTopButton from "../../components/general_usage_components/ScrollToTopButton";
 
 export default function Contact() {
   return (
@@ -17,6 +18,7 @@ export default function Contact() {
       className="relative bg-white flex flex-col min-h-screen bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: `url(${background_image})` }}
     >
+      <ScrollToTopButton />
       {/* Superposition noire avec opacité */}
       <div className="absolute inset-0 bg-[#000000] bg-opacity-75 z-10 pointer-events-none"></div>
 

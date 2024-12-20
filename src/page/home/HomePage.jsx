@@ -12,6 +12,7 @@ import Testimonial from "../../components/homePage_Components/Testimonial";
 import About from "../../components/homePage_Components/About";
 import News from "../../components/homePage_Components/News";
 import Faqs from "../../components/homePage_Components/Faqs";
+import ScrollToTopButton from "../../components/general_usage_components/ScrollToTopButton";
 
 const containerVariants = {
   hidden: { opacity: 0, y: 50 },
@@ -47,6 +48,7 @@ const AnimatedComponent = ({ children }) => {
 const HomePage = () => {
   return (
     <div className="">
+      <ScrollToTopButton/>
       <AnimatedComponent>
         <NavigationBar />
         <CarouselCustomArrows />
