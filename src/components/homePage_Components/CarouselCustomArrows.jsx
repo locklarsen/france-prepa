@@ -38,7 +38,7 @@ const CarouselCustomArrows = () => {
             <Typography
               variant="h1"
               color="white"
-              className="mb-4 text-2xl sm:text-3xl md:text-5xl lg:text-6xl"
+              className="mb-4 text-2xl sm:text-3xl md:text-5xl lg:text-6xl uppercase"
             >
               Préparation aux grandes écoles en France
             </Typography>
@@ -81,7 +81,7 @@ const CarouselCustomArrows = () => {
             <Typography
               variant="h1"
               color="white"
-              className="mb-4 text-xl sm:text-2xl md:text-4xl lg:text-5xl"
+              className="mb-4 text-xl sm:text-2xl md:text-4xl lg:text-5xl uppercase"
             >
               Une préparation pour réussir votre avenir
             </Typography>
@@ -123,7 +123,7 @@ const CarouselCustomArrows = () => {
             <Typography
               variant="h1"
               color="white"
-              className="mb-4 text-xl sm:text-2xl md:text-4xl lg:text-5xl"
+              className="mb-4 text-xl sm:text-2xl md:text-4xl lg:text-5xl uppercase"
             >
               Les clefs de l’obtention du visa
             </Typography>

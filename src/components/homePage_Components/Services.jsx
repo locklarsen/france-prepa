@@ -9,7 +9,10 @@ const Services = () => {
       <div className="flex flex-wrap">
         <div className="w-full">
           <div className="mb-5 max-w-full text-center lg:mb-20">
-            <span className="block mb-4 text-lg font-semibold py-2 capitalize text-[#f70b1b]">
+            <span
+              className="block mb-4 text-lg font-bold py-2 uppercase"
+              style={{ color: "#f70b1b" }}
+            >
               Nos services
             </span>
             <Typography

@@ -16,6 +16,7 @@ import person1 from "../../../src/assets/images/temoignanes/personnage1.jpeg";
 import person2 from "../../../src/assets/images/temoignanes/personnage2.jpg";
 import person3 from "../../../src/assets/images/temoignanes/personnage3.jpeg";
 import LargeVideo from "../general_usage_components/LargeVideo";
+import { Typography } from "@material-tailwind/react";
 
 const Testimonial = () => {
   const [activeTestimonial, setActiveTestimonial] = useState(0);
@@ -70,9 +71,18 @@ const Testimonial = () => {
     <MDBContainer fluid className="py-4">
       <div className="bg-white relative flex min-h-fit flex-col justify-center overflow-hidden bg-slate-100 py-1 sm:py-8">
         <div className="max-w-full px-4 sm:px-24 py-4">
-          <h2 className="font-bold text-[#00008f] text-center text-2xl sm:text-4xl lg:text-5xl text-slate-700 font-display">
-            Nos étudiants témoignent
-          </h2>
+          <span
+            className="block mb-4 text-lg font-bold py-2 uppercase"
+            style={{ color: "#f70b1b" }}
+          >
+         Témoignages
+          </span>
+          <Typography
+            variant="h1"
+            className="text-[#00008f] font-[montserrat] uppercase font-bold mb-1 text-3xl dark:text-white sm:text-[40px]/[48px]"
+          >
+            Nos étudiants témoignents
+          </Typography>
           <p className="text-center my-4 font-medium text-slate-500">
             - Témoignage d'un étudiant -
           </p>

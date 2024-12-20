@@ -6,6 +6,7 @@ import personnage from "../../../src/assets/images/temoignanes/hand.png";
 import postImage1 from "../../../src/assets/images/carousel/3.JPG";
 import postImage2 from "../../../src/assets/images/carousel/2.JPG";
 import postImage3 from "../../../src/assets/images/carousel/1.JPG";
+import { Typography } from "@material-tailwind/react";
 
 const posts = [
   {
@@ -59,9 +60,18 @@ export default function News() {
           }}
           className="w-full lg:mx-0"
         >
-          <h2 className="text-pretty text-4xl font-bold tracking-tight text-[#00008f] sm:text-5xl">
+          <span
+            className="block mb-4 text-lg font-bold py-2 uppercase"
+            style={{ color: "#f70b1b" }}
+          >
+            Actualité
+          </span>
+          <Typography
+            variant="h1"
+            className="text-[#00008f] font-[montserrat] uppercase font-bold mb-5 text-3xl dark:text-white sm:text-[40px]/[48px]"
+          >
             Actualités de France Prépa Academy
-          </h2>
+          </Typography>
         </motion.div>
         <motion.div
           initial={{ opacity: 0, y: 50 }}
