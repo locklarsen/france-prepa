@@ -71,24 +71,44 @@ const EtudesInternationales = () => {
 
         {/* Texte de la diapositive */}
         <div className="absolute inset-0 grid h-full w-full place-items-center items-end pb-8 bg-black/75">
-          <div className="w-5/6 md:w-3/4 lg:w-3/4 text-center px-4">
+          <div className="w-full text-center px-2">
             <AnimatedComponent>
-              <div className="flex flex-col items-center py-14 px-4 text-center">
-                <Typography
+              <div className="flex flex-col items-center py-14 px-2 text-center">
+                <motion.Typography
+                  initial={{ opacity: 0, y: 50 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{
+                    duration: 0.5,
+                    delay: 0.5,
+                  }}
                   variant="h1"
                   className="text-[#f6aa00] font-[montserrat] uppercase font-bold text-3xl sm:text-[40px]/[48px] dark:text-white"
                 >
                   Etudes internationales
-                </Typography>
-                <span
+                </motion.Typography>
+                <motion.span
+                  initial={{ opacity: 0, y: 50 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{
+                    duration: 0.5,
+                    delay: 0.6,
+                  }}
                   className="block mt-2 text-2xl font-semibold"
                   style={{ color: "#f70b1b" }}
                 >
                   France Prépa, un réseau d’école en France
-                </span>
-                {/* <p className="mt-4 text-base text-white">
+                </motion.span>
+                {/* <motion.p
+                  initial={{ opacity: 0, y: 50 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{
+                    duration: 0.5,
+                    delay: 0.8,
+                  }}
+                  className="mt-4 text-base text-white"
+                >
                   France Prépa, un réseau d’école en France
-                </p> */}
+                </motion.p> */}
               </div>
             </AnimatedComponent>
           </div>
