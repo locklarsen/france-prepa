@@ -68,7 +68,7 @@ const Testimonial = () => {
   };
 
   return (
-    <MDBContainer fluid className="py-4">
+    <MDBContainer fluid className="py-2">
       <div className="bg-white relative flex min-h-fit flex-col justify-center overflow-hidden bg-slate-100 py-1 sm:py-8">
         <div className="max-w-full px-4 sm:px-24 py-4">
           <span
