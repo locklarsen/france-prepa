@@ -1,19 +1,26 @@
+// IMPORTER LES PACKAGES REACT
 import React from "react";
+import { Link } from "react-router-dom";
+
+// IMPORTER D'AUTRES PACKAGES
 import { motion } from "framer-motion";
+
+// IMPORTER DES COMPOSANT
 import { useInView } from "react-intersection-observer";
 import NavigationBar from "../../components/homePage_Components/NavigationBar";
-import LargeVideo from "../../components/general_usage_components/LargeVideo";
+import Video from "../../components/general_usage_components/Video";
 import image_preview from "../../../src/assets/images/gallerie/orientation.JPG";
 import { Typography } from "@material-tailwind/react";
 import Footer from "../../components/homePage_Components/Footer";
-import { Link } from "react-router-dom";
 import Diplomes from "../../components/homePage_Components/Diplomes";
 import FrancePrepaTeam from "../../components/homePage_Components/FrancePrepaTeam";
-
-// IMPORT VIDÉO
-import video from "../../../src/assets/videos/video_01.MP4";
-import voyage from "../../../src/assets/images/gallerie/voyage.jpg";
 import ScrollToTopButton from "../../components/general_usage_components/ScrollToTopButton";
+
+// IMPORTER DES VIDÉOS
+import url_video from "../../../src/assets/videos/video_01.MP4";
+
+// IMPORTER DES IMAGE
+import voyage from "../../../src/assets/images/gallerie/mbw.JPG";
 
 // Variantes d'animation pour Framer Motion
 const containerVariants = {
@@ -65,13 +72,23 @@ const FrancePrepa = () => {
       <NavigationBar />
       <div className="relative h-[75vh] sm:h-[50vh] lg:h-[85vh]">
         {/* Image de la diapositive */}
-        <img src={voyage} alt="voyage" className="h-full w-full object-cover" />
-
-        {/* Texte de la diapositive */}
-        <div className="absolute inset-0 grid h-full w-full place-items-center items-end pb-8 bg-black/75">
-          <div className="w-full text-center px-2">
-            <AnimatedComponent>
-              <div className="flex flex-col items-center py-14 px-2 text-center">
+        <img src={voyage} alt="voyage" className="h-full w-full object-fut" />
+      </div>
+      <section
+        className={`flex flex-wrap lg:flex-nowrap px-14 pb-2 pt-0 items-center m-auto shadow-md shadow-gray-100`}
+        id="about"
+      >
+        {/* Section Texte */}
+        <motion.div
+          initial={{ opacity: 0, y: 100 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: 100 }}
+          transition={{ duration: 2 }}
+          className={`w-full lg:w-8/12 px-1 lg:mt-0 mt-4`}
+        >
+          <div className={"flex flex-wrap"}>
+            <div className={"w-full"}>
+              <div className={"mb-5 max-w-full text-center lg:mb-20"}>
                 <motion.Typography
                   initial={{ opacity: 0, y: 50 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -84,7 +101,6 @@ const FrancePrepa = () => {
                 >
                   France Prépa Academy
                 </motion.Typography>
-
                 <motion.span
                   initial={{ opacity: 0, y: 50 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -97,7 +113,6 @@ const FrancePrepa = () => {
                 >
                   L’ouverture aux grandes écoles en France
                 </motion.span>
-
                 <motion.p
                   initial={{ opacity: 0, y: 50 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -105,7 +120,7 @@ const FrancePrepa = () => {
                     duration: 0.5,
                     delay: 0.8,
                   }}
-                  className="mt-4 text-base text-white"
+                  className="mt-4 text-base text-black"
                 >
                   Notre mission consiste à faciliter aux étudiants africains
                   l’accès aux grandes écoles de commerce, de management et du
@@ -113,20 +128,27 @@ const FrancePrepa = () => {
                   leurs diplômes visés par l’Etat français.
                 </motion.p>
               </div>
+            </div>
+          </div>
+        </motion.div>
+
+        <div
+          className={`bg-[#f7a901] hover:bg-[#00008f] hover:text-white rounded-lg w-full lg:w-4/12 px-2 py-3  mt-4 lg:mt-0 shadow-md shadow-gray-300 lg:order-last`}
+        >
+          <div className={`flex items-center justify-center`}>
+            <AnimatedComponent>
+              <div className={`relative w-full h-full italic z-50`}>
+                <Video
+                  videoSource={url_video}
+                  imagePreview={image_preview}
+                  subtitle={"Mot du Promoteur de France Prépa Academy"}
+                />
+              </div>
             </AnimatedComponent>
           </div>
         </div>
-      </div>
-      {/* Section Présentation */}
-      <AnimatedComponent>
-        <div className="bg-white flex flex-col lg:flex-row items-center justify-center lg:justify-between px-6 py-16">
-          {/* Vidéo */}
-          <LargeVideo videoSource={video} imagePreview={image_preview} />
-          {/* <div className="w-full lg:w-1/2 mt-8 lg:mt-0 flex justify-center">
-            <div className="overflow-hidden rounded-[4rem] w-11/12 sm:w-3/4 md:w-2/3 lg:w-full"></div>
-          </div> */}
-        </div>
-      </AnimatedComponent>
+      </section>
+
       {/* Section Diplômes */}
       <AnimatedComponent>
         <Diplomes />

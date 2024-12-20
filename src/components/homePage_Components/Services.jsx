@@ -2,30 +2,40 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Typography } from "@material-tailwind/react";
 
-// Services Section
+// Section des services avec titre et animation
 const Services = () => {
   return (
-    <section className="bg-gray-50 py-3 sm:py-8 px-4 sm:px-14 lg:pb-[90px] lg:pt-[120px]">
-      <div className="flex flex-wrap">
-        <div className="w-full">
-          <div className="mb-5 max-w-full text-center lg:mb-20">
+    <section
+      className={
+        "bg-gray-50 py-4 sm:py-4 px-4 sm:px-14 lg:pb-[90px] lg:pt-[120px] shadow-md shadow-gray-100"
+      }
+    >
+      <div className={"flex flex-wrap"}>
+        <div className={"w-full"}>
+          <div className={"mb-5 max-w-full text-center lg:mb-20"}>
             <span
-              className="block mb-4 text-lg font-bold py-2 uppercase"
+              className={"block mb-4 text-lg font-bold py-2 uppercase"}
               style={{ color: "#f70b1b" }}
             >
               Nos services
             </span>
             <Typography
               variant="h1"
-              className="text-[#00008f] font-[montserrat] uppercase font-bold mb-5 text-3xl dark:text-white sm:text-[40px]/[48px]"
+              className={
+                "text-[#00008f] font-[montserrat] uppercase font-bold text-3xl dark:text-white sm:text-[40px]/[48px]"
+              }
             >
               Ce que nous vous offrons
             </Typography>
           </div>
         </div>
       </div>
-      {/* Grid des cartes avec animation séquentielle */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-6">
+      {/* Grille des cartes de service avec animation séquentielle */}
+      <div
+        className={
+          "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-6"
+        }
+      >
         {serviceData.map((service, index) => (
           <motion.div
             key={service.title}
@@ -33,7 +43,7 @@ const Services = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{
               duration: 0.5,
-              delay: index * 0.3, // Délai progressif entre les cartes
+              delay: index * 0.3, // Appliquer un délai progressif entre les animations
             }}
           >
             <ServiceCard {...service} />
@@ -46,26 +56,39 @@ const Services = () => {
 
 export default Services;
 
-// ServiceCard Component
+// Composant ServiceCard : représente un service unique
 const ServiceCard = ({ icon, title, details }) => {
   return (
-    <div className="pb-6 sm:pb-8 pt-2 w-full sm:w-auto px-2 sm:px-4">
-      <div className="mb-2 rounded-lg bg-gradient-to-t from-[#07076b] to-[#030341] text-white py-6 px-4 shadow-md md:px-7 xl:px-10 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
-        <div className="flex flex-col items-center">
-          <div className="mb-8 flex h-[50px] w-[50px] items-center justify-center rounded-2xl bg-[#f6aa00]">
+    <div className={"py-2 sm:py-1 w-full sm:w-auto px-2 sm:px-4"}>
+      <div
+        className={
+          "mb-2 rounded-lg bg-gradient-to-t from-[#07076b] to-[#030341] text-white py-6 px-4 shadow-md md:px-7 xl:px-10 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
+        }
+      >
+        <div className={"flex flex-col items-center"}>
+          <div
+            className={
+              "mb-8 flex h-[50px] w-[50px] items-center justify-center rounded-2xl bg-[#f6aa00]"
+            }
+          >
             {icon}
           </div>
-          <h4 className="mb-[14px] text-1xl font-semibold text-white">
+          <h4
+            className={
+              "mb-[14px] text-1xl font-semibold text-white text-center"
+            }
+          >
             {title}
           </h4>
         </div>
-        <p className="font-normal text-white">{details}</p>
+        <p className={"font-normal text-white"}>{details}</p>
       </div>
     </div>
   );
 };
 
-// Data for services
+// Données des services avec titre, icône et description
+
 const serviceData = [
   {
     title: "Admission dans une grande école",
@@ -133,7 +156,7 @@ const serviceData = [
   {
     title: "Stage/alternance en entreprise",
     details:
-      "Nous vous aidons à trouver des stages ou des alternances en entreprise pour renforcer votre expérience professionnelle.",
+      "Nous vous aidons à trouver des stages ou des alternances pour renforcer votre expérience professionnelle.",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"

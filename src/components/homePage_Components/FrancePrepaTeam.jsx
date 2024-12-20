@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 // IMPORTER LES IMAGES
 
 import promoteur from "../../../src/assets/images/gallerie/promoteur.jpg";
-import personne from "../../../src/assets/images/temoignanes/personnage4.jpg";
+import personne from "../../../src/assets/images/gallerie/promoteur.jpg";
 const FrancePrepaTeam = () => {
   // Liste statique des membres de l'équipe
   const teamMembers = [
