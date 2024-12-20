@@ -42,6 +42,19 @@ const stepVariants = {
   }),
 };
 
+// Variantes d'animation
+const dossierVarients = {
+  animate: {
+    scale: [1, 1.1, 1], // Animation de zoom avant/arrière
+    opacity: [1, 0.8, 1], // Variation d'opacité
+    transition: {
+      duration: 2, // Durée de l'animation
+      repeat: Infinity, // Répétition infinie
+      repeatDelay: 1, // Délai entre deux cycles
+    },
+  },
+};
+
 const EtapeDossier = () => {
   return (
     <div
@@ -56,7 +69,7 @@ const EtapeDossier = () => {
         <h1 className="text-3xl font-bold text-[#f6aa00]">
           Cheminement Chronologique
         </h1>
-        <p className="text-gray-400 mt-2">
+        <p className="text-gray-200 font-semibold mt-2">
           Voici les étapes clés de votre projet d'études.
         </p>
       </div>
@@ -70,25 +83,23 @@ const EtapeDossier = () => {
         <div className="space-y-12">
           {steps.map((step, index) => (
             <motion.div
-              key={step.id}
-              custom={index}
-              initial="hidden"
-              animate="visible"
-              variants={stepVariants}
+              key={index}
+              variants={dossierVarients}
+              animate="animate"
               className={`relative flex items-center ${
                 index % 2 === 0 ? "flex-row" : "flex-row-reverse"
               }`}
             >
               {/* Contenu de l'étape */}
               <div
-                className={`bg-white shadow-md rounded-lg p-6 w-72 z-20 ${
+                className={` bg-gradient-to-t from-[#f6aa00] to-[#d98d05]  border-white border-4 shadow-md rounded-lg p-6 w-72 z-20 ${
                   index % 2 === 0 ? "text-right ml-auto" : "text-left mr-auto"
                 }`}
               >
-                <h3 className="text-lg font-semibold text-[#00008f]">
+                <h3 className="text-lg font-bold text-[#00008f]">
                   {step.title}
                 </h3>
-                <p className="text-sm text-gray-600 mt-2">{step.description}</p>
+                <p className="text-md font-semibold text-white mt-2">{step.description}</p>
               </div>
 
               {/* Point sur la ligne */}

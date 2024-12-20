@@ -1,6 +1,6 @@
 // IMPORTER LES PACKAGES REACT
 import { Carousel, Typography, Button } from "@material-tailwind/react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 // IMPORTER LES IMAGES POUR LE CAROUSEL
 import carousel_img1 from "../../../src/assets/images/carousel/1.JPG";
@@ -33,47 +33,36 @@ const CarouselCustomArrows = () => {
         />
 
         {/* Texte de la diapositive */}
-        <div className="absolute inset-0 grid h-full w-full place-items-center bg-black/75">
-          <div className="w-5/6 md:w-3/4 lg:w-2/4 text-center px-4">
+        <div className="absolute inset-0 grid h-full w-full place-items-center items-end pb-8 bg-black/75">
+          <div className="w-5/6 md:w-3/4 lg:w-3/4 text-center px-4">
             <Typography
               variant="h1"
               color="white"
-              className="mb-4 text-xl sm:text-2xl md:text-4xl lg:text-5xl"
+              className="mb-4 text-2xl sm:text-3xl md:text-5xl lg:text-6xl"
             >
               Préparation aux grandes écoles en France
             </Typography>
-            <Typography
-              variant="lead"
-              color="white"
-              className="mb-12 text-sm sm:text-base md:text-lg lg:text-xl opacity-80"
-            >
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae,
-              cupiditate quaerat? Iste rerum distinctio eveniet dicta
-              laboriosam? Nulla eligendi suscipit qui aperiam, consequatur at ad
-              fuga repellendus nemo perspiciatis sint officiis enim facere quae
-              blanditiis.
-            </Typography>
 
             {/* Deux boutons dans la diapositive */}
-            <div className="flex flex-wrap justify-center gap-2">
-              <Button
-                size="lg"
-                className="font-[montserrat] bg-[#f6aa00] hover:bg-[#e59d01] hover:border-1 hover:border-yellow-100"
+            <div className="flex flex-col justify-center items-center gap-2 ">
+              <NavLink
+                className="bg-[#f6aa00] hover:bg-[#00007a] text-[#ffff] hover:text-[#f6aa00]  font-semibold rounded-lg p-3.5 justify-center shadow- w-fit uppercase"
                 onClick={() => scrollToSection("about")}
               >
-                EXPLORER
-              </Button>
+                Découvrir
+              </NavLink>
+
               <Button
                 size="lg"
                 variant="text"
                 className="font-[montserrat] bg-transparent text-white hover:text-[#e59d01] hover:bg-[#e59d01] hover:border-1 hover:border-[#e59d01]"
               >
-                <Link
+                {/* <Link
                   to={"/signup"}
                   className="hover:text-[#e59d01] hover:border-[#e59d01]"
                 >
                   S'INSCRIRE
-                </Link>
+                </Link> */}
               </Button>
             </div>
           </div>
@@ -87,8 +76,8 @@ const CarouselCustomArrows = () => {
           alt="image 2"
           className="h-full w-full object-cover"
         />
-        <div className="absolute inset-0 grid h-full w-full place-items-center bg-black/75">
-          <div className="w-5/6 md:w-3/4 lg:w-2/4 text-center px-4">
+        <div className="absolute inset-0 grid h-full w-full place-items-center items-end pb-8 bg-black/75">
+          <div className="w-5/6 md:w-3/4 lg:w-3/4 text-center px-4">
             <Typography
               variant="h1"
               color="white"
@@ -96,36 +85,26 @@ const CarouselCustomArrows = () => {
             >
               Une préparation pour réussir votre avenir
             </Typography>
-            <Typography
-              variant="lead"
-              color="white"
-              className="mb-12 text-sm sm:text-base md:text-lg lg:text-xl opacity-80"
-            >
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae,
-              cupiditate quaerat? Iste rerum distinctio eveniet dicta
-              laboriosam? Nulla eligendi suscipit qui aperiam, consequatur at ad
-              fuga repellendus nemo perspiciatis sint officiis enim facere quae
-              blanditiis.
-            </Typography>
-            <div className="flex flex-wrap justify-center gap-2">
-              <Button
-                size="lg"
-                className="font-[montserrat] bg-[#f6aa00] hover:bg-[#e59d01] hover:border-1 hover:border-yellow-100"
-                onClick={() => scrollToSection("about")}
+
+            <div className="flex flex-col justify-center items-center gap-2 ">
+              <NavLink
+                className="bg-[#f6aa00] hover:bg-[#00007a] text-[#ffff] hover:text-[#f6aa00]  font-semibold rounded-lg p-3.5 justify-center shadow- w-fit uppercase"
+                to={"/signup"}
               >
-                EXPLORER
-              </Button>
+                S'incrire
+              </NavLink>
+
               <Button
                 size="lg"
                 variant="text"
                 className="font-[montserrat] bg-transparent text-white hover:text-[#e59d01] hover:bg-[#e59d01] hover:border-1 hover:border-[#e59d01]"
               >
-                <Link
+                {/* <Link
                   to={"/signup"}
                   className="hover:text-[#e59d01] hover:border-[#e59d01]"
                 >
                   S'INSCRIRE
-                </Link>
+                </Link> */}
               </Button>
             </div>
           </div>
@@ -139,8 +118,8 @@ const CarouselCustomArrows = () => {
           alt="image 3"
           className="h-full w-full object-cover"
         />
-        <div className="absolute inset-0 grid h-full w-full place-items-center bg-black/75">
-          <div className="w-5/6 md:w-3/4 lg:w-2/4 text-center px-4">
+        <div className="absolute inset-0 grid h-full w-full place-items-center items-end pb-8 bg-black/75">
+          <div className="w-5/6 md:w-3/4 lg:w-3/4 text-center px-4">
             <Typography
               variant="h1"
               color="white"
@@ -148,36 +127,26 @@ const CarouselCustomArrows = () => {
             >
               Les clefs de l’obtention du visa
             </Typography>
-            <Typography
-              variant="lead"
-              color="white"
-              className="mb-12 text-sm sm:text-base md:text-lg lg:text-xl opacity-80"
-            >
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae,
-              cupiditate quaerat? Iste rerum distinctio eveniet dicta
-              laboriosam? Nulla eligendi suscipit qui aperiam, consequatur at ad
-              fuga repellendus nemo perspiciatis sint officiis enim facere quae
-              blanditiis.
-            </Typography>
-            <div className="flex flex-wrap justify-center gap-2">
-              <Button
-                size="lg"
-                className="font-[montserrat] bg-[#f6aa00] hover:bg-[#e59d01] hover:border-1 hover:border-yellow-100"
-                onClick={() => scrollToSection("about")}
+
+            <div className="flex flex-col justify-center items-center gap-2 ">
+              <NavLink
+                className="bg-[#f6aa00] hover:bg-[#00007a] text-[#ffff] hover:text-[#f6aa00]  font-semibold rounded-lg p-3.5 justify-center shadow- w-fit uppercase"
+                to={"/contact"}
               >
-                EXPLORER
-              </Button>
+                Contactez-nous
+              </NavLink>
+
               <Button
                 size="lg"
                 variant="text"
                 className="font-[montserrat] bg-transparent text-white hover:text-[#e59d01] hover:bg-[#e59d01] hover:border-1 hover:border-[#e59d01]"
               >
-                <Link
+                {/* <Link
                   to={"/signup"}
                   className="hover:text-[#e59d01] hover:border-[#e59d01]"
                 >
                   S'INSCRIRE
-                </Link>
+                </Link> */}
               </Button>
             </div>
           </div>

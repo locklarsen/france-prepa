@@ -13,18 +13,9 @@ import { Link, NavLink } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-50 w-auto justify-center mx-auto max-w-full p-4 sm:pt-12 lg:px-8 lg:pt-24">
+    <footer className="bg-gradient-to-t from-[#10113d] to-[#03042a] w-auto justify-center mx-auto max-w-full p-4 sm:pt-12 lg:px-8 lg:pt-24">
       <div className="xl:grid xl:grid-cols-3 gap-2 xl:gap-2 justify-center">
         <div className="w-fit flex flex-col items-center space-y-5 pt-4 px-7">
-          <h3 className="text-sm font-semibold leading-6 text-gray-900">
-            France Prépa
-          </h3>
-
-          <p className="text-sm leading-6 text-gray-600">
-            Un organisme international qui aide les étudiants africains à entrer
-            dans les grandes écoles en France et à réussir parfaitement leur
-            procédure de visa.{" "}
-          </p>
           <NavLink to={"/"}>
             <img
               className="w-20 h-20"
@@ -32,6 +23,15 @@ const Footer = () => {
               alt="Logo Fraance Prépa"
             ></img>
           </NavLink>
+          <h3 className="text-sm font-semibold leading-6 text-[#f6aa00]">
+            France Prépa Academy
+          </h3>
+
+          <p className="text-sm leading-6 text-white">
+            Un organisme international qui aide les étudiants africains à entrer
+            dans les grandes écoles en France et à réussir parfaitement leur
+            procédure de visa.{" "}
+          </p>
 
           {/* ICONES DE RESEAUX SOCIAUX */}
           <div className="flex space-x-6">
@@ -64,44 +64,34 @@ const Footer = () => {
         {/* LIENS */}
         {/* Liens utiles */}
         <div className="flex flex-col items-center space-y-5 pt-4 ">
-          <h3 className="text-sm font-semibold leading-6 text-gray-900">
+          <h3 className="text-sm font-semibold leading-6 text-[#f6aa00]">
             Liens utiles
           </h3>
           <ul role="list" className="mt-6 space-y-4">
             {/* Accueil */}
-            <li>
+            {/* <li>
               <NavLink
                 to={"/"}
                 className="text-sm leading-6 text-gray-600 hover:text-gray-900"
               >
                 Accueil
               </NavLink>
-            </li>
+            </li> */}
 
             {/* France Prepa */}
             <li>
               <NavLink
                 to={"/francePrepa"}
-                className="text-sm leading-6 text-gray-600 hover:text-gray-900 uppercase"
+                className="text-sm leading-6 text-gray-300 hover:text-gray-900 capitalize"
               >
-                France Prépa
-              </NavLink>
-            </li>
-
-            {/* Etudes internationales */}
-            <li>
-              <NavLink
-                to={"/etudes_internationales/#"}
-                className="text-sm leading-6 text-gray-600 hover:text-gray-900 uppercase"
-              >
-                France Prépa
+                France Prépa Academy
               </NavLink>
             </li>
 
             <li>
               <a
                 href="#"
-                className="text-sm leading-6 text-gray-600 hover:text-gray-900"
+                className="text-sm leading-6 text-gray-300 hover:text-gray-900"
               >
                 Etudes internationales
               </a>
@@ -111,7 +101,7 @@ const Footer = () => {
             <li>
               <Link
                 to={"/contact"}
-                className="text-sm leading-6 text-gray-600 hover:text-gray-900"
+                className="text-sm leading-6 text-gray-300 hover:text-gray-900"
               >
                 Contact
               </Link>
@@ -121,7 +111,7 @@ const Footer = () => {
 
         {/* S'INSCRIRE */}
         <div className="flex flex-col items-center space-y-5 pt-4">
-          <h3 className="text-sm font-semibold leading-6 text-gray-900">
+          <h3 className="text-sm font-semibold leading-6 text-gray-300 uppercase">
             S’inscrire
           </h3>
           <ul role="list" className="mt-6 space-y-4">
@@ -130,7 +120,7 @@ const Footer = () => {
             <li>
               <Link
                 to={"/login"}
-                className="text-sm leading-6 text-gray-600 hover:text-gray-900"
+                className="text-sm leading-6 text-gray-300 hover:text-gray-900 uppercase"
               >
                 Se connecter
               </Link>
@@ -139,7 +129,7 @@ const Footer = () => {
             <li>
               <Link
                 to={"/signup"}
-                className="text-sm leading-6 text-gray-600 hover:text-gray-900"
+                className="text-sm leading-6 text-gray-300 hover:text-gray-900 uppercase"
               >
                 Créer un compte
               </Link>

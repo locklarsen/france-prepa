@@ -2,8 +2,9 @@ import React from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import NavigationBar from "../../components/homePage_Components/NavigationBar";
-import Video from "../../components/general_usage_components/Video";
-import { Button, Typography } from "@material-tailwind/react";
+import LargeVideo from "../../components/general_usage_components/LargeVideo";
+import image_preview from "../../../src/assets/images/gallerie/orientation.JPG";
+import { Typography } from "@material-tailwind/react";
 import Footer from "../../components/homePage_Components/Footer";
 import { Link } from "react-router-dom";
 import Diplomes from "../../components/homePage_Components/Diplomes";
@@ -11,6 +12,7 @@ import FrancePrepaTeam from "../../components/homePage_Components/FrancePrepaTea
 
 // IMPORT VIDÉO
 import video from "../../../src/assets/videos/video_01.MP4";
+import voyage from "../../../src/assets/images/gallerie/voyage.jpg";
 
 // Variantes d'animation pour Framer Motion
 const containerVariants = {
@@ -59,58 +61,47 @@ const FrancePrepa = () => {
       {/* Barre de navigation */}
       <NavigationBar />
 
-      {/* Section Titre */}
-      <AnimatedComponent>
-        <div className="flex flex-col items-center py-14 px-4 text-center">
-          <Typography
-            variant="h1"
-            className="text-[#000097] font-[montserrat] uppercase font-bold text-3xl sm:text-[40px]/[48px] dark:text-white"
-          >
-            France Prépa
-          </Typography>
-          <span
-            className="block mt-2 text-lg font-semibold capitalize"
-            style={{ color: "#f70b1b" }}
-          >
-            L’ouverture aux grandes écoles en France
-          </span>
+      <div className="relative h-[75vh] sm:h-[50vh] lg:h-[85vh]">
+        {/* Image de la diapositive */}
+        <img src={voyage} alt="voyage" className="h-full w-full object-cover" />
+
+        {/* Texte de la diapositive */}
+        <div className="absolute inset-0 grid h-full w-full place-items-center items-end pb-8 bg-black/75">
+          <div className="w-5/6 md:w-3/4 lg:w-3/4 text-center px-4">
+            <AnimatedComponent>
+              <div className="flex flex-col items-center py-14 px-4 text-center">
+                <Typography
+                  variant="h1"
+                  className="text-[#f6aa00] font-[montserrat] uppercase font-bold text-3xl sm:text-[40px]/[48px] dark:text-white"
+                >
+                  France Prépa Academy
+                </Typography>
+                <span
+                  className="block mt-2 text-2xl font-semibold"
+                  style={{ color: "#f70b1b" }}
+                >
+                  L’ouverture aux grandes écoles en France
+                </span>
+                <p className="mt-4 text-base text-white">
+                  Notre mission consiste à faciliter aux étudiants africains
+                  l’accès aux grandes écoles de commerce, de management et du
+                  digital en France, et à les encadrer dans la validation de
+                  leurs diplômes visés par l’Etat français.
+                </p>
+              </div>
+            </AnimatedComponent>
+          </div>
         </div>
-      </AnimatedComponent>
+      </div>
 
       {/* Section Présentation */}
       <AnimatedComponent>
         <div className="bg-white flex flex-col lg:flex-row items-center justify-center lg:justify-between px-6 py-16">
-          {/* Texte de présentation */}
-          <div className="lg:max-w-xl text-center lg:text-left">
-            <Typography
-              variant="h2"
-              className="text-gray-800 font-light text-3xl leading-snug sm:text-5xl sm:leading-snug"
-            >
-              France{" "}
-              <span className="text-[#000097] border-b-8 border-g4 px-2 font-bold">
-                Prépa
-              </span>
-            </Typography>
-            <p className="mt-4 text-base text-gray-700">
-              Notre mission consiste à faciliter aux étudiants africains l’accès
-              aux grandes écoles de commerce, de management et du digital en
-              France, et à les encadrer dans la validation de leurs diplômes
-              visés par l’Etat français.
-            </p>
-            <Button
-              size="lg"
-              className="mt-6 font-[montserrat] bg-[#f6aa00] hover:bg-[#e59d01] hover:border-1 hover:border-yellow-100"
-            >
-              <Link to="/contact">Contactez-nous</Link>
-            </Button>
-          </div>
-
           {/* Vidéo */}
-          <div className="w-full lg:w-1/2 mt-8 lg:mt-0 flex justify-center">
-            <div className="overflow-hidden rounded-[4rem] w-11/12 sm:w-3/4 md:w-2/3 lg:w-full">
-              <Video url={video} />
-            </div>
-          </div>
+          <LargeVideo videoSource={video} imagePreview={image_preview} />
+          {/* <div className="w-full lg:w-1/2 mt-8 lg:mt-0 flex justify-center">
+            <div className="overflow-hidden rounded-[4rem] w-11/12 sm:w-3/4 md:w-2/3 lg:w-full"></div>
+          </div> */}
         </div>
       </AnimatedComponent>
 
@@ -121,51 +112,39 @@ const FrancePrepa = () => {
 
       {/* Section Écoles partenaires */}
       <AnimatedComponent>
-        <div className="grid grid-cols-1 md:grid-cols-2 bg-black text-white py-16 px-6 gap-8">
-          {/* Écoles partenaires */}
+        <div className="grid grid-cols-1 md:grid-cols-2 bg-[#0a090f] text-white py-16 px-6 gap-8 hover:shadow-xl transform hover:scale-105 transition-transform duration-300">
+          {/* Équipe dévouée */}
           <div className="flex flex-col justify-center">
             <Typography
               variant="h2"
-              className="text-white font-[montserrat] uppercase font-bold text-3xl sm:text-[40px]/[48px]"
+              className="text-[#f6aa00] font-[montserrat] uppercase font-bold text-3xl sm:text-[40px]/[48px]"
             >
-              France Prépa
+              France Prépa Academy
             </Typography>
-            <span
-              className="mt-2 text-lg font-semibold capitalize"
-              style={{ color: "#efb000" }}
-            >
-              Une dizaine d’{" "}
+            <span className="mt-3 text-lg font-semibold text-center text-white">
+              Une{" "}
+              <Link
+                onClick={() => scrollToSection("team")}
+                className="font-black underline hover:text-[#f6aa00]"
+              >
+                équipe dévouée
+              </Link>{" "}
+              pour l’obtention de votre visa
+            </span>
+          </div>
+
+          {/* Écoles partenaires */}
+          <div className="flex flex-col justify-center">
+            <span className="mt-1 text-lg font-semibold text-center text-white">
+              Une dizaine d’
               <Link
                 to="/etudes_internationales"
-                className="font-black underline"
+                className="font-black underline hover:text-[#f6aa00]"
                 onClick={() => scrollToSection("ecoles")}
               >
                 écoles partenaires
               </Link>{" "}
               dans la France hexagonale
-            </span>
-          </div>
-
-          {/* Équipe dévouée */}
-          <div className="flex flex-col justify-center">
-            <Typography
-              variant="h2"
-              className="text-white font-[montserrat] uppercase font-bold text-3xl sm:text-[40px]/[48px]"
-            >
-              France Prépa
-            </Typography>
-            <span
-              className="mt-2 text-lg font-semibold capitalize"
-              style={{ color: "#efb000" }}
-            >
-              Une{" "}
-              <Link
-                onClick={() => scrollToSection("team")}
-                className="font-black underline"
-              >
-                équipe dévouée
-              </Link>
-              pour l’obtention de votre visa
             </span>
           </div>
         </div>

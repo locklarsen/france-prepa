@@ -9,7 +9,7 @@ import {
 import { Link } from "react-router-dom";
 
 // IMPORT IMAGES
-import managerPicture from "../../../src/assets/images/temoignanes/personnage4.jpg";
+import promoteur from "../../../src/assets/images/gallerie/promoteur.jpg";
 
 // LISTE DES PROGRAMMES
 const programList = [
@@ -37,7 +37,7 @@ const programList = [
 const Diplomes = () => {
   return (
     <div
-      className="bg-blue-50 relative flex items-center justify-center overflow-hidden z-50"
+      className="bg-gradient-to-t from-[#07076b] to-[#080831]  relative flex items-center justify-center overflow-hidden z-50"
       id="servicesSection"
     >
       <div className="relative mx-auto px-6 pb-10 md:px-12 lg:max-w-screen-xl lg:px-8">
@@ -46,7 +46,7 @@ const Diplomes = () => {
           {/* Image Manager */}
           <div className="relative hidden lg:block lg:w-1/3">
             <div className="mx-auto overflow-hidden rounded-[6rem] rounded-br-none rounded-tl-none">
-              <img src={managerPicture} alt="Manager" width={300} />
+              <img src={promoteur} alt="Manager" width={300} />
             </div>
           </div>
 
@@ -54,14 +54,14 @@ const Diplomes = () => {
           <div className="lg:w-2/3">
             <Typography
               variant="h2"
-              className="text-3xl font-light leading-snug text-g1 sm:text-5xl sm:leading-snug"
+              className="text-3xl  leading-snug text-g1 sm:text-5xl sm:leading-snug"
             >
-              Optez pour nos{" "}
-              <span className="text-indigo-800 border-b-8 border-g4 px-2 font-bold">
+              <span className="font-normal text-white">Optez pour nos </span>
+              <span className="text-[#f6aa00] border-b-8 border-g4 px-2 font-bold">
                 diplômes d’envergure internationale
               </span>
             </Typography>
-            <p className="mt-4 text-gray-700">
+            <p className="mt-4 text-gray-200">
               Nous vous proposons des formations diplômantes reconnues qui vous
               permettront de réussir vos projets professionnels et personnels
               dans un environnement mondial.
@@ -83,11 +83,11 @@ const Diplomes = () => {
                 <Typography
                   variant="h5"
                   color="blue-gray"
-                  className="mb-2 font-bold"
+                  className="mb-2 font-bold text-[#00008f]"
                 >
                   {prog.program_name}
                 </Typography>
-                <Typography className="text-gray-600">
+                <Typography className="text-gray-900 font-normal">
                   {prog.description}
                 </Typography>
               </CardBody>
@@ -96,7 +96,7 @@ const Diplomes = () => {
                   size="lg"
                   className="font-[montserrat] bg-[#f6aa00] hover:bg-[#e59d01] hover:border-1 hover:border-yellow-100"
                 >
-                  <Link to={"/contact/#"}>En savoir plus</Link>
+                  <Link to={"/contact/#"}>Contactez-nous</Link>
                 </Button>
               </CardFooter>
             </Card>

@@ -39,7 +39,7 @@ import {
   UserGroupIcon,
 } from "@heroicons/react/24/solid";
 
-// FONCTION DE LISTE DE MENU : Cette fonction créer un tableau statique d'éléments pour un sous menu.
+// LISTE DE MENUS : Tableau statique d'éléments pour un sous menu.
 const navListMenuItems = [
   // Sous-menu 1
   {
@@ -104,102 +104,102 @@ const navListMenuItems = [
 ];
 
 // FONCTION QUI AFFICHE LES SOUS MENUS DU MENU "RESSOURCES"
-function NavListMenu() {
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
-  const renderItems = navListMenuItems.map(
-    ({ icon, title, description }, key) => (
-      <a key={key}>
-        <MenuItem className="flex items-center gap-3 rounded-lg">
-          <div className="flex items-center justify-center rounded-lg !bg-orange-300 p-2 ">
-            {React.createElement(icon, {
-              strokeWidth: 2,
-              className: "h-6 text-gray-900 w-6",
-            })}
-          </div>
-          <div>
-            {/* Titres des sous-menus du Menu "Ressources" */}
-            <Typography
-              variant="h6"
-              color="black"
-              className="flex items-center text-sm font-bold"
-            >
-              {title}
-            </Typography>
+// function NavListMenu() {
+//   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+//   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
+//   const renderItems = navListMenuItems.map(
+//     ({ icon, title, description }, key) => (
+//       <a key={key}>
+//         <MenuItem className="flex items-center gap-3 rounded-lg">
+//           <div className="flex items-center justify-center rounded-lg !bg-orange-300 p-2 ">
+//             {React.createElement(icon, {
+//               strokeWidth: 2,
+//               className: "h-6 text-gray-900 w-6",
+//             })}
+//           </div>
+//           <div>
+//             {/* Titres des sous-menus du Menu "Ressources" */}
+//             <Typography
+//               variant="h6"
+//               color="black"
+//               className="flex items-center text-sm font-bold"
+//             >
+//               {title}
+//             </Typography>
 
-            {/* Description des sous-menus du Menu "Ressources" */}
-            <Typography
-              variant="paragraph"
-              className="text-xs !font-medium text-blue-gray-500"
-            >
-              {description}
-            </Typography>
-          </div>
-        </MenuItem>
-      </a>
-    )
-  );
-  return (
-    <React.Fragment>
-      <Menu
-        open={isMenuOpen} //Vérifie si le menu "Reesources" est ouvert pour afficher ou non ses éléments
-        handler={setIsMenuOpen}
-        offset={{ mainAxis: 20 }}
-        placement="bottom"
-        allowHover={true}
-      >
-        <MenuHandler>
-          <Typography as="div" variant="small" className="font-medium">
-            <ListItem
-              className="flex items-center gap-2 py-2 pr-4 font-medium text-black bg-gray-100 hover:text-[#f7a901]"
-              selected={isMenuOpen || isMobileMenuOpen}
-              onClick={() => setIsMobileMenuOpen((cur) => !cur)}
-            >
-              Ressources
-              <ChevronDownIcon
-                strokeWidth={2.5}
-                className={`hidden h-3 w-3 transition-transform lg:block ${
-                  isMenuOpen ? "rotate-180" : "bg-gray-100 hover:text-[#f7a901]"
-                }`}
-              />
-              <ChevronDownIcon
-                strokeWidth={2.5}
-                className={`block h-3 w-3 transition-transform lg:hidden ${
-                  isMobileMenuOpen ? "rotate-180" : ""
-                }`}
-              />
-            </ListItem>
-          </Typography>
-        </MenuHandler>
-        <MenuList className="bg-gray-100 hidden max-w-screen-xl rounded-xl lg:block">
-          <ul className="grid grid-cols-3 gap-y-2 outline-none outline-0">
-            {renderItems}
-          </ul>
-        </MenuList>
-      </Menu>
-      <div className="block lg:hidden">
-        <Collapse open={isMobileMenuOpen}>{renderItems}</Collapse>
-      </div>
-    </React.Fragment>
-  );
-}
+//             {/* Description des sous-menus du Menu "Ressources" */}
+//             <Typography
+//               variant="paragraph"
+//               className="text-xs !font-medium text-blue-gray-500"
+//             >
+//               {description}
+//             </Typography>
+//           </div>
+//         </MenuItem>
+//       </a>
+//     )
+//   );
+//   return (
+//     <React.Fragment>
+//       <Menu
+//         open={isMenuOpen} //Vérifie si le menu "Reesources" est ouvert pour afficher ou non ses éléments
+//         handler={setIsMenuOpen}
+//         offset={{ mainAxis: 20 }}
+//         placement="bottom"
+//         allowHover={true}
+//       >
+//         <MenuHandler>
+//           <Typography as="div" variant="small" className="font-medium">
+//             <ListItem
+//               className="flex items-center gap-2 py-2 pr-4 font-medium text-black bg-gray-100 hover:text-[#f7a901]"
+//               selected={isMenuOpen || isMobileMenuOpen}
+//               onClick={() => setIsMobileMenuOpen((cur) => !cur)}
+//             >
+//               Ressources
+//               <ChevronDownIcon
+//                 strokeWidth={2.5}
+//                 className={`hidden h-3 w-3 transition-transform lg:block ${
+//                   isMenuOpen ? "rotate-180" : "bg-gray-100 hover:text-[#f7a901]"
+//                 }`}
+//               />
+//               <ChevronDownIcon
+//                 strokeWidth={2.5}
+//                 className={`block h-3 w-3 transition-transform lg:hidden ${
+//                   isMobileMenuOpen ? "rotate-180" : ""
+//                 }`}
+//               />
+//             </ListItem>
+//           </Typography>
+//         </MenuHandler>
+//         <MenuList className="bg-gray-100 hidden max-w-screen-xl rounded-xl lg:block">
+//           <ul className="grid grid-cols-3 gap-y-2 outline-none outline-0">
+//             {renderItems}
+//           </ul>
+//         </MenuList>
+//       </Menu>
+//       <div className="block lg:hidden">
+//         <Collapse open={isMobileMenuOpen}>{renderItems}</Collapse>
+//       </div>
+//     </React.Fragment>
+//   );
+// }
 
 // LISTE DE MENUS DE LA BARRE DE NAVIGATION
 function NavList() {
   return (
     <List className="justify-center items-center m-auto p-0 lg:mt-0 lg:mb-0 lg:flex-row lg:p-1 ">
-      {/* Menu Accueil */}
+      {/* Menu Accueil 
       <Typography
         as="a"
         variant="small"
         className="font-medium no-underline text-black"
       >
         <ListItem className="flex items-center gap-2 py-2 pr-4 hover:bg-gray-100 hover:text-[#f7a901]">
-          <NavLink to={"/"} className="hover:text-[#f7a901]">
+          <NavLink to={"/"} className="hover:text-[#f7a901]  font-semibold">
             Accueil
           </NavLink>
         </ListItem>
-      </Typography>
+      </Typography>*/}
 
       {/* Menu France Prépa */}
       <Typography
@@ -208,7 +208,10 @@ function NavList() {
         className="font-medium no-underline text-black"
       >
         <ListItem className="flex items-center gap-2 py-2 pr-4  hover:bg-gray-100 hover:text-[#f7a901]">
-          <NavLink to={"/francePrepa"} className="hover:text-[#f7a901]">
+          <NavLink
+            to={"/francePrepa"}
+            className="hover:text-[#f7a901]  font-semibold"
+          >
             France Prépa
           </NavLink>
         </ListItem>
@@ -221,7 +224,10 @@ function NavList() {
         className="font-medium no-underline text-black"
       >
         <ListItem className="flex items-center gap-2 py-2 pr-4  hover:bg-gray-100 hover:text-[#f7a901]">
-          <NavLink to={"/etudes_internationales"}>
+          <NavLink
+            to={"/etudes_internationales"}
+            className="hover:text-[#f7a901]  font-semibold"
+          >
             Etudes internationales
           </NavLink>
         </ListItem>
@@ -234,12 +240,15 @@ function NavList() {
         className="font-medium no-underline text-black"
       >
         <ListItem className="flex items-center gap-2 py-2 pr-4  hover:bg-gray-100 hover:text-[#f7a901]">
-          <NavLink to={"/contact"} className="hover:text-[#f7a901]">
+          <NavLink
+            to={"/contact"}
+            className="hover:text-[#f7a901]  font-semibold"
+          >
             Contacts
           </NavLink>
         </ListItem>
       </Typography>
-      <NavListMenu />
+      {/* <NavListMenu /> */}
     </List>
   );
 }
@@ -256,8 +265,8 @@ const NavigationBar = () => {
   }, []);
 
   return (
-    <Navbar className="bg-white flex flex-wrap m-auto w-auto j max-w-screen-1xl px-14 py-2 rounded-none justify-between">
-      <div className="bg-transparent flex items-center justify-between text-black  ">
+    <Navbar className="bg-white flex flex-wrap m-auto w-auto j max-w-screen-1xl px-10 py-2 rounded-none justify-between">
+      <div className="w-full flex items-end justify-between text-black">
         {/* LOGO */}
         <NavLink to={"/"}>
           <img src={logo} width={90}></img>
@@ -269,40 +278,30 @@ const NavigationBar = () => {
           variant="h6"
           className="mr-4 cursor-pointer py-1 lg:ml-1 uppercase font-black no-underline text-[#000095]"
         >
-          <NavLink to={"/"}> France Prépa</NavLink>
+          {/* <NavLink to={"/"}> France Prépa</NavLink> */}
         </Typography>
-        <div className="bg-transparent hidden items-start m-auto lg:block">
+        <div className="hidden items-start my-auto lg:block ">
           <NavList />
         </div>
 
         {/* BOUTTONS CTA */}
-        <div className="hidden gap-2 lg:flex m-auto">
+        <div className="hidden gap-3 lg:flex my-auto mx-2">
           {/* Bouton "Se connecter" */}
           <Button
-            variant="text"
+            variant="outlined"
             size="sm"
-            className="text-[#f6aa00] bg-gray-100 hover:text-[#00007a] hover:border-[#00007a] hover:border-1"
+            className="bg-[#00007a] text-[#f6aa00] hover:bg-[#f6aa00] hover:text-[#00007a]"
           >
-            <NavLink
-              to={"/login"}
-              className="font-semibold hover:text-[#00007a] "
-            >
-              Se connecter
-            </NavLink>
+            <NavLink to={"/login"}>Se connecter</NavLink>
           </Button>
 
           {/* Bouton "S'inscrire" */}
           <Button
             variant="outlined"
             size="sm"
-            className="bg-[#f6aa00] shadow-sm shadow-deep-orange-100"
+            className="bg-[#f6aa00] text-[#00007a] hover:bg-[#00007a] hover:text-[#f6aa00]"
           >
-            <NavLink
-              to={"/signup"}
-              className="font-semibold hover:text-[#00007a]"
-            >
-              S'incrire
-            </NavLink>
+            <NavLink to={"/signup"}>S'incrire</NavLink>
           </Button>
         </div>
 
@@ -310,7 +309,7 @@ const NavigationBar = () => {
         <IconButton
           variant="text"
           color="orange"
-          className="lg:hidden ml-auto"
+          className="lg:hidden my-auto"
           onClick={() => setOpenNav(!openNav)}
         >
           {openNav ? (
@@ -324,12 +323,12 @@ const NavigationBar = () => {
       {/* BOUTTONS CTA SUR MOBILE*/}
       <Collapse open={openNav}>
         <NavList />
-        <div className="flex w-full flex-nowrap items-center gap-2 lg:hidden">
+        <div className="flex w-full py-3 flex-nowrap items-center gap-2 lg:hidden shadow-md">
           <Button
             variant="outlined"
             size="sm"
             fullWidth
-            className="shadow-sm shadow-gray-200 text-[#f6aa00] bg-gray-100 hover:text-[#00007a] hover:border-[#00007a] hover:border-1"
+            className="bg-[#00007a] text-[#f6aa00] hover:bg-[#f6aa00]  hover:text-[#00007a] shadow-sm shadow-deep-yellow-200 "
           >
             {/* Bouton "Se connecter" */}
             <NavLink
@@ -345,7 +344,7 @@ const NavigationBar = () => {
             variant="outlined"
             size="sm"
             fullWidth
-            className="bg-[#f6aa00] shadow-sm shadow-deep-orange-200 hover:text-[#00007a]"
+            className="bg-[#f6aa00] hover:bg-[#00007a] text-[#00007a] hover:text-[#f6aa00] shadow-sm shadow-deep-orange-200 "
           >
             <NavLink
               to={"/signup"}

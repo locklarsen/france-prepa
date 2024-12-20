@@ -2,9 +2,10 @@ import React from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import NavigationBar from "../../components/homePage_Components/NavigationBar";
-import { Button, Typography } from "@material-tailwind/react";
+import { Typography } from "@material-tailwind/react";
 import Footer from "../../components/homePage_Components/Footer";
 
+import etudiant from "../../../src/assets/images/gallerie/etudiants.jpg";
 // IMPORT VIDÉO
 import CityNetwork from "../../components/homePage_Components/CityNetwork";
 import EtapeDossier from "../../components/homePage_Components/etapeDossier";
@@ -58,21 +59,51 @@ const EtudesInternationales = () => {
       {/* Barre de navigation */}
       <NavigationBar />
 
+      <div className="relative h-[75vh] sm:h-[50vh] lg:h-[85vh]">
+        {/* Image de la diapositive */}
+        <img
+          src={etudiant}
+          alt="voyage"
+          className="h-full w-full object-cover"
+        />
+
+        {/* Texte de la diapositive */}
+        <div className="absolute inset-0 grid h-full w-full place-items-center items-end pb-8 bg-black/75">
+          <div className="w-5/6 md:w-3/4 lg:w-3/4 text-center px-4">
+            <AnimatedComponent>
+              <div className="flex flex-col items-center py-14 px-4 text-center">
+                <Typography
+                  variant="h1"
+                  className="text-[#f6aa00] font-[montserrat] uppercase font-bold text-3xl sm:text-[40px]/[48px] dark:text-white"
+                >
+                  Etudes internationales
+                </Typography>
+                <span
+                  className="block mt-2 text-2xl font-semibold"
+                  style={{ color: "#f70b1b" }}
+                >
+                  France Prépa, un réseau d’école en France
+                </span>
+                {/* <p className="mt-4 text-base text-white">
+                  France Prépa, un réseau d’école en France
+                </p> */}
+              </div>
+            </AnimatedComponent>
+          </div>
+        </div>
+      </div>
+
       {/* Section Titre */}
       <AnimatedComponent>
         <div className="flex flex-col items-center py-14 px-4 text-center">
           <Typography
             variant="h1"
             className="text-[#000097] font-[montserrat] uppercase font-bold text-3xl sm:text-[40px]/[48px] dark:text-white"
-          >
-            Etudes internationales
-          </Typography>
+          ></Typography>
           <span
             className="block mt-2 text-lg font-semibold capitalize"
             style={{ color: "#f70b1b" }}
-          >
-            France Prépa, un réseau d’école en France
-          </span>
+          ></span>
         </div>
       </AnimatedComponent>
       <AnimatedComponent>

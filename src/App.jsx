@@ -25,11 +25,6 @@ function App() {
           <Route path="/contact" element={<Contact />} /> {/*Contact*/}
           <Route path="/login" element={<LoginPage />} /> {/*Connexion*/}
           <Route path="/signup" element={<SignupPage />} /> {/*Inscription*/}
-          {/* ROUTES VERS LES ESPACES DE COMPTEES */}
-          {/*Route to the admin Page */}
-          {/* <Route path="/admin" element={<AdminPage />}>
-            <Route path="admin/employees" element={<EmployeesManagement />} />
-          </Route> */}
         </Routes>
       </div>
     </Router>

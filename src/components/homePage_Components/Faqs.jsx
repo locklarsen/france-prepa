@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 
 const Faqs = () => {
   return (
@@ -6,30 +7,23 @@ const Faqs = () => {
       <div className="container mx-auto">
         <div className="-mx-4 flex flex-wrap">
           <div className="w-full px-4">
-            <div className="mx-auto mb-[60px] max-w-[520px] text-center lg:mb-20">
-              <span className="mb-2 block text-lg font-semibold text-[#f70b1b]">
-                Questions fréquemment posées
+            <div className="w-full text-center lg:mb-10">
+              <span className="mb-2 block text-lg font-bold text-[#f70b1b]">
+                FAQ
               </span>
               <h2 className="mb-4 text-3xl font-bold text-[#00008f] sm:text-[40px]/[48px]">
-                Vous vous posez des questions sur France Prepa ?
+                Avez-vous des questions sur France Prépa Academy ?
               </h2>
-              <p className="text-base text-body-color dark:text-dark-6">
-                Voici une série de questions fréquement posées. Si la répose à
-                votre question n'y figure pas,{" "}
-                <a href="#" className="text-bold text-primary">
-                  contactez-nous
-                </a>{" "}
-                directement.
-              </p>
             </div>
           </div>
         </div>
 
-        <div className="-mx-4 flex flex-wrap">
-          <div className="w-full px-4 lg:w-1/2">
+        <div className="w-full flex flex-wrap px-0">
+          {/* <div className="w-full px-4 lg:w-1/2"> */}
+          <div className="text-justify  font-medium mb-8 w-full sm:max-w-full rounded-lg bg-[#f6a901] p-2 shadow-[0px_20px_95px_0px_rgba(201,203,204,0.30)] dark:bg-dark-2 dark:shadow-[0px_20px_95px_0px_rgba(0,0,0,0.30)] px-1 sm:p-4 lg:px-6 xl:px-2">
             <AccordionItem
-              header="Qui est France Prepa ?"
-              text="Nous sommes un organisme qui aide les étudiants africains à entrer dans les grandes écoles en France et à réussir parfaitement leur procédure de visa"
+              header="Qui est France Prepa Academy ?"
+              text="Nous sommes un organisme qui aide les étudiants africains à intégrer dans les grandes écoles en France et à réussir parfaitement leur procédure de visa."
             />
             <AccordionItem
               header="Quels sont vos services ?"
@@ -38,20 +32,6 @@ const Faqs = () => {
             <AccordionItem
               header="Comment soumettre un dossier ?"
               text="Inscrivez-vous sur notre site Internet, et puis déposez une lettre de motivation, votre CV actualisé, la copie du dernier diplôme ainsi que ses relevés de notes."
-            />
-          </div>
-          <div className="w-full px-4 lg:w-1/2">
-            <AccordionItem
-              header="Autre question"
-              text="It takes 2-3 weeks to get your first blog post ready. That includes the in-depth research & creation of your monthly content marketing strategy that we do before writing your first blog post, Ipsum available ."
-            />
-            <AccordionItem
-              header="Autre question"
-              text="It takes 2-3 weeks to get your first blog post ready. That includes the in-depth research & creation of your monthly content marketing strategy that we do before writing your first blog post, Ipsum available ."
-            />
-            <AccordionItem
-              header="Autre question"
-              text="It takes 2-3 weeks to get your first blog post ready. That includes the in-depth research & creation of your monthly content marketing strategy that we do before writing your first blog post, Ipsum available ."
             />
           </div>
         </div>
@@ -100,7 +80,7 @@ const AccordionItem = ({ header, text }) => {
     setActive(!active);
   };
   return (
-    <div className="mb-8 w-full rounded-lg bg-white p-4 shadow-[0px_20px_95px_0px_rgba(201,203,204,0.30)] dark:bg-dark-2 dark:shadow-[0px_20px_95px_0px_rgba(0,0,0,0.30)] sm:p-8 lg:px-6 xl:px-8">
+    <div className="mb-8 w-full sm:max-w-full rounded-lg bg-white p-4 shadow-[0px_20px_95px_0px_rgba(201,203,204,0.30)] dark:shadow-[0px_20px_95px_0px_rgba(0,0,0,0.30)] sm:p-4 lg:px-3 xl:px-4">
       <button
         className={`faq-btn flex w-full text-left`}
         onClick={() => handleToggle()}
