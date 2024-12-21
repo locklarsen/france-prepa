@@ -160,7 +160,7 @@ const SignupPage = () => {
                 {/* Bouton Créer un compte */}
                 <Button
                   size="lg"
-                  className={`bg-[#f6aa00] hover:bg-[#00008f] hover:border-[#00008f] text-white focus:bg-[#f6aa00] focus:ring-4 focus:outline-none focus:ring-[#f6aa00] font-medium rounded-full w-fit py-3`}
+                  className={`bg-[#f6aa00] hover:bg-[#00008f] hover:border-1 hover:border-yellow-100 mx-auto my-4`}
                 >
                   Créer un compte
                 </Button>
