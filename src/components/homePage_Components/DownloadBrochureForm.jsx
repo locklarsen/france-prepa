@@ -1,7 +1,11 @@
+// IMPORTER LES PACKAGES REACT
 import React, { useState } from "react";
+
+//  IMPORTER D'AUTRES PACKAGES
 import { motion } from "framer-motion";
-import { Button, Input, Typography } from "@material-tailwind/react";
-import { useInView } from "react-intersection-observer";
+
+// IMPORTER DES COMPOSANTS
+import image_procedure from "../../../src/assets/images/gallerie/etudiante.jpg";
 
 // Données de l'animation
 const containerVariants = {
@@ -10,7 +14,7 @@ const containerVariants = {
     opacity: 1,
     y: 0,
     transition: {
-      type: "spring",
+      type: `spring`,
       stiffness: 120,
       duration: 1,
     },
@@ -18,21 +22,20 @@ const containerVariants = {
 };
 
 const DownloadBrochureForm = () => {
-  const [name, setName] = useState("");
-  const [fisrt_name, setFirstName] = useState("");
-  const [email, setEmail] = useState("");
+  const [name, setName] = useState(``);
+  const [firstName, setFirstName] = useState(``);
+  const [email, setEmail] = useState(``);
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
 
   // Fonction pour gérer l'envoi du formulaire
   const handleSubmit = (e) => {
     e.preventDefault();
     if (email) {
-      // Envoie du formulaire (dans un cas réel, envoyer à un serveur ou à un service de gestion d'emails)
+      // Simule l'envoi du formulaire, dans un cas réel, envoie à un serveur ou un service de gestion d'emails
       setIsFormSubmitted(true);
-      // Simuler un téléchargement de la brochure après l'envoi du formulaire
       setTimeout(() => {
-        // Ici vous pouvez ajouter le code pour télécharger le fichier
-        alert("La brochure a été envoyée à votre email !");
+        // Simule le téléchargement de la brochure après l'envoi
+        alert(`La brochure a été envoyée à votre email !`);
       }, 2000);
     }
   };
@@ -42,76 +45,118 @@ const DownloadBrochureForm = () => {
       variants={containerVariants}
       initial="hidden"
       animate="visible"
-      className=" py-16 px-4"
+      className={`
+        pt-0 pb-4 px-4
+      `}
     >
-      <div className="bg-gray-50 max-w-xl mx-auto text-center p-5 rounded-md">
-        <Typography
-          variant="h2"
-          className="text-3xl font-semibold text-[#00008f]"
-        >
-          Quels sont les frais de la procédure ?
-        </Typography>
-        <p className="text-gray-600 mt-2">
-          Veuillez entrer votre email pour recevoir notre brochure détaillée.
-        </p>
+      <div
+        className={`bg-white relative flex items-top justify-center min-h-screen sm:items-center sm:pt-0`}
+      >
+        <div className={`max-w-6xl mx-auto sm:px-6 lg:px-8`}>
+          <div className={`mt-8 overflow-hidden`}>
+            <div className={`grid grid-cols-1 md:grid-cols-2`}>
+              <div className={`p-6 mr-2 bg-[#f6aa00] sm:rounded-lg`}>
+                <h1
+                  className={`text-4xl sm:text-5xl text-[#00008f] font-extrabold tracking-tight`}
+                >
+                  Frais de procédure
+                </h1>
+                <p
+                  className={`text-normal text-lg sm:text-2xl font-medium text-white mt-2`}
+                >
+                  Veuillez entrer votre e-mail pour recevoir notre brochure
+                  détaillée.
+                </p>
 
-        {/* Formulaire de téléchargement */}
-        {!isFormSubmitted ? (
-          <form onSubmit={handleSubmit} className="mt-8">
-            <div className="mb-4 flex flex-col gap-6">
-              <td className="w-100 ">
-                <Input
-                  type="text"
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                  label="Votre Nom"
-                  required
-                  className="w-full px-4 py-2 text-lg rounded-"
-                />
-              </td>
-              <td className="w-100">
-                <Input
-                  type="text"
-                  value={fisrt_name}
-                  onChange={(e) => setFirstName(e.target.value)}
-                  label="Votre Prénom :"
-                  required
-                  className="w-full px-4 py-2 text-lg rounded-"
-                />
-              </td>
-              <td>
-                <Input
-                  type="text"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  label="Votre adresse email"
-                  required
-                  className="w-full px-4 py-2 text-lg rounded-md"
-                />
-              </td>
+                <div
+                  className={`flex items-center mt-8 text-gray-600 dark:text-gray-400`}
+                >
+                  <img src={image_procedure} alt="Procédure" />
+                </div>
+              </div>
+
+              {/* Formulaire de téléchargement de la brochure */}
+              <form
+                onSubmit={handleSubmit}
+                className={`p-6 flex flex-col justify-center`}
+              >
+                {/* Champ de saisie du nom */}
+                <div className={`flex flex-col`}>
+                  <label htmlFor={`name`} className={`hidden`}>
+                    Nom
+                  </label>
+                  <input
+                    type={`text`}
+                    name={`name`}
+                    id={`name`}
+                    placeholder={`Nom`}
+                    required={true}
+                    className={`
+                      w-full mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 
+                      border border-gray-400 dark:border-gray-700 text-gray-800 font-semibold 
+                      focus:border-indigo-500 focus:outline-none
+                    `}
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                  />
+                </div>
+
+                {/* Champ de saisie du prénom */}
+                <div className={`flex flex-col`}>
+                  <label htmlFor={`givenname`} className={`hidden`}>
+                    Prénom
+                  </label>
+                  <input
+                    type={`text`}
+                    name={`givenname`}
+                    id={`givenname`}
+                    placeholder={`Prénom`}
+                    required={true}
+                    className={`
+                      w-full mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 
+                      border border-gray-400 dark:border-gray-700 text-gray-800 font-semibold 
+                      focus:border-indigo-500 focus:outline-none
+                    `}
+                    value={firstName}
+                    onChange={(e) => setFirstName(e.target.value)}
+                  />
+                </div>
+
+                {/* Champ de saisie de l'email */}
+                <div className={`flex flex-col mt-2`}>
+                  <label htmlFor={`email`} className={`hidden`}>
+                    Email
+                  </label>
+                  <input
+                    type={`email`}
+                    name={`email`}
+                    id={`email`}
+                    placeholder={`Email`}
+                    required={true}
+                    className={`
+                      w-full mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 
+                      border border-gray-400 dark:border-gray-700 text-gray-800 font-semibold 
+                      focus:border-indigo-500 focus:outline-none
+                    `}
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                  />
+                </div>
+
+                {/* Bouton d'envoi du formulaire */}
+                <button
+                  type={`submit`}
+                  className={`
+                    md:w-fit bg-[#f6aa00] hover:bg-gradient-to-t from-[#07076b] to-[#030341] 
+                    text-white font-bold py-3 px-6 rounded-lg mt-3 transition ease-in-out duration-300
+                  `}
+                >
+                  Recevoir la brochure
+                </button>
+              </form>
             </div>
-
-            <Button
-              type="submit"
-              size="lg"
-              className="bg-[#f6aa00] hover:bg-[#e59d01] w-full font-semibold py-2"
-            >
-              Télécharger la Brochure
-            </Button>
-          </form>
-        ) : (
-          <div className="mt-8">
-            <Typography
-              variant="h4"
-              className="text-xl font-semibold text-green-500"
-            >
-              Merci ! Votre demande a bien été reçue.
-            </Typography>
-            <Typography className="text-gray-600 mt-2">
-              Nous vous enverrons la brochure à l'adresse email fournie.
-            </Typography>
           </div>
-        )}
+        </div>
       </div>
     </motion.div>
   );

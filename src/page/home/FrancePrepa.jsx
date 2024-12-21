@@ -16,11 +16,9 @@ import Diplomes from "../../components/homePage_Components/Diplomes";
 import FrancePrepaTeam from "../../components/homePage_Components/FrancePrepaTeam";
 import ScrollToTopButton from "../../components/general_usage_components/ScrollToTopButton";
 
-// IMPORTER DES VIDÉOS
-import url_video from "../../../src/assets/videos/video_01.MP4";
-
 // IMPORTER DES IMAGE
 import voyage from "../../../src/assets/images/gallerie/mbw.JPG";
+import voyage_2 from "../../../src/assets/images/carousel/2.JPG";
 
 // Variantes d'animation pour Framer Motion
 const containerVariants = {
@@ -70,12 +68,12 @@ const FrancePrepa = () => {
       <ScrollToTopButton />
       {/* Barre de navigation */}
       <NavigationBar />
-      <div className="relative h-[75vh] sm:h-[50vh] lg:h-[85vh]">
-        {/* Image de la diapositive */}
-        <img src={voyage} alt="voyage" className="h-full w-full object-fut" />
-      </div>
+      <div
+        className="relative h-[75vh] sm:h-[50vh] lg:h-[900px] bg-cover bg-no-repeat bg-center"
+        style={{ backgroundImage: `url('${voyage}')` }}
+      ></div>
       <section
-        className={`flex flex-wrap lg:flex-nowrap px-14 pb-2 pt-0 items-center m-auto shadow-md shadow-gray-100`}
+        className={`flex flex-wrap lg:flex-nowrap px-14 py-2 items-center m-auto shadow-md shadow-gray-100`}
         id="about"
       >
         {/* Section Texte */}
@@ -97,7 +95,7 @@ const FrancePrepa = () => {
                     delay: 0.5,
                   }}
                   variant="h1"
-                  className="text-[#f6aa00] font-[montserrat] uppercase font-bold text-3xl sm:text-[40px]/[48px] dark:text-white"
+                  className="text-[#d8354a] font-[montserrat] uppercase font-bold text-3xl sm:text-[40px]/[48px] dark:text-white"
                 >
                   France Prépa Academy
                 </motion.Typography>
@@ -109,7 +107,7 @@ const FrancePrepa = () => {
                     delay: 0.6,
                   }}
                   className="block mt-2 text-2xl font-semibold"
-                  style={{ color: "#f70b1b" }}
+                  style={{ color: "#00008f" }}
                 >
                   L’ouverture aux grandes écoles en France
                 </motion.span>
@@ -133,16 +131,15 @@ const FrancePrepa = () => {
         </motion.div>
 
         <div
-          className={`bg-[#f7a901] hover:bg-[#00008f] hover:text-white rounded-lg w-full lg:w-4/12 px-2 py-3  mt-4 lg:mt-0 shadow-md shadow-gray-300 lg:order-last`}
+          className={`bg-[#f7a901] hover:bg-[#00008f] hover:text-white rounded-lg w-full lg:w-4/12 px-2 py-3  mt-0 lg:mt-0 shadow-md shadow-gray-300 lg:order-last`}
         >
           <div className={`flex items-center justify-center`}>
             <AnimatedComponent>
               <div className={`relative w-full h-full italic z-50`}>
-                <Video
-                  videoSource={url_video}
-                  imagePreview={image_preview}
-                  subtitle={"Mot du Promoteur de France Prépa Academy"}
-                />
+                <img
+                  src={voyage_2}
+                  className={`rounded-lg w-full h-full`}
+                ></img>
               </div>
             </AnimatedComponent>
           </div>
@@ -154,44 +151,7 @@ const FrancePrepa = () => {
         <Diplomes />
       </AnimatedComponent>
       {/* Section Écoles partenaires */}
-      <AnimatedComponent>
-        <div className="grid grid-cols-1 md:grid-cols-2 bg-[#0a090f] text-white py-16 px-6 gap-8 hover:shadow-xl transform hover:scale-105 transition-transform duration-300">
-          {/* Équipe dévouée */}
-          <div className="flex flex-col justify-center">
-            <Typography
-              variant="h2"
-              className="text-[#f6aa00] font-[montserrat] uppercase font-bold text-3xl sm:text-[40px]/[48px]"
-            >
-              France Prépa Academy
-            </Typography>
-            <span className="mt-3 text-lg font-semibold text-center text-white">
-              Une{" "}
-              <Link
-                onClick={() => scrollToSection("team")}
-                className="font-black underline hover:text-[#f6aa00]"
-              >
-                équipe dévouée
-              </Link>{" "}
-              pour l’obtention de votre visa
-            </span>
-          </div>
-
-          {/* Écoles partenaires */}
-          <div className="flex flex-col justify-center">
-            <span className="mt-1 text-lg font-semibold text-center text-white">
-              Une dizaine d’
-              <Link
-                to="/etudes_internationales"
-                className="font-black underline hover:text-[#f6aa00]"
-                onClick={() => scrollToSection("ecoles")}
-              >
-                écoles partenaires
-              </Link>{" "}
-              dans la France hexagonale
-            </span>
-          </div>
-        </div>
-      </AnimatedComponent>
+      <AnimatedComponent></AnimatedComponent>
       {/* Section Équipe */}
       <AnimatedComponent>
         <FrancePrepaTeam />

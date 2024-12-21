@@ -16,7 +16,7 @@ const Video = ({ videoSource, imagePreview, subtitle }) => {
         }}
         controls
         poster={imagePreview} // Image de prévisualisation de la vidéo
-        className={`w-full h-auto max-w-full lg:max-w-[90%] mx-auto border-1 border-[#efb000] rounded-lg`}
+        className={`w-full h-auto max-w-full lg:max-w-[90%] mx-auto rounded-lg`}
       >
         <source src={videoSource} type="video/mp4" />
         Your browser does not support the video tag.
