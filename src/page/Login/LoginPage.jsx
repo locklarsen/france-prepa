@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 // IMPORTER D'AUTRES PACKAGES
 import { Button, Typography } from "@material-tailwind/react";
+import { motion } from "framer-motion";
 
 // IMPORTER DES COMPOSANTS
 import NavigationBar from "../../components/homePage_Components/NavigationBar";
@@ -21,16 +22,30 @@ const LoginPage = () => {
 
       <div className={`flex flex-col lg:flex-row flex-grow`}>
         {/* Left: Image */}
-        <div className={`lg:w-1/2 lg:block h-64 lg:h-auto opacity-90`}>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            duration: 0.5,
+            delay: 0.6,
+          }}
+          className={`lg:w-1/2 lg:block h-64 lg:h-auto opacity-90`}
+        >
           <img
             src={background}
             className={`object-cover w-full h-full`}
             alt="Background image"
           />
-        </div>
+        </motion.div>
 
         {/* Bloc de droite: Formulaire de connexion */}
-        <div
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            duration: 0.6,
+            delay: 0.7,
+          }}
           className={`flex flex-col bg-gray-50 opacity-95 rounded-2xl p-8 sm:p-10 md:p-12 lg:w-1/2 items-center justify-center`}
         >
           <img
@@ -119,7 +134,7 @@ const LoginPage = () => {
               </Link>
             </p>
           </div>
-        </div>
+        </motion.div>
       </div>
 
       {/* Footer */}

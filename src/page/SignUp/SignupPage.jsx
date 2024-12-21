@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 // IMPORTER D'AUTRES PACKAGES
 import { Button, Typography } from "@material-tailwind/react";
+import { motion } from "framer-motion";
 
 // IMPRTER DES COMPOSANT
 import Footer from "../../components/homePage_Components/Footer";
@@ -30,7 +31,13 @@ const SignupPage = () => {
         ></div>
 
         {/* Contenu placé au-dessus de l'image d'arrière-plan */}
-        <div
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            duration: 0.5,
+            delay: 0.6,
+          }}
           className={`relative z-10 flex justify-center w-full h-full my-auto xl:gap-14 lg:gap-10 md:gap-5`}
         >
           <div className={`flex items-center justify-center w-full lg:p-12`}>
@@ -38,19 +45,29 @@ const SignupPage = () => {
               <form
                 className={`bg-white opacity-90 flex flex-col items-center w-full h-full pb-6 text-center rounded-3xl p-4 md:p-8`}
               >
-                {/* Logo */}
-                <img
-                  src={logo}
-                  alt="Logo"
-                  className={`object-cover w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-48 lg:h-48`}
-                />
-
-                {/* Titre de la page */}
-                <Typography
-                  className={`font-[montserrat] text-[#00008f] mb-3 text-2xl sm:text-3xl md:text-4xl font-extrabold uppercase`}
+                <motion.div
+                  initial={{ opacity: 0, y: 50 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{
+                    duration: 0.6,
+                    delay: 0.7,
+                  }}
+                  className={`flex flex-col items-center `}
                 >
-                  Créer un compte
-                </Typography>
+                  {/* Logo */}
+                  <img
+                    src={logo}
+                    alt="Logo"
+                    className={`object-cover w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-48 lg:h-48`}
+                  />
+
+                  {/* Titre de la page */}
+                  <Typography
+                    className={`font-[montserrat] text-[#00008f] mb-3 text-2xl sm:text-3xl md:text-4xl font-extrabold uppercase`}
+                  >
+                    Créer un compte
+                  </Typography>
+                </motion.div>
 
                 {/* Ligne de séparation */}
                 <div className={`flex items-center mb-3 w-full`}>
@@ -177,7 +194,7 @@ const SignupPage = () => {
               </form>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
 
       <Footer />

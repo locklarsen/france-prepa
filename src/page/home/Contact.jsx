@@ -1,11 +1,15 @@
+// IMPORTER LES PACKAGES REACT
 import React from "react";
 import { Link } from "react-router-dom";
+
+// IMPORTER D'AUTRES PACKAGES
+import { Button, Typography } from "@material-tailwind/react";
+import { motion } from "framer-motion";
 
 // Importer les composants nécessaires
 import NavigationBar from "../../components/homePage_Components/NavigationBar";
 import InputPhoneCountryCode from "../../components/general_usage_components/InputPhoneCountryCode";
 import Footer from "../../components/homePage_Components/Footer";
-import { Button, Typography } from "@material-tailwind/react";
 
 // Importer les images
 import logo from "../../../src/assets/images/logos/logo.png";
@@ -15,6 +19,10 @@ import ScrollToTopButton from "../../components/general_usage_components/ScrollT
 export default function Contact() {
   return (
     <div>
+      {/* Barre de navigation */}
+      <div className={`relative z-20`}>
+        <NavigationBar />
+      </div>
       <div
         className={`relative bg-white flex flex-col min-h-screen bg-cover bg-center bg-no-repeat`}
         style={{ backgroundImage: `url(${background_image})` }}
@@ -25,20 +33,29 @@ export default function Contact() {
           className={`absolute inset-0 bg-[#000000] bg-opacity-75 z-10 pointer-events-none`}
         ></div>
 
-        {/* Barre de navigation */}
-        <div className={`relative z-20`}>
-          <NavigationBar />
-        </div>
-
         {/* Contenu principal */}
         <div
           className={`relative flex flex-col items-center py-10 px-6 lg:px-8 z-20`}
         >
           {/* Formulaire de contact */}
-          <form
+          <motion.form
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 0.5,
+              delay: 0.6,
+            }}
             className={`relative bg-white rounded-3xl shadow-lg p-8 w-full max-w-2xl z-20 opacity-95`}
           >
-            <div className={`text-center mb-6`}>
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 0.6,
+                delay: 0.7,
+              }}
+              className={`text-center mb-6`}
+            >
               <div className={`flex justify-center mb-6`}>
                 <img
                   src={logo}
@@ -55,7 +72,7 @@ export default function Contact() {
                 Remplissez le formulaire ci-dessous pour nous envoyer un
                 message.
               </p>
-            </div>
+            </motion.div>
 
             <div className={`flex flex-col gap-4 mb-4`}>
               {/* Champs prénom et nom */}
@@ -189,10 +206,9 @@ export default function Contact() {
                 Connectez-vous
               </Link>
             </p>
-          </form>
+          </motion.form>
         </div>
       </div>
-
       {/* Footer */}
       <Footer className={`relative z-20`} />
     </div>
