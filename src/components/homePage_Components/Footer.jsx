@@ -110,7 +110,7 @@ const Footer = () => {
         className={"mt-4 border-t border-gray-900/10 pt-8 sm:mt-20 lg:mt-24"}
       >
         <p className={"text-xs leading-5 text-gray-500"}>
-          &copy; 2024 Prépa France, tous droits réservés.
+          &copy; 2024 Prépa France Academy, tous droits réservés.
         </p>
       </div>
     </footer>
