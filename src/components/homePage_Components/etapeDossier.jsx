@@ -9,30 +9,30 @@ import image_paris from "../../../src/assets/images/background/paris_2.jpg";
 
 // Données des étapes
 const steps = [
-  { id: 1, title: "Concours", description: "Épreuves écrites et orales." },
+  { id: 1, title: "1. Concours", description: "Épreuves écrites et orales." },
   {
     id: 2,
-    title: "Admission",
+    title: "2. Admission",
     description: "Lettre d’acception dans une école.",
   },
   {
     id: 3,
-    title: "Campus France",
+    title: "3. Campus France",
     description: "Préparation au projet professionnel et à l’entretien.",
   },
   {
     id: 4,
-    title: "Réservation de logement",
+    title: "4. Réservation de logement",
     description: "Trouver et réserver un logement.",
   },
   {
     id: 5,
-    title: "Demande de visa",
+    title: "5. Demande de visa",
     description: "Validation des documents et soumission de la demande.",
   },
   {
     id: 6,
-    title: "Intégration en France",
+    title: "6. Intégration en France",
     description: "Accueil et intégration dans votre école.",
   },
 ];
@@ -54,7 +54,7 @@ const EtapeDossier = () => {
   return (
     <div
       style={{ backgroundImage: `url(${image_paris})` }}
-      className="relative bg-gray-200 bg-cover bg-center py-16 px-4 m-auto"
+      className="relative bg-cover bg-center py-16 px-4 m-auto"
     >
       {/* Superposition noire avec opacité pour l'effet d'ombrage */}
       <div className="absolute inset-0 bg-[#040480] bg-opacity-75 z-10"></div>
@@ -77,7 +77,7 @@ const EtapeDossier = () => {
       {/* Conteneur des étapes */}
       <div className="relative max-w-4xl mx-auto z-20">
         {/* Ligne principale (cachée sur mobile) */}
-        <div className="hidden sm:block absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-[#f6aa00] z-10"></div>
+        <div className="hidden sm:block absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-[#f6aa00] z-0"></div>
 
         {/* Liste des étapes avec animations */}
         <div className="space-y-12">
@@ -93,7 +93,7 @@ const EtapeDossier = () => {
               {/* Contenu de l'étape avec gradient et style */}
               <div
                 className={`bg-gradient-to-t from-[#f6aa00] to-[#d98d05] border-white border-4 shadow-md rounded-lg p-6 w-72 z-20 ${
-                  index % 2 === 0 ? "text-right ml-auto" : "text-left mr-auto"
+                  index % 2 === 0 ? "mr-auto text-right" : "ml-auto text-left"
                 }`}
               >
                 <h3 className="text-lg font-bold text-[#00008f]">
@@ -105,7 +105,7 @@ const EtapeDossier = () => {
               </div>
 
               {/* Point sur la ligne (caché sur mobile) */}
-              <div className="hidden sm:flex absolute left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full bg-[#f6aa00] items-center justify-center z-[1000]">
+              <div className="hidden sm:flex absolute left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full bg-[#f6aa00] items-center justify-center z-[50]">
                 <span className="text-white font-bold">{step.id}</span>
               </div>
             </motion.div>

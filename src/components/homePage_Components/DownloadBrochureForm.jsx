@@ -45,14 +45,16 @@ const DownloadBrochureForm = () => {
       variants={containerVariants}
       initial="hidden"
       animate="visible"
-      className={`
-        pt-0 pb-4 px-4
+      className={`bg-gray-50 
+        py-4 px-4
       `}
     >
       <div
-        className={`bg-white relative flex items-top justify-center min-h-screen sm:items-center sm:pt-0`}
+        className={` relative my-3 flex items-top justify-center min-h-screen sm:items-center sm:pt-0`}
       >
-        <div className={`max-w-6xl mx-auto sm:px-6 lg:px-8`}>
+        <div
+          className={`bg-[#10113d] max-w-6xl mx-auto sm:px-6 lg:px-8 py-2 rounded-xl shadow-lg`}
+        >
           <div className={`mt-8 overflow-hidden`}>
             <div className={`grid grid-cols-1 md:grid-cols-2`}>
               <div className={`p-6 mr-2 bg-[#f6aa00] sm:rounded-lg`}>
@@ -81,7 +83,7 @@ const DownloadBrochureForm = () => {
                 className={`p-6 flex flex-col justify-center`}
               >
                 {/* Champ de saisie du nom */}
-                <div className={`flex flex-col`}>
+                <div className={`flex flex-col mt-2`}>
                   <label htmlFor={`name`} className={`hidden`}>
                     Nom
                   </label>
@@ -102,7 +104,7 @@ const DownloadBrochureForm = () => {
                 </div>
 
                 {/* Champ de saisie du prénom */}
-                <div className={`flex flex-col`}>
+                <div className={`flex flex-col mt-2`}>
                   <label htmlFor={`givenname`} className={`hidden`}>
                     Prénom
                   </label>
@@ -113,7 +115,7 @@ const DownloadBrochureForm = () => {
                     placeholder={`Prénom`}
                     required={true}
                     className={`
-                      w-full mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 
+                                        w-full mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 
                       border border-gray-400 dark:border-gray-700 text-gray-800 font-semibold 
                       focus:border-indigo-500 focus:outline-none
                     `}
@@ -134,7 +136,7 @@ const DownloadBrochureForm = () => {
                     placeholder={`Email`}
                     required={true}
                     className={`
-                      w-full mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 
+                                       w-full mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 
                       border border-gray-400 dark:border-gray-700 text-gray-800 font-semibold 
                       focus:border-indigo-500 focus:outline-none
                     `}
@@ -147,11 +149,11 @@ const DownloadBrochureForm = () => {
                 <button
                   type={`submit`}
                   className={`
-                    md:w-fit bg-[#f6aa00] hover:bg-gradient-to-t from-[#07076b] to-[#030341] 
-                    text-white font-bold py-3 px-6 rounded-lg mt-3 transition ease-in-out duration-300
+                    md:w-fit bg-[#f6aa00] hover:bg-gradient-to-t from-[#07076b] to-[#030341] hover:border-white hover:border-2
+                    text-white font-bold  py-3 mx-auto px-6 rounded-lg mt-4 transition ease-in-out duration-300
                   `}
                 >
-                  Recevoir la brochure
+                  Télécharger la brochure
                 </button>
               </form>
             </div>

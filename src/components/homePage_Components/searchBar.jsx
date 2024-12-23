@@ -21,7 +21,7 @@ const SearchBar = () => {
         {/* Bouton de recherche de la formation */}
         <NavLink
           to={"/etudes_internationales"}
-          className={`bg-[#f6aa00] hover:bg-[#00008f] hover:text-[#f6aa00] hover:border-1 hover:border-yellow-100 py-2 px-3.5 rounded-lg font-semibold`}
+          className={`bg-[#f6aa00] text-white hover:bg-[#00008f] hover:text-[#f6aa00] hover:border-1 hover:border-yellow-100 py-2 px-3.5 rounded-lg font-semibold`}
         >
           Rechercher
         </NavLink>

@@ -14,6 +14,8 @@ import EtapeDossier from "../../components/homePage_Components/etapeDossier";
 // Importation des images
 import etudiant from "../../../src/assets/images/gallerie/etudiants.jpg";
 
+import image_paris from "../../../src/assets/images/background/paris.jpg";
+
 // Définition des animations pour Framer Motion
 const containerVariants = {
   hidden: { opacity: 0, y: 50 },
@@ -66,7 +68,7 @@ const EtudesInternationales = () => {
       <NavigationBar />
 
       {/* Section d'en-tête avec image et texte */}
-      <div className="relative h-[75vh] sm:h-[50vh] lg:h-[85vh]">
+      <div className="relative w-full h-full">
         {/* Image de l'en-tête */}
         <img
           src={etudiant}
@@ -75,7 +77,7 @@ const EtudesInternationales = () => {
         />
 
         {/* Texte de la section */}
-        <div className="absolute inset-0 grid h-full w-full place-items-center items-end pb-8 bg-black/75">
+        <div className="absolute inset-0 grid h-full w-full place-items-center items-end pb-8 bg-black/30">
           <div className="w-full text-center px-2">
             <AnimatedComponent>
               <div className="flex flex-col items-center py-14 px-2 text-center">
@@ -87,10 +89,10 @@ const EtudesInternationales = () => {
                     delay: 0.5,
                   }}
                   className={
-                    "text-[#00008f] font-[montserrat] uppercase font-bold text-4xl sm:text-6xl dark:text-white"
+                    "text-[#f7a901] font-[montserrat] uppercase font-extrabold text-4xl sm:text-7xl dark:text-white"
                   }
                 >
-                  Etudes internationales
+                  FRANCE PREPA ACADEMY
                 </motion.h1>
                 <motion.span
                   initial={{ opacity: 0, y: 50 }}
@@ -99,21 +101,22 @@ const EtudesInternationales = () => {
                     duration: 0.5,
                     delay: 0.6,
                   }}
-                  className={"block mt-2 text-2xl font-semibold text-white"}
+                  className={"block mt-4 text-3xl font-bold text-white"}
                 >
-                  France Prepa Academy, Un réseau d’écoles en France
-                  métropolitaine.
+                  Un réseau d’écoles en France métropolitaine.
                 </motion.span>
               </div>
             </AnimatedComponent>
           </div>
         </div>
       </div>
+      <div className={`w-full h-24 bg-[#040480]`}></div>
 
       {/* Contenu de la page */}
       <AnimatedComponent>
         <CityNetwork />
       </AnimatedComponent>
+
       <AnimatedComponent>
         <EtapeDossier />
       </AnimatedComponent>

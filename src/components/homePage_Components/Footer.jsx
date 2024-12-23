@@ -13,33 +13,53 @@ const Footer = () => {
   return (
     <footer
       className={
-        "bg-gradient-to-t from-[#10113d] to-[#03042a] w-auto justify-center mx-auto max-w-full p-4 sm:pt-12 lg:px-8 lg:pt-24"
+        "bg-gradient-to-t from-[#10113d] to-[#03042a] w-full justify-center min-w-screen max-w-full"
       }
     >
       {/* Conteneur principal avec grille pour organiser le contenu */}
-      <div className={"xl:grid xl:grid-cols-3 gap-2 justify-center"}>
+      <div
+        className={
+          "xl:grid xl:grid-cols-3 gap-2 justify-center  p-4 sm:pt-12 lg:px-8 lg:pt-24"
+        }
+      >
         {/* Logo */}
-        <div className={"flex items-center justify-center pt-4 px-7"}>
-          <NavLink to={"/"}>
+        <div
+          className={
+            "flex flex-col items-center w-fit justify-center pt-4 px-7"
+          }
+        >
+          {/* <NavLink to={"/"}>
             <img className={"w-30 h-40"} src={logo} alt={"Logo France Prépa"} />
+          </NavLink> */}
+
+          <NavLink
+            to={"/"}
+            className={`text-[#f6aa00] hover:text-white text-md font-semibold my-2 uppercase`}
+          >
+            <span>FRANCE PREPA ACADEMY</span>
           </NavLink>
+          <p className={`text-gray-200 my-2 text-center text-sm`}>
+            Un organisme international qui soutient les étudiants africains dans
+            leur démarche d'intégration aux grandes écoles, en les accompagnant
+            vers la réussite de leur projet d'études en France.
+          </p>
         </div>
 
         {/* Liens utiles */}
         <div className={"flex flex-col items-center space-y-5 pt-4"}>
           <h3
             className={
-              "text-sm font-semibold leading-6 text-[#f6aa00] uppercase"
+              "text-sm font-bold leading-6 text-[#f6aa00] uppercase"
             }
           >
             LIENS UTILES
           </h3>
-          <ul role={"list"} className={"mt-6 space-y-4"}>
+          <ul role={"list"} className={`mt-6 space-y-4`}>
             <li>
               <NavLink
                 to={"/francePrepa"}
                 className={
-                  "text-sm leading-6 text-gray-300 hover:text-gray-900 capitalize"
+                  "text-sm leading-6 text-gray-300 hover:text-gray-500 capitalize"
                 }
               >
                 France Prépa Academy
@@ -50,7 +70,7 @@ const Footer = () => {
               <a
                 href={"#"}
                 className={
-                  "text-sm leading-6 text-gray-300 hover:text-gray-900"
+                  "text-sm leading-6 text-gray-300 hover:text-gray-500"
                 }
               >
                 Études internationales
@@ -61,7 +81,7 @@ const Footer = () => {
               <Link
                 to={"/contact"}
                 className={
-                  "text-sm leading-6 text-gray-300 hover:text-gray-900"
+                  "text-sm leading-6 text-gray-300 hover:text-gray-500"
                 }
               >
                 Contact
@@ -74,7 +94,7 @@ const Footer = () => {
         <div className={"flex flex-col items-center space-y-5 pt-4"}>
           <h3
             className={
-              "text-sm font-semibold leading-6 text-[#f6aa00] uppercase"
+              "text-sm font-bold leading-6 text-[#f6aa00] uppercase"
             }
           >
             S’INSCRIRE
@@ -84,7 +104,7 @@ const Footer = () => {
               <Link
                 to={"/login"}
                 className={
-                  "text-sm leading-6 text-[#f6aa00] hover:text-gray-900 uppercase"
+                  "text-sm leading-6 text-[#ffff] hover:text-gray-500 captalize"
                 }
               >
                 Se connecter
@@ -95,7 +115,7 @@ const Footer = () => {
               <Link
                 to={"/signup"}
                 className={
-                  "text-sm leading-6 text-[#f6aa00] hover:text-gray-900 uppercase"
+                  "text-sm leading-6 text-[#ffff] hover:text-gray-500 captalize"
                 }
               >
                 Créer un compte
@@ -106,11 +126,16 @@ const Footer = () => {
       </div>
 
       {/* Bas de page : droits d'auteur */}
-      <div
-        className={"mt-4 border-t border-gray-900/10 pt-8 sm:mt-20 lg:mt-24"}
-      >
-        <p className={"text-xs leading-5 text-gray-500"}>
-          &copy; 2024 Prépa France Academy, tous droits réservés.
+      <div className={"flex bg-[#f6aa00] w-full py-3 justify-center m-auto"}>
+        <p className={"text-sm leading-5 text-white font-medium"}>
+          &copy; 2024 Prépa France Academy, tous droits réservés | Designed by{" "}
+          <a
+            href="https://iredi-ti.com"
+            target="_blank"
+            className={`font-bold hover:text-black`}
+          >
+            IREDI
+          </a>
         </p>
       </div>
     </footer>

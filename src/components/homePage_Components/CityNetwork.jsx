@@ -38,20 +38,21 @@ const CityNetwork = () => {
   return (
     <div
       id="cityNetwork"
-      className={"bg-cover bg-center py-10 px-4"}
+      className={"bg-cover bg-center"}
       style={{ backgroundImage: `url(${image_paris})` }}
     >
       {/* En-tête de la section */}
+
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.7 }}
-        className={"text-center mb-8"}
+        className={"text-center mb-8  py-10 px-4"}
       >
-        <h1 className={"text-4xl font-bold text-[#ffff]"}>
+        <h1 className={"text-4xl font-bold text-[#f7a901]"}>
           Partenaire de choix d’Eduservices
         </h1>
-        <p className={"text-white mt-2 text-lg font-semibold"}>
+        <p className={"text-white mt-4 text-lg font-semibold"}>
           Explorez notre présence à travers la France
         </p>
       </motion.div>
@@ -78,6 +79,7 @@ const CityNetwork = () => {
           </motion.div>
         ))}
       </div>
+      <div className={`w-full h-24 bg-[#ffff] opacity-75 mt-8`}></div>
     </div>
   );
 };

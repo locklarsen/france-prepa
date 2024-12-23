@@ -47,8 +47,8 @@ const AnimatedComponent = ({ children }) => {
 
 const HomePage = () => {
   return (
-    <div className="">
-      <ScrollToTopButton/>
+    <div className="w-full">
+      <ScrollToTopButton />
       <AnimatedComponent>
         <NavigationBar />
         <CarouselCustomArrows />
