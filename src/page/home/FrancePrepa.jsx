@@ -69,9 +69,10 @@ const FrancePrepa = () => {
       {/* Barre de navigation */}
       <NavigationBar />
       <div
-        className="relative h-[75vh] sm:h-[50vh] lg:h-[900px] bg-cover bg-no-repeat bg-center"
+        className="relative w-full h-[32rem] bg-cover bg-no-repeat bg-center"
         style={{ backgroundImage: `url('${voyage}')` }}
       ></div>
+
       <section
         className={`flex flex-wrap lg:flex-nowrap px-14 py-2 items-center m-auto shadow-md shadow-gray-100`}
         id="about"
