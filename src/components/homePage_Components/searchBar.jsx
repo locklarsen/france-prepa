@@ -8,7 +8,7 @@ import { NavLink } from "react-router-dom";
 const SearchBar = () => {
   return (
     <div
-      className={`w-full px-4 py-3 bg-gray-100 shadow-md border-b-1 shadow-deep-gray-100`}
+      className={`w-full px-4 py-3 bg-[#00008f] shadow-md border-b-1 shadow-deep-gray-100`}
     >
       <div className={`flex flex-wrap justify-center items-center gap-3`}>
         {/* Zone de texte pour la formation */}
@@ -20,8 +20,8 @@ const SearchBar = () => {
 
         {/* Bouton de recherche de la formation */}
         <NavLink
-          to={"/etudes_internationales"}
-          className={`bg-[#f6aa00] text-white hover:bg-[#00008f] hover:text-[#f6aa00] hover:border-1 hover:border-yellow-100 py-2 px-3.5 rounded-lg font-semibold`}
+          to={"/etudes_internationales#schoolNetwork"}
+          className={`bg-[#f6aa00] text-white hover:bg-[#f0bb48] hover:text-[#f6aa00] hover:border-1 hover:border-yellow-100 py-2 px-3.5 rounded-lg font-semibold`}
         >
           Rechercher
         </NavLink>

@@ -1,5 +1,5 @@
 // Importation des bibliothèques nécessaires
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
@@ -13,8 +13,10 @@ import EtapeDossier from "../../components/homePage_Components/etapeDossier";
 
 // Importation des images
 import etudiant from "../../../src/assets/images/gallerie/etudiants.jpg";
+import ecoles from "../../../src/assets/images/logos/ecoles.jpg";
 
 import image_paris from "../../../src/assets/images/background/paris.jpg";
+import { useLocation } from "react-router-dom";
 
 // Définition des animations pour Framer Motion
 const containerVariants = {
@@ -51,13 +53,16 @@ const AnimatedComponent = ({ children }) => {
 
 // Composant principal de la page "Études Internationales"
 const EtudesInternationales = () => {
-  // Fonction pour défiler vers une section spécifique
-  const scrollToSection = (id) => {
-    const section = document.getElementById(id);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" }); // Ajoute un défilement fluide
+  const { hash } = useLocation();
+
+  useEffect(() => {
+    if (hash) {
+      const element = document.querySelector(hash);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
     }
-  };
+  }, [hash]);
 
   return (
     <div>
@@ -70,12 +75,11 @@ const EtudesInternationales = () => {
       {/* Section d'en-tête avec image et texte */}
       <div className="relative w-full h-full">
         {/* Image de l'en-tête */}
-        <img
-          src={etudiant}
-          alt="voyage"
-          className="h-full w-full object-cover"
-        />
 
+        <div
+          className="w-full h-[35rem]  bg-green-600] bg-cover"
+          style={{ backgroundImage: `url(${ecoles})` }}
+        ></div>
         {/* Texte de la section */}
         <div className="absolute inset-0 grid h-full w-full place-items-center items-end pb-8 bg-black/30">
           <div className="w-full text-center px-2">
@@ -89,7 +93,7 @@ const EtudesInternationales = () => {
                     delay: 0.5,
                   }}
                   className={
-                    "text-[#f7a901] font-[montserrat] uppercase font-extrabold text-4xl sm:text-7xl dark:text-white"
+                    "text-[#f7a901] font-[montserrat] uppercase font-extrabold text-4xl sm:text-7xl"
                   }
                 >
                   FRANCE PREPA ACADEMY
@@ -101,20 +105,21 @@ const EtudesInternationales = () => {
                     duration: 0.5,
                     delay: 0.6,
                   }}
-                  className={"block mt-4 text-3xl font-bold text-white"}
+                  className={"block mt-4 text-3xl font-bold text-[#00008f]"}
                 >
-                  Un réseau d’écoles en France métropolitaine.
+                  Un réseau d’écoles en France métropolitaine
                 </motion.span>
               </div>
             </AnimatedComponent>
           </div>
         </div>
       </div>
-      <div className={`w-full h-24 bg-[#040480]`}></div>
 
       {/* Contenu de la page */}
       <AnimatedComponent>
-        <CityNetwork />
+        <section id="schoolNetwork">
+          <CityNetwork />
+        </section>
       </AnimatedComponent>
 
       <AnimatedComponent>

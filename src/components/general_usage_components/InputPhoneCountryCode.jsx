@@ -29,7 +29,7 @@ const InputPhoneCountryCode = () => {
               ripple={false}
               variant="text"
               color="blue-gray"
-              className="h-10 w-14 shrink-0 rounded-r-none border border-r-0 border-blue-gray-200 bg-transparent px-3"
+              className="h-10 w-14 shrink-0 rounded-r-none border-2 border-r-0 border-gray-500 bg-transparent px-3"
             >
               {CODES[country]}
             </Button>
@@ -52,14 +52,14 @@ const InputPhoneCountryCode = () => {
           type="tel"
           pattern="[0-9]*"
           inputMode="numeric"
-          maxLength={12}
+          maxLength={9}
           placeholder="683 61 74 24"
-          className="appearance-none rounded-l-none !border-t-blue-gray-200 placeholder:text-blue-gray-300 placeholder:opacity-100 focus:!border-t-gray-900 [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
+          className={`bg-white flex items-center w-full px-5 py-3 text-sm font-medium outline-none 400 mb-3 md:mb-0 placeholder:text-gray-700 text-dark-gray-900 border-gray-500 border-2 rounded-xl`}
           labelProps={{
             className: "before:content-none after:content-none",
           }}
           containerProps={{
-            className: "min-w-0",
+            className: "min-w-0 ",
           }}
         />
       </div>

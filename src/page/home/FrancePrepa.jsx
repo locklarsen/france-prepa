@@ -19,6 +19,8 @@ import ScrollToTopButton from "../../components/general_usage_components/ScrollT
 // IMPORTER DES IMAGE
 import voyage from "../../../src/assets/images/gallerie/mbw.JPG";
 import voyage_2 from "../../../src/assets/images/carousel/2.JPG";
+import personne from "../../../src/assets/images/gallerie/promoteur.jpg"; // Image secondaire
+
 
 // Variantes d'animation pour Framer Motion
 const containerVariants = {
@@ -74,16 +76,30 @@ const FrancePrepa = () => {
       ></div>
 
       <section
-        className={`flex flex-wrap lg:flex-nowrap px-14 py-2 items-center m-auto shadow-md shadow-gray-100`}
+        className={`flex flex-wrap lg:flex-nowrap px-4 lg:px-8 py-2 items-center m-auto shadow-md shadow-gray-100`}
         id="about"
       >
+        <div
+          className={`bg-[#f7a901] hover:bg-[#00008f] hover:text-white rounded-lg w-full lg:w-4/12 px-2 py-3  mt-0 lg:mt-0 shadow-md shadow-gray-300 lg:order-first`}
+        >
+          <div className={`flex items-center justify-center`}>
+            <AnimatedComponent>
+              <div className={`relative w-full h-full italic z-50`}>
+                <img
+                  src={personne}
+                  className={`rounded-lg w-full h-full`}
+                ></img>
+              </div>
+            </AnimatedComponent>
+          </div>
+        </div>
         {/* Section Texte */}
         <motion.div
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 100 }}
           transition={{ duration: 2 }}
-          className={`w-full lg:w-8/12 px-1 lg:mt-0 mt-4`}
+          className={`w-full lg:w-8/12 lg:mt-0 mt-4`}
         >
           <div className={"flex flex-wrap"}>
             <div className={"w-full"}>
@@ -98,7 +114,7 @@ const FrancePrepa = () => {
                   variant="h1"
                   className="text-[#d8354a] font-[montserrat] uppercase font-bold text-3xl sm:text-[40px]/[48px] dark:text-white"
                 >
-                  France Prépa Academy
+                  Mot du promoteur
                 </motion.Typography>
                 <motion.span
                   initial={{ opacity: 0, y: 50 }}
@@ -126,25 +142,33 @@ const FrancePrepa = () => {
                   digital en France, et à les encadrer dans la validation de
                   leurs diplômes visés par l’Etat français.
                 </motion.p>
+
+                <motion.p
+                  initial={{ opacity: 0, y: 50 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{
+                    duration: 0.5,
+                    delay: 0.8,
+                  }}
+                  className="mt-4  text-lg font-bold text-black"
+                >
+                  Pr. Benjamin B. Obama
+                </motion.p>
+                <motion.p
+                  initial={{ opacity: 0, y: 50 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{
+                    duration: 0.5,
+                    delay: 0.8,
+                  }}
+                  className="text-lg font-medium text-black"
+                >
+                  Maître de conférences au groupe universitaire Eduservices
+                </motion.p>
               </div>
             </div>
           </div>
         </motion.div>
-
-        <div
-          className={`bg-[#f7a901] hover:bg-[#00008f] hover:text-white rounded-lg w-full lg:w-4/12 px-2 py-3  mt-0 lg:mt-0 shadow-md shadow-gray-300 lg:order-last`}
-        >
-          <div className={`flex items-center justify-center`}>
-            <AnimatedComponent>
-              <div className={`relative w-full h-full italic z-50`}>
-                <img
-                  src={voyage_2}
-                  className={`rounded-lg w-full h-full`}
-                ></img>
-              </div>
-            </AnimatedComponent>
-          </div>
-        </div>
       </section>
 
       {/* Section Diplômes */}

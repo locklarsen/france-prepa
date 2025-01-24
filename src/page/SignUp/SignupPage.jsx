@@ -23,7 +23,7 @@ const SignupPage = () => {
       {/* Section avec l'image d'arrière-plan et l'overlay */}
       <div
         style={{ backgroundImage: `url(${background})` }}
-        className={`relative w-full inset-50 p-5 sm:p-6 md:p-10 lg:p-14 flex flex-col justify-center items-center bg-cover bg-center`}
+        className={`relative w-full inset-50 py-8 px-2 md:px-4 lg:px-8 flex flex-col justify-center items-center bg-cover bg-center`}
       >
         {/* Superposition sombre pour améliorer la visibilité du contenu */}
         <div
@@ -38,12 +38,14 @@ const SignupPage = () => {
             duration: 0.5,
             delay: 0.6,
           }}
-          className={`relative z-10 flex justify-center w-full h-full my-auto xl:gap-14 lg:gap-10 md:gap-5`}
+          className={`relative z-10 flex justify-center w-full h-full my-auto gap-1`}
         >
-          <div className={`flex items-center justify-center w-full lg:p-12`}>
-            <div className={`flex items-center xl:p-1 w-full`}>
+          <div
+            className={`flex flex-col items-center justify-center w-full px-2 lg:py-12 lg:px-8`}
+          >
+            <div className={`flex items-center  w-full`}>
               <form
-                className={`bg-white opacity-90 flex flex-col items-center w-full h-full pb-6 text-center rounded-3xl p-4 md:p-8`}
+                className={`bg-white opacity-95 flex flex-col items-center w-full h-full pb-6 text-center rounded-3xl p-4 md:p-8`}
               >
                 <motion.div
                   initial={{ opacity: 0, y: 50 }}
@@ -93,7 +95,7 @@ const SignupPage = () => {
                       type="text"
                       placeholder="Lock Larsen"
                       required
-                      className={`bg-transparent border border-grey-300 flex items-center w-full px-5 py-3 text-sm font-medium outline-none focus:bg-grey-400 mb-3 md:mb-0 placeholder:text-grey-700 bg-grey-200 text-dark-grey-900 rounded-xl`}
+                      className={`bg-white flex items-center w-full px-5 py-3 text-sm font-medium outline-none 400 mb-3 md:mb-0 placeholder:text-gray-700 text-dark-gray-900 border-gray-500 border-2 rounded-xl`}
                     />
                   </div>
                   <div className={`flex flex-col w-full mb-3`}>
@@ -108,7 +110,7 @@ const SignupPage = () => {
                       type="text"
                       placeholder="Ansalla"
                       required
-                      className={`bg-transparent border border-grey-300 flex items-center w-full px-5 py-3 text-sm font-medium outline-none focus:bg-grey-400 mb-3 md:mb-0 placeholder:text-grey-700 bg-grey-200 text-dark-grey-900 rounded-xl`}
+                      className={`bg-white flex items-center w-full px-5 py-3 text-sm font-medium outline-none 400 mb-3 md:mb-0 placeholder:text-gray-700 text-dark-gray-900 border-gray-500 border-2 rounded-xl`}
                     />
                   </div>
                 </div>
@@ -126,7 +128,7 @@ const SignupPage = () => {
                       type="email"
                       placeholder="contact.locklarsen@gmail.com"
                       required
-                      className={`bg-transparent border border-grey-300 flex items-center w-full px-5 py-3 text-sm font-medium outline-none focus:bg-grey-400 mb-3 md:mb-0 placeholder:text-grey-700 bg-grey-200 text-dark-grey-900 rounded-xl`}
+                      className={`bg-white flex items-center w-full px-5 py-3 text-sm font-medium outline-none 400 mb-3 md:mb-0 placeholder:text-gray-700 text-dark-gray-900 border-gray-500 border-2 rounded-xl`}
                     />
                   </div>
                   <div className={`flex flex-col w-full mb-3`}>
@@ -153,7 +155,7 @@ const SignupPage = () => {
                       type="password"
                       placeholder="Créer un mot de passe"
                       required
-                      className={`bg-transparent border border-grey-300 flex items-center w-full px-5 py-3 text-sm font-medium outline-none focus:bg-grey-400 mb-3 md:mb-0 placeholder:text-grey-700 bg-grey-200 text-dark-grey-900 rounded-xl`}
+                      className={`bg-white flex items-center w-full px-5 py-3 text-sm font-medium outline-none 400 mb-3 md:mb-0 placeholder:text-gray-700 text-dark-gray-900 border-gray-500 border-2 rounded-xl`}
                     />
                   </div>
                   <div className={`flex flex-col w-full mb-3`}>
@@ -169,7 +171,7 @@ const SignupPage = () => {
                       type="password"
                       placeholder="Confirmez le mot de passe"
                       required
-                      className={`bg-transparent border border-grey-300 flex items-center w-full px-5 py-3 text-sm font-medium outline-none focus:bg-grey-400 mb-3 md:mb-0 placeholder:text-grey-700 bg-grey-200 text-dark-grey-900 rounded-xl`}
+                      className={`bg-white flex items-center w-full px-5 py-3 text-sm font-medium outline-none 400 mb-3 md:mb-0 placeholder:text-gray-700 text-dark-gray-900 border-gray-500 border-2 rounded-xl`}
                     />
                   </div>
                 </div>

@@ -108,7 +108,7 @@ const About = () => {
 
   return (
     <section
-      className={`flex flex-wrap lg:flex-nowrap px-14 pb-2 pt-0 items-center m-auto shadow-md shadow-gray-100`}
+      className={`flex flex-wrap lg:flex-nowrap px-3 lg:px-14 pb-2 pt-0 items-center m-auto shadow-md shadow-gray-100`}
       id="about"
     >
       {/* Section Texte */}

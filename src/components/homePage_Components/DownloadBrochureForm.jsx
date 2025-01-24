@@ -45,19 +45,17 @@ const DownloadBrochureForm = () => {
       variants={containerVariants}
       initial="hidden"
       animate="visible"
-      className={`bg-gray-50 
-        py-4 px-4
-      `}
+      className={`bg-gray-50 shadow-lg py-4 lg:px-10`}
     >
       <div
-        className={` relative my-3 flex items-top justify-center min-h-screen sm:items-center sm:pt-0`}
+        className={` relative  flex flex-col items-center justify-center min-h-screen sm:items-center sm:pt-0`}
       >
         <div
-          className={`bg-[#10113d] max-w-6xl mx-auto sm:px-6 lg:px-8 py-2 rounded-xl shadow-lg`}
+          className={`bg-[#10113d] w-full mx-auto px-4 py-2 rounded-xl shadow-lg`}
         >
           <div className={`mt-8 overflow-hidden`}>
             <div className={`grid grid-cols-1 md:grid-cols-2`}>
-              <div className={`p-6 mr-2 bg-[#f6aa00] sm:rounded-lg`}>
+              <div className={`p-2 bg-[#f6aa00] sm:rounded-lg`}>
                 <h1
                   className={`text-4xl sm:text-5xl text-[#00008f] font-extrabold tracking-tight`}
                 >
@@ -80,10 +78,10 @@ const DownloadBrochureForm = () => {
               {/* Formulaire de téléchargement de la brochure */}
               <form
                 onSubmit={handleSubmit}
-                className={`p-6 flex flex-col justify-center`}
+                className={`py-3 px-1 flex flex-col w-full items-center justify-center`}
               >
                 {/* Champ de saisie du nom */}
-                <div className={`flex flex-col mt-2`}>
+                <div className={`flex flex-col mt-2 w-full px-4`}>
                   <label htmlFor={`name`} className={`hidden`}>
                     Nom
                   </label>
@@ -94,9 +92,9 @@ const DownloadBrochureForm = () => {
                     placeholder={`Nom`}
                     required={true}
                     className={`
-                      w-full mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 
-                      border border-gray-400 dark:border-gray-700 text-gray-800 font-semibold 
-                      focus:border-indigo-500 focus:outline-none
+                      w-full mt-2 py-3 px-3 rounded-lg bg-white 
+                      border border-gray-400 dark:border-gray-700 text-gray-800 font-normal 
+                      focus:border-amber-500 focus:outline-none
                     `}
                     value={name}
                     onChange={(e) => setName(e.target.value)}
@@ -104,7 +102,7 @@ const DownloadBrochureForm = () => {
                 </div>
 
                 {/* Champ de saisie du prénom */}
-                <div className={`flex flex-col mt-2`}>
+                <div className={`flex flex-col mt-2 w-full px-4`}>
                   <label htmlFor={`givenname`} className={`hidden`}>
                     Prénom
                   </label>
@@ -115,9 +113,9 @@ const DownloadBrochureForm = () => {
                     placeholder={`Prénom`}
                     required={true}
                     className={`
-                                        w-full mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 
-                      border border-gray-400 dark:border-gray-700 text-gray-800 font-semibold 
-                      focus:border-indigo-500 focus:outline-none
+                      w-full mt-2 py-3 px-3 rounded-lg bg-white 
+                      border border-gray-400 dark:border-gray-700 text-gray-800 font-normal 
+                      focus:border-amber-500 focus:outline-none
                     `}
                     value={firstName}
                     onChange={(e) => setFirstName(e.target.value)}
@@ -125,7 +123,7 @@ const DownloadBrochureForm = () => {
                 </div>
 
                 {/* Champ de saisie de l'email */}
-                <div className={`flex flex-col mt-2`}>
+                <div className={`flex flex-col mt-2 w-full px-4`}>
                   <label htmlFor={`email`} className={`hidden`}>
                     Email
                   </label>
@@ -136,9 +134,9 @@ const DownloadBrochureForm = () => {
                     placeholder={`Email`}
                     required={true}
                     className={`
-                                       w-full mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 
-                      border border-gray-400 dark:border-gray-700 text-gray-800 font-semibold 
-                      focus:border-indigo-500 focus:outline-none
+                      w-full mt-2 py-3 px-3 rounded-lg bg-white 
+                      border border-gray-400 dark:border-gray-700 text-gray-800 font-normal 
+                      focus:border-amber-500 focus:outline-none
                     `}
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}

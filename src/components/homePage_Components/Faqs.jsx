@@ -4,9 +4,9 @@ import React, { useState } from "react"; // Import nécessaire pour React et use
 const Faqs = () => {
   return (
     <section
-      className={`relative z-20 overflow-hidden bg-transparent px-5 py-4 dark:bg-dark lg:pb-[90px] lg:pt-[120px]`}
+      className={`relative z-20 overflow-hidden bg-transparent p-4`}
     >
-      <div className={`container mx-auto`}>
+      <div className={` mx-auto`}>
         <div className={`flex flex-wrap`}>
           <div className={`w-full text-center lg:mb-10`}>
             {/* Titre de la section */}
@@ -23,7 +23,7 @@ const Faqs = () => {
 
         {/* Conteneur des éléments FAQ */}
         <div
-          className={`text-justify font-medium mb-8 w-full sm:max-w-full rounded-lg bg-[#f6a901] p-4 shadow-[0px_20px_95px_0px_rgba(201,203,204,0.30)] dark:bg-dark-2 dark:shadow-[0px_20px_95px_0px_rgba(0,0,0,0.30)]`}
+          className={`text-justify font-medium mb-8 w-full sm:max-w-full rounded-lg bg-[#f6a901] py-4 px-2 shadow-[0px_20px_95px_0px_rgba(201,203,204,0.30)] dark:bg-dark-2 dark:shadow-[0px_20px_95px_0px_rgba(0,0,0,0.30)]`}
         >
           {faqData.map((faq, index) => (
             <AccordionItem key={index} header={faq.header} text={faq.text} />
@@ -50,7 +50,7 @@ const AccordionItem = ({ header, text }) => {
 
   return (
     <div
-      className={`mb-8 w-full rounded-lg bg-white p-4 shadow-[0px_20px_95px_0px_rgba(201,203,204,0.30)] dark:shadow-[0px_20px_95px_0px_rgba(0,0,0,0.30)]`}
+      className={`mb-8 w-full rounded-lg bg-white p-4 shadow-[0px_20px_95px_0px_rgba(201,203,204,0.30)]`}
     >
       <button
         className={`faq-btn flex w-full text-left`}
@@ -58,7 +58,7 @@ const AccordionItem = ({ header, text }) => {
       >
         {/* Bouton avec icône */}
         <div
-          className={`mr-5 flex h-10 w-full max-w-[40px] items-center justify-center rounded-lg bg-primary/5 text-primary dark:bg-white/5`}
+          className={`mr-1 flex h-10 w-full max-w-[40px] items-center justify-center rounded-lg bg-primary/5 text-primary dark:bg-white/5`}
         >
           <svg
             className={`fill-primary stroke-primary duration-200 ease-in-out ${
@@ -75,9 +75,7 @@ const AccordionItem = ({ header, text }) => {
 
         {/* En-tête de l'élément */}
         <div className={`w-full`}>
-          <h4
-            className={`mt-1 text-lg font-semibold text-dark dark:text-white`}
-          >
+          <h4 className={`mt-1 text-lg font-semibold text-dark text-[#00008f]`}>
             {header}
           </h4>
         </div>
@@ -85,12 +83,12 @@ const AccordionItem = ({ header, text }) => {
 
       {/* Texte visible uniquement lorsque l'accordéon est ouvert */}
       <div
-        className={`pl-[62px] duration-200 ease-in-out ${
+        className={`px-2 duration-200 ease-in-out ${
           active ? "block" : "hidden"
         }`}
       >
         <p
-          className={`py-3 text-base leading-relaxed text-body-color dark:text-dark-6`}
+          className={`py-3 text-base leading-relaxed`}
         >
           {text}
         </p>

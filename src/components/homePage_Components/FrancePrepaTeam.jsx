@@ -8,21 +8,21 @@ const FrancePrepaTeam = () => {
   // Liste des membres de l'équipe
   const teamMembers = [
     {
-      name: "Dr. Benjamin B. Obama",
-      role: "Promoteur de France Prépa Academy",
+      name: "Daouda Kek à Zock",
+      role: "Conseiller pédagogique",
       description:
         "Dr. Obama est maître de conférences à l’Université Catholique de Lyon et spécialiste des questions d’entreprenariat et de RSE.",
       image: promoteur,
     },
     {
-      name: "Daouda",
-      role: "Conseiller",
+      name: "Durelle Mbia",
+      role: "Conseillère adjointe",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat sit officiis tempora maiores molestiae non a repellendus est dolores.",
       image: personne,
     },
     {
-      name: "Juvenal",
+      name: "Fabrice Epoh",
       role: "Responsable des recrutements",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat sit officiis tempora maiores molestiae non a repellendus est dolores.",
@@ -35,7 +35,7 @@ const FrancePrepaTeam = () => {
       {/* Section principale */}
       <div id="team">
         <div
-          className={`w-full h-fit items-center justify-items-center bg-gar-50 px-10 pt-10`}
+          className={`w-full h-fit items-center justify-items-center bg-gar-50 px-4 lg:px-8 pt-10`}
         >
           <div
             role={`list`}

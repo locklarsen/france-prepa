@@ -8,16 +8,21 @@ import image_paris from "../../../src/assets/images/background/paris.jpg";
 
 // Liste des villes
 const cities = [
+  "Angers",
+  "Bordeaux",
+  "Caen",
+  "Chambéry",
+  "Lille",
   "Lyon",
+  "Marseille",
+  "Montpellier",
+  "Nantes",
+  "Nice",
+  "Nîmes",
+  "Rennes",
+  "Strasbourg",
   "Toulouse",
   "Paris",
-  "Angers",
-  "Marseille",
-  "Nice",
-  "Lille",
-  "Montpellier",
-  "Bordeaux",
-  "Strasbourg",
 ];
 
 // Variantes d'animation pour chaque ville
@@ -37,12 +42,11 @@ const cityVariants = {
 const CityNetwork = () => {
   return (
     <div
-      id="cityNetwork"
       className={"bg-cover bg-center"}
       style={{ backgroundImage: `url(${image_paris})` }}
     >
-      {/* En-tête de la section */}
-
+    
+      <div className={`w-full h-24 bg-[#ffff] opacity-75`}></div>
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
@@ -53,7 +57,7 @@ const CityNetwork = () => {
           Partenaire de choix d’Eduservices
         </h1>
         <p className={"text-white mt-4 text-lg font-semibold"}>
-          Explorez notre présence à travers la France
+          Une présence dans 60% des grandes villes françaises
         </p>
       </motion.div>
 

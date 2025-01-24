@@ -9,19 +9,19 @@ import { Typography } from "@material-tailwind/react";
 const posts = [
   {
     id: 1,
-    title: "Les concours France Prépa arrivent…",
+    title: "Les premiers visas de 2025 sont là !",
     href: "#",
-    image: postImage1,
+    image: postImage2,
     description:
       "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.",
-    date: "30/11/2024",
-    datetime: "2024-11-30",
+    date: "10/01/2025",
+    datetime: "2025-01-10",
   },
   {
     id: 2,
-    title: "Nos lauréats aux premiers rangs",
+    title: "Le concours de mars arrive",
     href: "#",
-    image: postImage2,
+    image: postImage1,
     description:
       "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.",
     date: "16/03/2020",
@@ -29,7 +29,7 @@ const posts = [
   },
   {
     id: 3,
-    title: "Nos lauréats entrent en stage",
+    title: "Les trois promotions de France Prepa Academy se rencontrent !",
     href: "#",
     image: postImage3,
     description:

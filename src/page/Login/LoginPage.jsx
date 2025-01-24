@@ -48,11 +48,7 @@ const LoginPage = () => {
           }}
           className={`flex flex-col bg-gray-50 opacity-95 rounded-2xl p-8 sm:p-10 md:p-12 lg:w-1/2 items-center justify-center`}
         >
-          <img
-            src={logo}
-            alt="Logo"
-            className={`object-cover w-1/3 h-1/3 mb-4`}
-          />
+
           <Typography className={`text-2xl font-semibold mb-4 text-[#00008f]`}>
             Connexion
           </Typography>
