@@ -1,14 +1,16 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import axios from "axios";
 import {
   Menu,
   MenuHandler,
   MenuList,
   MenuItem,
   Button,
-  Input,
 } from "@material-tailwind/react";
 import image_procedure from "../../../src/assets/images/gallerie/etudiante.jpg";
+
+import Notification from "../general_usage_components/Notification";
 
 const COUNTRIES = [
   "Algérie (+213)",
@@ -84,16 +86,57 @@ const DownloadBrochureForm = () => {
   const [country, setCountry] = useState(0);
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
 
+  const [message, setMessage] = useState("");
+  const [type, setType] = useState("");
+
   // Fonction pour gérer l'envoi du formulaire
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (email) {
-      // Simule l'envoi du formulaire, dans un cas réel, envoie à un serveur ou un service de gestion d'emails
-      setIsFormSubmitted(true);
-      setTimeout(() => {
-        // Simule le téléchargement de la brochure après l'envoi
-        alert(`La brochure a été envoyée à votre email !`);
-      }, 2000);
+
+    try {
+      // Envoi des données du formulaire
+      const response = await fetch(
+        "http://localhost:3000/api/prospects/enregistrer",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            nom: name,
+            prenom: firstName,
+            email: email,
+            tel: country + phone,
+            idDoc: 1,
+          }),
+        }
+      );
+
+      if (response.ok) {
+        setMessage(
+          "Données enregistrées avec succès ! Votre téléchargement va débuter..."
+        );
+        setType("success");
+
+        // Réinitialiser la notification après 10 secondes
+        setTimeout(() => {
+          setMessage("");
+          setType("");
+
+          // Lancer le téléchargement après disparition du message
+          const downloadUrl = "/backend/upload/brochure.pdf"; // Remplacer par l'URL de ton fichier
+          const link = document.createElement("a");
+          link.href = downloadUrl;
+          link.download = "brochure.pdf"; // Nom du fichier téléchargé
+          link.click(); // Simule un clic pour démarrer le téléchargement
+        }, 5000); // 10 secondes avant de lancer le téléchargement
+      } else {
+        setMessage("Erreur lors de l’enregistrement du prospect.");
+        setType("error");
+      }
+    } catch (error) {
+      setMessage("Une erreur est survenue.");
+      setType("error");
     }
   };
 
@@ -105,7 +148,7 @@ const DownloadBrochureForm = () => {
       className={`bg-gray-50 shadow-lg py-4 lg:px-10`}
     >
       <div
-        className={` relative  flex flex-col items-center justify-center min-h-screen sm:items-center sm:pt-0`}
+        className={` relative flex flex-col items-center justify-center min-h-screen sm:items-center sm:pt-0`}
       >
         <div
           className={`bg-[#10113d] w-full mx-auto px-4 py-2 rounded-xl shadow-lg`}
@@ -133,6 +176,7 @@ const DownloadBrochureForm = () => {
               </div>
 
               {/* Formulaire de téléchargement de la brochure */}
+
               <form
                 onSubmit={handleSubmit}
                 className={`py-3 px-1 flex flex-col w-full items-center justify-center`}
@@ -201,56 +245,45 @@ const DownloadBrochureForm = () => {
                 </div>
 
                 {/* Champ de saisie du numéro de téléphone */}
-                <div className={`flex flex-col mt-2 w-full px-4`}>
+                <div className="w-full  mt-4  px-4">
                   <label htmlFor={`phone`} className={`hidden`}>
                     Numéro de téléphone
                   </label>
-                  <div className="flex w-full">
+                  <div className="flex">
                     <Menu placement="bottom-start">
                       <MenuHandler>
                         <Button
                           ripple={false}
                           variant="text"
-                          color="blue-gray"
-                          className="shrink-0 rounded-r-none border-gray-500 border-1 border-r-0 bg-transparent px-3 flex items-center"
-                          style={{ width: "4rem" }} // Ajuster la largeur du bouton
+                          className="bg-white shrink-0 rounded-r-none border border-gray-300 px-3"
                         >
                           {CODES[country]}
                         </Button>
                       </MenuHandler>
-                      <MenuList className="bg-[#f6aa00] max-h-[40rem] max-w-[50rem] text-gray-800 space-y-3 font-medium">
+                      <MenuList className="max-h-60 overflow-auto">
                         {COUNTRIES.map((country, index) => (
                           <MenuItem
                             key={country}
-                            value={country}
                             onClick={() => setCountry(index)}
-                            className="flex flex-col border-b-[1px] border-t-0 border-x-0 rounded-none px-2 border-red-900"
                           >
                             {country}
                           </MenuItem>
                         ))}
                       </MenuList>
                     </Menu>
-                    <Input
+                    <input
                       type="tel"
-                      pattern="[0-9]*"
-                      inputMode="numeric"
-                      maxLength={9}
                       placeholder="Numéro de téléphone"
-                      required={true}
-                      className="w-full h-14 px-2 py-3 text-sm font-normal rounded-l-none rounded-lg placeholder:text-gray-700 text-gray-900"
+                      maxLength={9}
                       value={phone}
                       onChange={(e) => setPhone(e.target.value)}
-                      labelProps={{
-                        className: "before:content-none after:content-none",
-                      }}
-                      containerProps={{
-                        className: "bg-white w-full h-14 rounded-r-lg",
-                      }}
+                      className="bg-white flex-1 border border-gray-300 rounded-r-lg px-4 py-2 focus:ring-2 focus:ring-blue-500"
                     />
                   </div>
                 </div>
-
+                <div className="h-auto mt-4">
+                  {message && <Notification type={type} message={message} />}
+                </div>
                 {/* Bouton d'envoi du formulaire */}
                 <button
                   type={`submit`}
@@ -269,5 +302,4 @@ const DownloadBrochureForm = () => {
     </motion.div>
   );
 };
-
 export default DownloadBrochureForm;

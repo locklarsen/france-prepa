@@ -1,204 +1,210 @@
-// IMPORTER LES PACKAGES REACT
-import React from "react";
-import { Link } from "react-router-dom";
-
-// IMPORTER D'AUTRES PACKAGES
-import { Button, Typography } from "@material-tailwind/react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
-
-// IMPRTER DES COMPOSANT
+import {
+  Typography,
+  Menu,
+  MenuHandler,
+  MenuList,
+  MenuItem,
+  Button,
+} from "@material-tailwind/react";
 import Footer from "../../components/homePage_Components/Footer";
-import InputPhoneCountryCode from "../../components/general_usage_components/InputPhoneCountryCode";
 import NavigationBar from "../../components/homePage_Components/NavigationBar";
-
-// IMPORTER DES IMAGES
 import background from "../../assets/images/background/001.JPG";
 import logo from "../../../src/assets/images/logos/logo.png";
 
-const SignupPage = () => {
-  return (
-    <div className={`bg-white`}>
-      <NavigationBar />
+const COUNTRIES = [
+  "Algérie (+213)",
+  "Bénin (+229)",
+  "Burkina Faso (+226)",
+  "Burundi (+257)",
+  "Cameroun (+237)",
+  "Cap-Vert (+238)",
+  "Comores (+269)",
+  "Congo Brazzaville (+242)",
+  "Congo Kinshasa (+243)",
+  "Côte d'Ivoire (+225)",
+  "Djibouti (+253)",
+  "Gabon (+241)",
+  "Guinée (+224)",
+  "Guinée-Bissau (+245)",
+  "Madagascar (+261)",
+  "Mali (+223)",
+  "Mauritanie (+222)",
+  "Niger (+227)",
+  "Rwanda (+250)",
+  "Sénégal (+221)",
+  "Seychelles (+248)",
+  "Tchad (+235)",
+  "Togo (+228)",
+];
+const CODES = [
+  "+213",
+  "+229",
+  "+226",
+  "+257",
+  "+237",
+  "+238",
+  "+269",
+  "+242",
+  "+243",
+  "+225",
+  "+253",
+  "+241",
+  "+224",
+  "+245",
+  "+261",
+  "+223",
+  "+222",
+  "+227",
+  "+250",
+  "+221",
+  "+248",
+  "+235",
+  "+228",
+];
 
-      {/* Section avec l'image d'arrière-plan et l'overlay */}
+const SignupPage = () => {
+  const [country, setCountry] = useState(0);
+  const [phone, setPhone] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    alert("Formulaire soumis avec succès !");
+  };
+
+  return (
+    <div className="bg-white">
+      <NavigationBar />
       <div
         style={{ backgroundImage: `url(${background})` }}
-        className={`relative w-full inset-50 py-8 px-2 md:px-4 lg:px-8 flex flex-col justify-center items-center bg-cover bg-center`}
+        className="relative w-full py-8 px-4 flex flex-col items-center bg-cover bg-center"
       >
-        {/* Superposition sombre pour améliorer la visibilité du contenu */}
-        <div
-          className={`absolute inset-0 bg-[#000000] bg-opacity-75 z-10`}
-        ></div>
-
-        {/* Contenu placé au-dessus de l'image d'arrière-plan */}
+        <div className="absolute inset-0 bg-[#000000] bg-opacity-75 z-10"></div>
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{
-            duration: 0.5,
-            delay: 0.6,
-          }}
-          className={`relative z-10 flex justify-center w-full h-full my-auto gap-1`}
+          transition={{ duration: 0.5, delay: 0.6 }}
+          className="relative z-10 w-full max-w-4xl bg-white opacity-95 rounded-3xl p-6 md:p-10"
         >
-          <div
-            className={`flex flex-col items-center justify-center w-full px-2 lg:py-12 lg:px-8`}
-          >
-            <div className={`flex items-center  w-full`}>
-              <form
-                className={`bg-white opacity-95 flex flex-col items-center w-full h-full pb-6 text-center rounded-3xl p-4 md:p-8`}
-              >
-                <motion.div
-                  initial={{ opacity: 0, y: 50 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{
-                    duration: 0.6,
-                    delay: 0.7,
-                  }}
-                  className={`flex flex-col items-center `}
-                >
-                  {/* Logo */}
-                  <img
-                    src={logo}
-                    alt="Logo"
-                    className={`object-cover w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-48 lg:h-48`}
-                  />
-
-                  {/* Titre de la page */}
-                  <Typography
-                    className={`font-[montserrat] text-[#00008f] mb-3 text-2xl sm:text-3xl md:text-4xl font-extrabold uppercase`}
-                  >
-                    Créer un compte
-                  </Typography>
-                </motion.div>
-
-                {/* Ligne de séparation */}
-                <div className={`flex items-center mb-3 w-full`}>
-                  <hr
-                    className={`h-0.5 border-b border-solid border-grey-500 grow`}
-                  />
-                  <hr
-                    className={`h-0.5 border-b border-solid border-grey-500 grow`}
-                  />
-                </div>
-
-                {/* Formulaire d'inscription */}
-                <div className={`flex flex-col w-full md:flex-row md:gap-3`}>
-                  <div className={`flex flex-col w-full mb-3`}>
-                    <label
-                      htmlFor="prenom"
-                      className={`mb-2 text-md font-medium text-gray-900 text-justify`}
-                    >
-                      Prénom<span className={`text-red-700`}>*</span>
-                    </label>
-                    <input
-                      id="prenom"
-                      type="text"
-                      placeholder="Lock Larsen"
-                      required
-                      className={`bg-white flex items-center w-full px-5 py-3 text-sm font-normal outline-none mb-3 md:mb-0 placeholder:text-gray-700 text-dark-gray-900 border-gray-500 border-1 rounded-xl`}
-                    />
-                  </div>
-                  <div className={`flex flex-col w-full mb-3`}>
-                    <label
-                      htmlFor="nom"
-                      className={`mb-2 text-md font-medium text-gray-900 text-justify`}
-                    >
-                      Nom<span className={`text-red-700`}>*</span>
-                    </label>
-                    <input
-                      id="nom"
-                      type="text"
-                      placeholder="Ansalla"
-                      required
-                      className={`bg-white flex items-center w-full px-5 py-3 text-sm font-normal outline-none mb-3 md:mb-0 placeholder:text-gray-700 text-dark-gray-900 border-gray-500 border-1 rounded-xl`}
-                    />
-                  </div>
-                </div>
-
-                <div className={`flex flex-col w-full md:flex-row md:gap-3`}>
-                  <div className={`flex flex-col w-full mb-3`}>
-                    <label
-                      htmlFor="email"
-                      className={`mb-2 text-md font-medium text-gray-900 text-justify`}
-                    >
-                      Email<span className={`text-red-700`}>*</span>
-                    </label>
-                    <input
-                      id="email"
-                      type="email"
-                      placeholder="contact.locklarsen@gmail.com"
-                      required
-                      className={`bg-white flex items-center w-full px-5 py-3 text-sm font-normal outline-none mb-3 md:mb-0 placeholder:text-gray-700 text-dark-gray-900 border-gray-500 border-1 rounded-xl`}
-                    />
-                  </div>
-                  <div className={`flex flex-col w-full mb-3`}>
-                    <label
-                      htmlFor="InputPhoneCountryCode"
-                      className={`mb-2 text-md font-medium text-gray-900 text-justify`}
-                    >
-                      Téléphone<span className={`text-red-700`}>*</span>
-                    </label>
-                    <InputPhoneCountryCode />
-                  </div>
-                </div>
-
-                <div className={`flex flex-col w-full md:flex-row md:gap-3`}>
-                  <div className={`flex flex-col w-full mb-3`}>
-                    <label
-                      htmlFor="password"
-                      className={`mb-2 text-md font-medium text-gray-900 text-justify`}
-                    >
-                      Mot de passe<span className={`text-red-700`}>*</span>
-                    </label>
-                    <input
-                      id="password"
-                      type="password"
-                      placeholder="Créer un mot de passe"
-                      required
-                      className={`bg-white flex items-center w-full px-5 py-3 text-sm font-normal outline-none mb-3 md:mb-0 placeholder:text-gray-700 text-dark-gray-900 border-gray-500 border-1 rounded-xl`}
-                    />
-                  </div>
-                  <div className={`flex flex-col w-full mb-3`}>
-                    <label
-                      htmlFor="confirmed_password"
-                      className={`mb-2 text-md font-medium text-gray-900 text-justify`}
-                    >
-                      Confirmez le mot de passe
-                      <span className={`text-red-700`}>*</span>
-                    </label>
-                    <input
-                      id="confirmed_password"
-                      type="password"
-                      placeholder="Confirmez le mot de passe"
-                      required
-                      className={`bg-white flex items-center w-full px-5 py-3 text-sm font-normal outline-none mb-3 md:mb-0 placeholder:text-gray-700 text-dark-gray-900 border-gray-500 border-1 rounded-xl`}
-                    />
-                  </div>
-                </div>
-
-                {/* Bouton Créer un compte */}
-                <Button
-                  size="lg"
-                  className={`bg-[#f6aa00] hover:bg-[#00008f] hover:border-1 hover:border-yellow-100 mx-auto my-4`}
-                >
-                  Créer un compte
-                </Button>
-
-                <Typography className={`mt-4 font-medium text-base`}>
-                  Vous avez déjà un compte?{" "}
-                  <Link
-                    to="/login"
-                    className={`text-[#00008f] hover:text-[#f6aa00] focus:text-[#f6aa00]`}
-                  >
-                    Connectez-vous ici
-                  </Link>
-                </Typography>
-              </form>
-            </div>
+          <div className="text-center">
+            <img src={logo} alt="Logo" className="w-20 h-20 mx-auto mb-4" />
+            <Typography
+              variant="h4"
+              className="text-[#00008f] font-extrabold uppercase mb-4"
+            >
+              Créer un compte
+            </Typography>
+            <p className="text-lg font-medium text-gray-600">
+              Remplissez le formulaire ci-dessous pour créer un compte.
+            </p>
           </div>
+          <form onSubmit={handleSubmit} className="mt-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {/* Colonne gauche */}
+              <div className="space-y-4">
+                <div>
+                  <label className="block text-gray-700 font-medium mb-1">
+                    Nom
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="Entrez votre nom"
+                    className="bg-white w-full border border-gray-500 rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500"
+                  />
+                </div>
+                <div>
+                  <label className="block text-gray-700 font-medium mb-1">
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    placeholder="Entrez votre email"
+                    className="bg-white w-full border border-gray-500 rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500"
+                  />
+                </div>
+                <div>
+                  <label className="block text-gray-700 font-medium mb-1">
+                    Numéro de téléphone
+                  </label>
+                  <div className="flex">
+                    <Menu placement="bottom-start">
+                      <MenuHandler>
+                        <Button
+                          ripple={false}
+                          variant="text"
+                          className="shrink-0 rounded-r-none border border-gray-300 px-3"
+                        >
+                          {CODES[country]}
+                        </Button>
+                      </MenuHandler>
+                      <MenuList className="max-h-60 overflow-auto">
+                        {COUNTRIES.map((country, index) => (
+                          <MenuItem
+                            key={country}
+                            onClick={() => setCountry(index)}
+                          >
+                            {country}
+                          </MenuItem>
+                        ))}
+                      </MenuList>
+                    </Menu>
+                    <input
+                      type="tel"
+                      placeholder="Numéro"
+                      maxLength={9}
+                      value={phone}
+                      onChange={(e) => setPhone(e.target.value)}
+                      className="bg-white flex-1 border border-gray-300 rounded-r-lg px-4 py-2 focus:ring-2 focus:ring-blue-500"
+                    />
+                  </div>
+                </div>
+              </div>
+              {/* Colonne droite */}
+              <div className="space-y-4">
+                <div>
+                  <label className="block text-gray-700 font-medium mb-1">
+                    Prénom
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="Entrez votre prénom"
+                    className="bg-white w-full border border-gray-500 rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500"
+                  />
+                </div>
+                <div>
+                  <label className="block text-gray-700 font-medium mb-1">
+                    Mot de passe
+                  </label>
+                  <input
+                    type="password"
+                    placeholder="Entrez votre mot de passe"
+                    className="bg-white w-full border border-gray-500 rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500"
+                  />
+                </div>
+                <div>
+                  <label className="block text-gray-700 font-medium mb-1">
+                    Confirmer le mot de passe
+                  </label>
+                  <input
+                    type="password"
+                    placeholder="Confirmez votre mot de passe"
+                    className="bg-white w-full border border-gray-500 rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500"
+                  />
+                </div>
+              </div>
+            </div>
+            <div className="mt-6 text-center">
+              <button
+                type="submit"
+                className="bg-[#f6aa00] text-white font-bold py-2 px-6 rounded-lg hover:bg-[#00008f]"
+              >
+                Soumettre
+              </button>
+            </div>
+          </form>
         </motion.div>
       </div>
-
       <Footer />
     </div>
   );
