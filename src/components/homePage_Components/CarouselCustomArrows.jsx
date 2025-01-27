@@ -1,5 +1,5 @@
 // IMPORTER LES PACKAGES REACT
-import { Carousel, Typography, Button } from "@material-tailwind/react";
+import { Carousel, Typography } from "@material-tailwind/react";
 import { Link, NavLink } from "react-router-dom";
 
 // IMPORTER LES IMAGES POUR LE CAROUSEL

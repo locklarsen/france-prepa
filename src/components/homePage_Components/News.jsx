@@ -9,33 +9,33 @@ import { Typography } from "@material-tailwind/react";
 const posts = [
   {
     id: 1,
-    title: "Les premiers visas de 2025 sont là !",
+    title: "Les premiers visas de 2025 sont là.",
     href: "#",
     image: postImage2,
     description:
       "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.",
-    date: "10/01/2025",
-    datetime: "2025-01-10",
+    date: "22/01/2025",
+    datetime: "2025-01-22",
   },
   {
     id: 2,
-    title: "Le concours de mars arrive",
-    href: "#",
-    image: postImage1,
-    description:
-      "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.",
-    date: "16/03/2020",
-    datetime: "2020-03-16",
-  },
-  {
-    id: 3,
-    title: "Les trois promotions de France Prepa Academy se rencontrent !",
+    title: "Les trois promotions de France Prepa Academy se rencontrent.",
     href: "#",
     image: postImage3,
     description:
       "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.",
-    date: "16/03/2020",
-    datetime: "2020-03-16",
+    date: "17/02/2050",
+    datetime: "2025-02-17",
+  },
+  {
+    id: 3,
+    title: "Le concours de mars arrive.",
+    href: "#",
+    image: postImage1,
+    description:
+      "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.",
+    date: "05/03/2025",
+    datetime: "2025-03-05",
   },
 ];
 

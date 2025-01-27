@@ -77,7 +77,7 @@ const EtudesInternationales = () => {
         {/* Image de l'en-tête */}
 
         <div
-          className="w-full h-[35rem]  bg-green-600] bg-cover"
+          className="w-full h-[32rem] bg-cover bg-center"
           style={{ backgroundImage: `url(${ecoles})` }}
         ></div>
         {/* Texte de la section */}
@@ -98,7 +98,7 @@ const EtudesInternationales = () => {
                 >
                   FRANCE PREPA ACADEMY
                 </motion.h1>
-                <motion.span
+                {/* <motion.span
                   initial={{ opacity: 0, y: 50 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{
@@ -108,7 +108,7 @@ const EtudesInternationales = () => {
                   className={"block mt-4 text-3xl font-bold text-[#00008f]"}
                 >
                   Un réseau d’écoles en France métropolitaine
-                </motion.span>
+                </motion.span> */}
               </div>
             </AnimatedComponent>
           </div>

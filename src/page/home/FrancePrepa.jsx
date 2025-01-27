@@ -21,7 +21,6 @@ import voyage from "../../../src/assets/images/gallerie/mbw.JPG";
 import voyage_2 from "../../../src/assets/images/carousel/2.JPG";
 import personne from "../../../src/assets/images/gallerie/promoteur.jpg"; // Image secondaire
 
-
 // Variantes d'animation pour Framer Motion
 const containerVariants = {
   hidden: { opacity: 0, y: 50 },
@@ -85,10 +84,36 @@ const FrancePrepa = () => {
           <div className={`flex items-center justify-center`}>
             <AnimatedComponent>
               <div className={`relative w-full h-full italic z-50`}>
-                <img
-                  src={personne}
-                  className={`rounded-lg w-full h-full`}
-                ></img>
+                <figure>
+                  <img
+                    src={personne}
+                    className={`rounded-lg rounded-b-none w-full h-full`}
+                  ></img>
+                </figure>
+                <figcaption className="bg-[#00008f] py-3 rounded-t-none rounded-lg">
+                  <motion.p
+                    initial={{ opacity: 0, y: 50 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{
+                      duration: 0.5,
+                      delay: 0.8,
+                    }}
+                    className="text-lg font-bold text-white"
+                  >
+                    Pr. Benjamin B. Obama
+                  </motion.p>
+                  <motion.p
+                    initial={{ opacity: 0, y: 50 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{
+                      duration: 0.5,
+                      delay: 0.8,
+                    }}
+                    className="text-lg font-normal text-white italic"
+                  >
+                    Maître de conférences au groupe universitaire Eduservices
+                  </motion.p>
+                </figcaption>
               </div>
             </AnimatedComponent>
           </div>
@@ -116,32 +141,6 @@ const FrancePrepa = () => {
                 >
                   Mot du promoteur
                 </motion.Typography>
-                <motion.span
-                  initial={{ opacity: 0, y: 50 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{
-                    duration: 0.5,
-                    delay: 0.6,
-                  }}
-                  className="block mt-2 text-2xl font-semibold"
-                  style={{ color: "#00008f" }}
-                >
-                  L’ouverture aux grandes écoles en France
-                </motion.span>
-                <motion.p
-                  initial={{ opacity: 0, y: 50 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{
-                    duration: 0.5,
-                    delay: 0.8,
-                  }}
-                  className="mt-4 text-base text-black"
-                >
-                  Notre mission consiste à faciliter aux étudiants africains
-                  l’accès aux grandes écoles de commerce, de management et du
-                  digital en France, et à les encadrer dans la validation de
-                  leurs diplômes visés par l’Etat français.
-                </motion.p>
 
                 <motion.p
                   initial={{ opacity: 0, y: 50 }}
@@ -150,20 +149,12 @@ const FrancePrepa = () => {
                     duration: 0.5,
                     delay: 0.8,
                   }}
-                  className="mt-4  text-lg font-bold text-black"
+                  className="mt-4 lg:px-4 text-base text-black"
                 >
-                  Pr. Benjamin B. Obama
-                </motion.p>
-                <motion.p
-                  initial={{ opacity: 0, y: 50 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{
-                    duration: 0.5,
-                    delay: 0.8,
-                  }}
-                  className="text-lg font-medium text-black"
-                >
-                  Maître de conférences au groupe universitaire Eduservices
+                  Notre mission consiste à faciliter aux étudiants africains
+                  l’accès aux grandes écoles de commerce, de management et du
+                  digital en France, et à les encadrer dans la validation de
+                  leurs diplômes visés par l’Etat français.
                 </motion.p>
               </div>
             </div>

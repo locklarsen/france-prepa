@@ -3,9 +3,7 @@ import React, { useState } from "react"; // Import nécessaire pour React et use
 // Composant principal de la section FAQ
 const Faqs = () => {
   return (
-    <section
-      className={`relative z-20 overflow-hidden bg-transparent p-4`}
-    >
+    <section className={`relative z-20 overflow-hidden bg-transparent p-4`}>
       <div className={` mx-auto`}>
         <div className={`flex flex-wrap`}>
           <div className={`w-full text-center lg:mb-10`}>
@@ -23,10 +21,14 @@ const Faqs = () => {
 
         {/* Conteneur des éléments FAQ */}
         <div
-          className={`text-justify font-medium mb-8 w-full sm:max-w-full rounded-lg bg-[#f6a901] py-4 px-2 shadow-[0px_20px_95px_0px_rgba(201,203,204,0.30)] dark:bg-dark-2 dark:shadow-[0px_20px_95px_0px_rgba(0,0,0,0.30)]`}
+          className={`text-justify text-white font-medium mb-8 w-full sm:max-w-full rounded-lg bg-[#f6a901] py-4 px-2 shadow-[0px_20px_95px_0px_rgba(201,203,204,0.30)] dark:bg-dark-2 dark:shadow-[0px_20px_95px_0px_rgba(0,0,0,0.30)]`}
         >
           {faqData.map((faq, index) => (
-            <AccordionItem key={index} header={faq.header} text={faq.text} />
+            <AccordionItem
+              key={index}
+              qestion={faq.qestion}
+              response={faq.response}
+            />
           ))}
         </div>
       </div>
@@ -40,7 +42,7 @@ const Faqs = () => {
 };
 
 // Composant pour un élément d'accordéon individuel
-const AccordionItem = ({ header, text }) => {
+const AccordionItem = ({ qestion, response }) => {
   const [active, setActive] = useState(false); // Gère l'état ouvert/fermé de l'accordéon
 
   const handleToggle = (e) => {
@@ -50,24 +52,25 @@ const AccordionItem = ({ header, text }) => {
 
   return (
     <div
-      className={`mb-8 w-full rounded-lg bg-white p-4 shadow-[0px_20px_95px_0px_rgba(201,203,204,0.30)]`}
+      className={`mb-8 w-full rounded-lg bg-[#00008f] py-2 px-0 shadow-[0px_20px_95px_0px_rgba(201,203,204,0.30)]`}
     >
       <button
-        className={`faq-btn flex w-full text-left`}
+        className={`faq-btn flex w-full text-left `}
         onClick={handleToggle}
       >
         {/* Bouton avec icône */}
         <div
-          className={`mr-1 flex h-10 w-full max-w-[40px] items-center justify-center rounded-lg bg-primary/5 text-primary dark:bg-white/5`}
+          className={`mr-1 flex items-center text-whiteflex h-10 w-full max-w-[40px] justify-center rounded-lg bg-primary/5 text-primary dark:bg-white/5`}
         >
           <svg
-            className={`fill-primary stroke-primary duration-200 ease-in-out ${
+            className={`fill-primary  stroke-primary duration-200 ease-in-out ${
               active ? "rotate-180" : ""
             }`}
             width="17"
             height="10"
             viewBox="0 0 17 10"
             xmlns="http://www.w3.org/2000/svg"
+            fill="#ffffff"
           >
             <path d="M7.28687 8.43257L9.53454 8.41721L15.7631 2.70784C16.0981 2.38028 16.1985 1.80579 15.7981 1.41393C15.4803 1.1028 14.9167 1.00854 14.5249 1.38489L8.41472 7.00806L2.29995 1.38063C1.93092 1.07036 1.38469 1.06804 1.03129 1.41393L1.0545 2.69659L7.28687 8.43257Z" />
           </svg>
@@ -75,8 +78,8 @@ const AccordionItem = ({ header, text }) => {
 
         {/* En-tête de l'élément */}
         <div className={`w-full`}>
-          <h4 className={`mt-1 text-lg font-semibold text-dark text-[#00008f]`}>
-            {header}
+          <h4 className={`mt-1 text-lg font-semibold text-[#ffff]`}>
+            {qestion}
           </h4>
         </div>
       </button>
@@ -87,10 +90,8 @@ const AccordionItem = ({ header, text }) => {
           active ? "block" : "hidden"
         }`}
       >
-        <p
-          className={`py-3 text-base leading-relaxed`}
-        >
-          {text}
+        <p className={`bg-gray-100 py-3 rounded-md rounded-t-none px-3 text-base leading-relaxed text-black`}>
+          {response}
         </p>
       </div>
     </div>
@@ -131,16 +132,19 @@ const BackgroundSvg = () => (
 // Données des FAQs
 const faqData = [
   {
-    header: "Qui est France Prepa Academy ?",
-    text: "Nous sommes un organisme qui aide les étudiants africains à intégrer dans les grandes écoles en France et à réussir parfaitement leur procédure de visa.",
+    qestion: "Qui est France Prepa Academy ?",
+    response:
+      "Nous sommes un organisme qui aide les étudiants africains à intégrer dans les grandes écoles en France et à réussir parfaitement leur procédure de visa.",
   },
   {
-    header: "Quels sont vos services ?",
-    text: "Entretien & admission – Procédure Campus France – Réservation de logement – Dépôt de visa & Validation en ligne.",
+    qestion: "Quels sont vos services ?",
+    response:
+      "Entretien & admission – Procédure Campus France – Réservation de logement – Dépôt de visa & Validation en ligne.",
   },
   {
-    header: "Comment soumettre un dossier ?",
-    text: "Inscrivez-vous sur notre site Internet, et puis déposez une lettre de motivation, votre CV actualisé, la copie du dernier diplôme ainsi que ses relevés de notes.",
+    qestion: "Comment soumettre un dossier ?",
+    response:
+      "Inscrivez-vous sur notre site Internet, et puis déposez une lettre de motivation, votre CV actualisé, la copie du dernier diplôme ainsi que ses relevés de notes.",
   },
 ];
 

@@ -1,11 +1,66 @@
-// IMPORTER LES PACKAGES REACT
 import React, { useState } from "react";
-
-//  IMPORTER D'AUTRES PACKAGES
 import { motion } from "framer-motion";
-
-// IMPORTER DES COMPOSANTS
+import {
+  Menu,
+  MenuHandler,
+  MenuList,
+  MenuItem,
+  Button,
+  Input,
+} from "@material-tailwind/react";
 import image_procedure from "../../../src/assets/images/gallerie/etudiante.jpg";
+
+const COUNTRIES = [
+  "Algérie (+213)",
+  "Bénin (+229)",
+  "Burkina Faso (+226)",
+  "Burundi (+257)",
+  "Cameroun (+237)",
+  "Cap-Vert (+238)",
+  "Comores (+269)",
+  "Congo Brazzaville (+242)",
+  "Congo Kinshasa (+243)",
+  "Côte d'Ivoire (+225)",
+  "Djibouti (+253)",
+  "Gabon (+241)",
+  "Guinée (+224)",
+  "Guinée-Bissau (+245)",
+  "Madagascar (+261)",
+  "Mali (+223)",
+  "Mauritanie (+222)",
+  "Niger (+227)",
+  "Rwanda (+250)",
+  "Sénégal (+221)",
+  "Seychelles (+248)",
+  "Tchad (+235)",
+  "Togo (+228)",
+];
+
+const CODES = [
+  "+213",
+  "+229",
+  "+226",
+  "+257",
+  "+237",
+  "+238",
+  "+269",
+  "+242",
+  "+243",
+  "+225",
+  "+253",
+  "+241",
+  "+224",
+  "+245",
+  "+261",
+  "+223",
+  "+222",
+  "+227",
+  "+250",
+  "+221",
+  "+248",
+  "+235",
+  "+228",
+];
 
 // Données de l'animation
 const containerVariants = {
@@ -25,6 +80,8 @@ const DownloadBrochureForm = () => {
   const [name, setName] = useState(``);
   const [firstName, setFirstName] = useState(``);
   const [email, setEmail] = useState(``);
+  const [phone, setPhone] = useState(``);
+  const [country, setCountry] = useState(0);
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
 
   // Fonction pour gérer l'envoi du formulaire
@@ -143,12 +200,63 @@ const DownloadBrochureForm = () => {
                   />
                 </div>
 
+                {/* Champ de saisie du numéro de téléphone */}
+                <div className={`flex flex-col mt-2 w-full px-4`}>
+                  <label htmlFor={`phone`} className={`hidden`}>
+                    Numéro de téléphone
+                  </label>
+                  <div className="flex w-full">
+                    <Menu placement="bottom-start">
+                      <MenuHandler>
+                        <Button
+                          ripple={false}
+                          variant="text"
+                          color="blue-gray"
+                          className="shrink-0 rounded-r-none border-gray-500 border-1 border-r-0 bg-transparent px-3 flex items-center"
+                          style={{ width: "4rem" }} // Ajuster la largeur du bouton
+                        >
+                          {CODES[country]}
+                        </Button>
+                      </MenuHandler>
+                      <MenuList className="bg-[#f6aa00] max-h-[40rem] max-w-[50rem] text-gray-800 space-y-3 font-medium">
+                        {COUNTRIES.map((country, index) => (
+                          <MenuItem
+                            key={country}
+                            value={country}
+                            onClick={() => setCountry(index)}
+                            className="flex flex-col border-b-[1px] border-t-0 border-x-0 rounded-none px-2 border-red-900"
+                          >
+                            {country}
+                          </MenuItem>
+                        ))}
+                      </MenuList>
+                    </Menu>
+                    <Input
+                      type="tel"
+                      pattern="[0-9]*"
+                      inputMode="numeric"
+                      maxLength={9}
+                      placeholder="Numéro de téléphone"
+                      required={true}
+                      className="w-full h-14 px-2 py-3 text-sm font-normal rounded-l-none rounded-lg placeholder:text-gray-700 text-gray-900"
+                      value={phone}
+                      onChange={(e) => setPhone(e.target.value)}
+                      labelProps={{
+                        className: "before:content-none after:content-none",
+                      }}
+                      containerProps={{
+                        className: "bg-white w-full h-14 rounded-r-lg",
+                      }}
+                    />
+                  </div>
+                </div>
+
                 {/* Bouton d'envoi du formulaire */}
                 <button
                   type={`submit`}
                   className={`
                     md:w-fit bg-[#f6aa00] hover:bg-gradient-to-t from-[#07076b] to-[#030341] hover:border-white hover:border-2
-                    text-white font-bold  py-3 mx-auto px-6 rounded-lg mt-4 transition ease-in-out duration-300
+                    text-white font-bold py-3 mx-auto px-6 rounded-lg mt-4 transition ease-in-out duration-300
                   `}
                 >
                   Télécharger la brochure

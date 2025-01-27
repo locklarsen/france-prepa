@@ -95,7 +95,7 @@ const SignupPage = () => {
                       type="text"
                       placeholder="Lock Larsen"
                       required
-                      className={`bg-white flex items-center w-full px-5 py-3 text-sm font-medium outline-none 400 mb-3 md:mb-0 placeholder:text-gray-700 text-dark-gray-900 border-gray-500 border-2 rounded-xl`}
+                      className={`bg-white flex items-center w-full px-5 py-3 text-sm font-normal outline-none mb-3 md:mb-0 placeholder:text-gray-700 text-dark-gray-900 border-gray-500 border-1 rounded-xl`}
                     />
                   </div>
                   <div className={`flex flex-col w-full mb-3`}>
@@ -110,7 +110,7 @@ const SignupPage = () => {
                       type="text"
                       placeholder="Ansalla"
                       required
-                      className={`bg-white flex items-center w-full px-5 py-3 text-sm font-medium outline-none 400 mb-3 md:mb-0 placeholder:text-gray-700 text-dark-gray-900 border-gray-500 border-2 rounded-xl`}
+                      className={`bg-white flex items-center w-full px-5 py-3 text-sm font-normal outline-none mb-3 md:mb-0 placeholder:text-gray-700 text-dark-gray-900 border-gray-500 border-1 rounded-xl`}
                     />
                   </div>
                 </div>
@@ -128,7 +128,7 @@ const SignupPage = () => {
                       type="email"
                       placeholder="contact.locklarsen@gmail.com"
                       required
-                      className={`bg-white flex items-center w-full px-5 py-3 text-sm font-medium outline-none 400 mb-3 md:mb-0 placeholder:text-gray-700 text-dark-gray-900 border-gray-500 border-2 rounded-xl`}
+                      className={`bg-white flex items-center w-full px-5 py-3 text-sm font-normal outline-none mb-3 md:mb-0 placeholder:text-gray-700 text-dark-gray-900 border-gray-500 border-1 rounded-xl`}
                     />
                   </div>
                   <div className={`flex flex-col w-full mb-3`}>
@@ -155,7 +155,7 @@ const SignupPage = () => {
                       type="password"
                       placeholder="Créer un mot de passe"
                       required
-                      className={`bg-white flex items-center w-full px-5 py-3 text-sm font-medium outline-none 400 mb-3 md:mb-0 placeholder:text-gray-700 text-dark-gray-900 border-gray-500 border-2 rounded-xl`}
+                      className={`bg-white flex items-center w-full px-5 py-3 text-sm font-normal outline-none mb-3 md:mb-0 placeholder:text-gray-700 text-dark-gray-900 border-gray-500 border-1 rounded-xl`}
                     />
                   </div>
                   <div className={`flex flex-col w-full mb-3`}>
@@ -171,7 +171,7 @@ const SignupPage = () => {
                       type="password"
                       placeholder="Confirmez le mot de passe"
                       required
-                      className={`bg-white flex items-center w-full px-5 py-3 text-sm font-medium outline-none 400 mb-3 md:mb-0 placeholder:text-gray-700 text-dark-gray-900 border-gray-500 border-2 rounded-xl`}
+                      className={`bg-white flex items-center w-full px-5 py-3 text-sm font-normal outline-none mb-3 md:mb-0 placeholder:text-gray-700 text-dark-gray-900 border-gray-500 border-1 rounded-xl`}
                     />
                   </div>
                 </div>
