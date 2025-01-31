@@ -149,12 +149,39 @@ const FrancePrepa = () => {
                     duration: 0.5,
                     delay: 0.8,
                   }}
-                  className="mt-4 lg:px-4 text-base text-black"
+                  className="mt-2 lg:px-4 text-justify text-base text-black"
                 >
-                  Notre mission consiste à faciliter aux étudiants africains
-                  l’accès aux grandes écoles de commerce, de management et du
-                  digital en France, et à les encadrer dans la validation de
-                  leurs diplômes visés par l’Etat français.
+                  Point d'arme aussi puissante que l'éducation pour changer le
+                  monde. C'est cette sagesse que nous a léguée Nelson Mandela,
+                  ce bâtisseur visionnaire et chantre du développement humain
+                  intégral. Éduquer c'est transformer la personne dans sa
+                  dimension holistique, corps et âme. L'éducation n'est rien
+                  moins que l'une des principales "capabilités" ou
+                  préconditions, d'après Amartya Sen, de l'authentique progrès
+                  des peuples. Tel est le défi véritable que se lance{" "}
+                  <em className="font-bold">FRANCE PRÉPA ACADEMY</em> :
+                  l'éducation de la jeunesse africaine. Au-delà de la pure
+                  phénoménalité de son activité qui est d'accompagner les
+                  étudiants dans leurs projets d'études en France, notre
+                  organisme a d'abord mission de contribuer à l'éducation de nos
+                  jeunes étudiants au travers d'un réel renforcement du lien.
+                  France Prépa s'affirme de ce fait comme une véritable
+                  "famille" dont les membres sont liés les uns aux autres par un
+                  " lien" fort, celui de la solidarité. Dans cette dynamique,
+                  les premiers de cordée tendent ainsi la main aux seconds en
+                  vue de la "traversée". Ce geste de solidarité institue alors
+                  une réelle création collective, gage de création de valeur.
+                  Avez-vous cerné la clé de notre performance ? En voici le
+                  secret :{" "}
+                  <strong>
+                    LA SOLIDARITÉ DES MEMBRES DE LA GRANDE FAMILLE FRANCE PRÉPA
+                    !
+                  </strong>{" "}
+                  De 7 visas en 2023 à 35 visas en 2024, soit présentement 5
+                  fois la performance de l'année précédente, voilà le fruit
+                  d'une solidarité agissante...grâce à une équipe elle-même
+                  SOLIDE. I believe I can fly… I believe I can touch the sky.
+                  <strong> YES WE CAN !</strong>
                 </motion.p>
               </div>
             </div>
