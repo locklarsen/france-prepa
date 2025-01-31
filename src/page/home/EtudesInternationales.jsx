@@ -85,7 +85,7 @@ const EtudesInternationales = () => {
           <div className="w-full text-center px-2">
             <AnimatedComponent>
               <div className="flex flex-col items-center py-14 px-2 text-center">
-                <motion.h1
+                {/* <motion.h1
                   initial={{ opacity: 0, y: 50 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{
@@ -97,7 +97,7 @@ const EtudesInternationales = () => {
                   }
                 >
                   FRANCE PREPA ACADEMY
-                </motion.h1>
+                </motion.h1> */}
                 {/* <motion.span
                   initial={{ opacity: 0, y: 50 }}
                   animate={{ opacity: 1, y: 0 }}
