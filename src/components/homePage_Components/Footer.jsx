@@ -48,16 +48,15 @@ const Footer = () => {
         {/* Liens utiles */}
         <div className={"flex flex-col items-center space-y-5 pt-4"}>
           <h3
-            className={
-              "text-sm font-bold leading-6 text-[#f6aa00] uppercase"
-            }
+            className={"text-sm font-bold leading-6 text-[#f6aa00] uppercase"}
           >
             LIENS UTILES
           </h3>
           <ul role={"list"} className={`mt-6 space-y-4`}>
             <li>
               <NavLink
-                to={"/francePrepa"}
+                to={"/a-propos"}
+                target="_top"
                 className={
                   "text-sm leading-6 text-gray-300 hover:text-gray-500 capitalize"
                 }
@@ -67,14 +66,15 @@ const Footer = () => {
             </li>
 
             <li>
-              <a
-                href={"#"}
+              <Link
+                to={"/etudes-internationales"}
+                target="_top"
                 className={
                   "text-sm leading-6 text-gray-300 hover:text-gray-500"
                 }
               >
                 Études internationales
-              </a>
+              </Link>
             </li>
 
             <li>
@@ -93,9 +93,7 @@ const Footer = () => {
         {/* Section S’inscrire */}
         <div className={"flex flex-col items-center space-y-5 pt-4"}>
           <h3
-            className={
-              "text-sm font-bold leading-6 text-[#f6aa00] uppercase"
-            }
+            className={"text-sm font-bold leading-6 text-[#f6aa00] uppercase"}
           >
             S’INSCRIRE
           </h3>

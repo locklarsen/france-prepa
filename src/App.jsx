@@ -15,10 +15,10 @@ function App() {
         <Routes>
           {/* ROUTES VERS LES PAGSE DU SITE */}
           <Route path="/" element={<HomePage />} /> {/*Accueil*/}
-          <Route path="francePrepa" element={<FrancePrepa />} />{" "}
+          <Route path="a-propos" element={<FrancePrepa />} />{" "}
           {/*France Prépa*/}
           <Route
-            path="etudes_internationales"
+            path="etudes-internationales"
             element={<EtudesInternationales />}
           />{" "}
           {/*France Prépa*/}

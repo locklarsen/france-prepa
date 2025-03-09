@@ -14,19 +14,27 @@ const FrancePrepaTeam = () => {
         "Dr. Obama est maître de conférences à l’Université Catholique de Lyon et spécialiste des questions d’entreprenariat et de RSE.",
       image: promoteur,
     },
+
+    {
+      name: "Dr Christiane Azab",
+      role: "REnseignante à l'université de Yaoundé 1, Présidente du jury France Prépa Cameroun",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat sit officiis tempora maiores molestiae non a repellendus est dolores.",
+      image: "../../../src/assets/images/teams/Christiane.jpg",
+    },
+    {
+      name: "Fabrice Epoh",
+      role: "Représentant France Prépa Londres",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat sit officiis tempora maiores molestiae non a repellendus est dolores.",
+      image: "../../../src/assets/images/teams/Fabrice.jpg",
+    },
     {
       name: "Durelle Mbia",
       role: "Conseillère adjointe",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat sit officiis tempora maiores molestiae non a repellendus est dolores.",
-      image: personne,
-    },
-    {
-      name: "Fabrice Epoh",
-      role: "Responsable des recrutements",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat sit officiis tempora maiores molestiae non a repellendus est dolores.",
-      image: personne,
+      image: "",
     },
   ];
 
@@ -72,7 +80,7 @@ const FrancePrepaTeam = () => {
                     <div className={`h-32 w-32`}>
                       <img
                         src={member.image}
-                        alt={`Display Picture of ${member.name}`}
+                        alt={`Photo de ${member.name}`}
                         role={`img`}
                         className={`rounded-full object-cover h-full w-full shadow-md hover:shadow-xl transform hover:scale-105 transition-transform duration-300`}
                       />

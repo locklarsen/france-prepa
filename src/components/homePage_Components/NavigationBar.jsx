@@ -27,7 +27,7 @@ function NavList() {
       <Typography as="a" variant="small" className={``}>
         <ListItem className={`bg-transparent hover:bg-transparent text-black`}>
           <NavLink
-            to={`/francePrepa`}
+            to={`/a-propos`}
             className={`w-fit flex items-center gap-2 py-2 pr-4 hover:bg-[#00008f]  hover:text-[#f7a901] font-bold p-3.5 rounded-xl`}
           >
             France Prépa Academy
@@ -39,7 +39,7 @@ function NavList() {
       <Typography as="a" variant="small" className={``}>
         <ListItem className={`bg-transparent hover:bg-transparent text-black`}>
           <NavLink
-            to={`/etudes_internationales`}
+            to={`/etudes-internationales`}
             className={`w-fit flex items-center gap-2 py-2 pr-4 hover:bg-[#00008f] hover:text-[#f7a901] font-bold p-3.5 rounded-xl`}
           >
             Études internationales
