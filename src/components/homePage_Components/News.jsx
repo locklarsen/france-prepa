@@ -165,7 +165,7 @@ export default function News() {
                   <img
                     src={image}
                     alt={`${selectedPost.title} - ${index}`}
-                    className="w-auto h-auto object-fit rounded-lg mb-4"
+                    className="w-[80%] h-96 m-auto object-fit rounded-lg mb-4"
                   />
                 </SwiperSlide>
               ))}
