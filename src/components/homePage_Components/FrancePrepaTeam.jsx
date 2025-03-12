@@ -8,34 +8,32 @@ const FrancePrepaTeam = () => {
   // Liste des membres de l'équipe
   const teamMembers = [
     {
-      name: "Daouda Kek à Zock",
-      role: "Conseiller pédagogique",
-      description:
-        "Dr. Obama est maître de conférences à l’Université Catholique de Lyon et spécialiste des questions d’entreprenariat et de RSE.",
+      name: "Pr Benjamin B. Obama",
+      role: "Maître de Conférences au groupe universitaire Eduservices.",
+      description: "Maître de Conférences au groupe universitaire Eduservices.",
       image: promoteur,
     },
 
     {
       name: "Dr Christiane Azab",
-      role: "REnseignante à l'université de Yaoundé 1, Présidente du jury France Prépa Cameroun",
+      role: "Enseignante à l'Université de Yaoundé I, Présidente du Jury France Prépa Cameroun.",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat sit officiis tempora maiores molestiae non a repellendus est dolores.",
+        "Enseignante à l'Université de Yaoundé I, Présidente du Jury France Prépa Cameroun.",
       image: "../../../src/assets/images/teams/Christiane.jpg",
     },
     {
       name: "Fabrice Epoh",
-      role: "Représentant France Prépa Londres",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat sit officiis tempora maiores molestiae non a repellendus est dolores.",
+      role: "Représentant France Prépa Londres.",
+      description: "Représentant France Prépa Londres.",
       image: "../../../src/assets/images/teams/Fabrice.jpg",
     },
-    {
-      name: "Durelle Mbia",
-      role: "Conseillère adjointe",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat sit officiis tempora maiores molestiae non a repellendus est dolores.",
-      image: "",
-    },
+    // {
+    //   name: "Durelle Mbia",
+    //   role: "Conseillère adjointe",
+    //   description:
+    //     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat sit officiis tempora maiores molestiae non a repellendus est dolores.",
+    //   image: "",
+    // },
   ];
 
   return (
@@ -71,7 +69,7 @@ const FrancePrepaTeam = () => {
                 }}
                 key={index}
                 role={`listitem`}
-                className={`bg-gradient-to-t from-[#07076b] to-[#030341] xl:w-1/3 sm:w-3/4 md:w-2/5 relative mt-20 mb-24 sm:mb-24 xl:max-w-sm lg:w-2/5 hover:shadow-xl transform hover:scale-105 transition-transform duration-300`}
+                className={`bg-gradient-to-t from-[#07076b] to-[#030341] xl:w-1/3 sm:w-3/4 md:w-2/5 h-64 rounded-md shadow-md relative mt-20 mb-24 sm:mb-24 xl:max-w-sm lg:w-2/5 hover:shadow-xl transform hover:scale-105 transition-transform duration-300`}
               >
                 <div
                   className={`mx-2 my-auto rounded overflow-hidden shadow-md py-4`}
@@ -97,11 +95,11 @@ const FrancePrepaTeam = () => {
                     >
                       {member.role}
                     </p>
-                    <p
+                    {/* <p
                       className={`text-center text-gray-200 text-base pt-3 font-normal`}
                     >
                       {member.description}
-                    </p>
+                    </p> */}
                   </div>
                 </div>
               </motion.div>

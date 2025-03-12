@@ -22,34 +22,46 @@ const posts = [
     href: "#",
     couverture: postImage4,
     description:
-      "France Prépa Academy a été le théâtre d'une journée mémorable lors du concours de bourse qui s’est tenu le 1er mars dernier. La salle était remplie d'enthousiasme et de détermination, avec des candidats impatients de prouver leur potentiel et de faire un pas décisif vers leur avenir académique.\n\n<strong>DES ENTRETIENS QUI FONT LA DIFFERENCE</strong>\nChaque candidat a eu l'occasion de présenter son parcours, ses aspirations et sa vision d'avenir dans un cadre bienveillant devant un jury, attentif et engagé.\n\nLoin d'être de simples formalités, ce concours mets en oeuvre une véritable scène pour briller. Ces moments d'échange sont cruciaux pour montrer non seulement les compétences académiques, mais aussi la personnalité et la motivation qui font la différence.",
+      "France Prépa Academy a été le théâtre d'une journée mémorable lors du concours de bourse qui s’est tenu le 1er mars dernier. La salle était remplie d'enthousiasme et de détermination, avec des candidats impatients de prouver leur potentiel et de faire un pas décisif vers leur avenir académique.",
     date: "01-03-2025",
     datetime: "2025-03-01",
-    images: [postImage4, postImage5, postImage6],
+    images: [postImage4],
   },
+
   {
     id: 2,
-    title: "Les premiers visas de 2025 sont là.",
+    title: "DES ENTRETIENS QUI FONT LA DIFFERENCE",
     href: "#",
-    couverture: postImage2,
+    couverture: postImage6,
     description:
-      "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.",
-    date: "22/01/2025",
-    datetime: "2025-01-22",
-    images: [postImage2, postImage1],
-  },
-  {
-    id: 3,
-    title: "Les trois promotions de France Prepa Academy se rencontrent.",
-    href: "#",
-    couverture: postImage3,
-    description:
-      "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.",
+      "Chaque candidat a eu l'occasion de présenter son parcours, ses aspirations et sa vision d'avenir dans un cadre bienveillant devant un jury, attentif et engagé. Loin d'être de simples formalités, ce concours mets en oeuvre une véritable scène pour briller. Ces moments d'échange sont cruciaux pour montrer non seulement les compétences académiques, mais aussi la personnalité et la motivation qui font la différence.",
     date: "17/02/2050",
     datetime: "2025-02-17",
-    images: [postImage1, postImage2],
+    images: [postImage6, postImage5],
   },
 ];
+// {
+//   id: 2,
+//   title: "Les premiers visas de 2025 sont là.",
+//   href: "#",
+//   couverture: postImage2,
+//   description:
+//     "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.",
+//   date: "22/01/2025",
+//   datetime: "2025-01-22",
+//   images: [postImage2, postImage1],
+// },
+//   {
+//     id: 3,
+//     title: "Les trois promotions de France Prepa Academy se rencontrent.",
+//     href: "#",
+//     couverture: postImage3,
+//     description:
+//       "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.",
+//     date: "17/02/2050",
+//     datetime: "2025-02-17",
+//     images: [postImage1, postImage2],
+//   },
 
 export default function News() {
   const [selectedPost, setSelectedPost] = useState(null);
