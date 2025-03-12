@@ -3,6 +3,11 @@ import { motion } from "framer-motion";
 import postImage1 from "../../../src/assets/images/carousel/3.JPG";
 import postImage2 from "../../../src/assets/images/carousel/2.JPG";
 import postImage3 from "../../../src/assets/images/carousel/1.JPG";
+
+import postImage4 from "../../../src/assets/images/news/3.jpg";
+import postImage5 from "../../../src/assets/images/news/2.jpg";
+import postImage6 from "../../../src/assets/images/news/1.jpg";
+
 import { Typography } from "@material-tailwind/react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -15,16 +20,12 @@ const posts = [
     id: 1,
     title: "LE CONCOURS DE BOURSE DE MARS 2025",
     href: "#",
-    couverture: "../../../src/assets/images/news/3.jpg",
+    couverture: postImage4,
     description:
       "France Prépa Academy a été le théâtre d'une journée mémorable lors du concours de bourse qui s’est tenu le 1er mars dernier. La salle était remplie d'enthousiasme et de détermination, avec des candidats impatients de prouver leur potentiel et de faire un pas décisif vers leur avenir académique.\n\n<strong>DES ENTRETIENS QUI FONT LA DIFFERENCE</strong>\nChaque candidat a eu l'occasion de présenter son parcours, ses aspirations et sa vision d'avenir dans un cadre bienveillant devant un jury, attentif et engagé.\n\nLoin d'être de simples formalités, ce concours mets en oeuvre une véritable scène pour briller. Ces moments d'échange sont cruciaux pour montrer non seulement les compétences académiques, mais aussi la personnalité et la motivation qui font la différence.",
     date: "01-03-2025",
     datetime: "2025-03-01",
-    images: [
-      "../../../src/assets/images/news/1.jpg",
-      "../../../src/assets/images/news/2.jpg",
-      "../../../src/assets/images/news/3.jpg",
-    ],
+    images: [postImage4, postImage5, postImage6],
   },
   {
     id: 2,
@@ -148,7 +149,7 @@ export default function News() {
           <div className="bg-white p-6 rounded-lg max-w-3xl w-full max-h-[95vh] overflow-y-auto">
             <button
               onClick={closeModal}
-              className="bg-red-600 rounded-lg absolute top-2 right-2 py-1 px-3 font-bold text-white hover:text-gray-200 z-50"
+              className="bg-red-600 rounded-lg sm:mb-8 md:mb-0 absolute top-2 right-2 py-1 px-3 font-bold text-white hover:text-gray-200 z-50"
             >
               Fermer
             </button>
