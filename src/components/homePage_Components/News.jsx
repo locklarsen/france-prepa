@@ -1,8 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import postImage1 from "../../../src/assets/images/carousel/3.JPG";
-import postImage2 from "../../../src/assets/images/carousel/2.JPG";
-import postImage3 from "../../../src/assets/images/carousel/1.JPG";
 
 import postImage4 from "../../../src/assets/images/news/3.jpg";
 import postImage5 from "../../../src/assets/images/news/2.jpg";

@@ -1,7 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
 import promoteur from "../../../src/assets/images/gallerie/promoteur.jpg"; // Image principale
-import personne from "../../../src/assets/images/gallerie/promoteur.jpg"; // Image secondaire
+import christiane from "../../../src/assets/images/teams/Christiane.jpg"; // Image secondaire
+import Fabrice from "../../../src/assets/images/teams/Fabrice.jpg"; // Image secondaire
+
 import { Typography } from "@material-tailwind/react";
 
 const FrancePrepaTeam = () => {
@@ -19,13 +21,13 @@ const FrancePrepaTeam = () => {
       role: "Enseignante à l'Université de Yaoundé I, Présidente du Jury France Prépa Cameroun.",
       description:
         "Enseignante à l'Université de Yaoundé I, Présidente du Jury France Prépa Cameroun.",
-      image: "../../../src/assets/images/teams/Christiane.jpg",
+      image: christiane,
     },
     {
       name: "Fabrice Epoh",
       role: "Représentant France Prépa Londres.",
       description: "Représentant France Prépa Londres.",
-      image: "../../../src/assets/images/teams/Fabrice.jpg",
+      image: Fabrice,
     },
     // {
     //   name: "Durelle Mbia",
